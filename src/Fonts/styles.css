@@ -3,3 +3,9 @@
     src: url(./Inconsolata-VariableFont.woff2);
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(./Poppins-Regular.woff2);
+    font-style: normal;
+}
