@@ -125,7 +125,7 @@ function Demo() {
     <Container>
       <Carousel
         slideSize="50%"
-        breakpoints={[{ maxWidth: 'sm', slideSize: '100%', slideGap: 2 }]}
+        breakpoints={[{ maxWidth: 'xs', slideSize: '100%', slideGap: 3 }]}
         slideGap="xl"
         align="start"
         slidesToScroll={mobile ? 1 : 2}
