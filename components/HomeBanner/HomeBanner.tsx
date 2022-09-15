@@ -11,7 +11,6 @@ import harindu from './harindu.jpg';
 const useStyles = createStyles((theme) => ({
   homeleft: {
     display: 'flex',
-    paddingTop: theme.spacing.xl * 8,
     paddingBottom: theme.spacing.xl * 2,
 
     [`@media (max-width: ${theme.breakpoints.sm}px)`]: {
@@ -21,11 +20,10 @@ const useStyles = createStyles((theme) => ({
 
   homeright: {
     display: 'flex',
-    paddingTop: theme.spacing.xl * 8,
     paddingBottom: theme.spacing.xl * 2,
 
     [`@media (max-width: ${theme.breakpoints.sm}px)`]: {
-      paddingTop: theme.spacing.xl * 0,
+      paddingTop: theme.spacing.xl * 0.3,
     },
   },
 
@@ -107,7 +105,7 @@ export function HomeBanner() {
   const { classes } = useStyles();
   return (
     <div>
-      <Container px={50}>
+      <Container>
         <Grid align="flex-start">
           <Grid.Col xs={12} sm={8}>
             <div className={classes.homeleft}>
