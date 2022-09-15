@@ -1,6 +1,18 @@
 import { useState } from 'react';
-import { createStyles, Header, Container, Group, Burger, Paper, Transition } from '@mantine/core';
+import {
+  createStyles,
+  Header,
+  Container,
+  Group,
+  Burger,
+  Paper,
+  Transition,
+  Text,
+  Title,
+} from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
+import logo from './logo.png';
+import { ColorSchemeToggle } from '../ColorSchemeToggle/ColorSchemeToggle';
 
 const HEADER_HEIGHT = 60;
 
@@ -79,16 +91,15 @@ interface HeaderResponsiveProps {
 
 export function HeaderResponsive({ links }: HeaderResponsiveProps) {
   const [opened, { toggle, close }] = useDisclosure(false);
+  var activenum = 0;
   const [active, setActive] = useState(links[0].link);
   const { classes, cx } = useStyles();
-
   const items = links.map((link) => (
     <a
       key={link.label}
       href={link.link}
-      className={cx(classes.link, { [classes.linkActive]: active === link.link })}
+      className={cx(classes.link, { [classes.linkActive]: active == link.link })}
       onClick={(event) => {
-        event.preventDefault();
         setActive(link.link);
         close();
       }}
@@ -100,8 +111,18 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
   return (
     <Header height={HEADER_HEIGHT} mb={120} className={classes.root}>
       <Container className={classes.header}>
+        <Group spacing="xl">
+          <Title order={2} weight={900} style={{ fontFamily: 'Poppins' }}>
+            harindu.dev
+          </Title>
+          <div className={classes.burger}>
+              <ColorSchemeToggle />
+            </div>
+        </Group>
+
         <Group spacing={5} className={classes.links}>
           {items}
+          <ColorSchemeToggle />
         </Group>
 
         <Burger opened={opened} onClick={toggle} className={classes.burger} size="sm" />

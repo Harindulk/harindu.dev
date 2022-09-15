@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const useStyles = createStyles((theme) => ({
   root: {
-    paddingTop: 200,
+    paddingTop: 100,
     paddingBottom: 150,
   },
 
