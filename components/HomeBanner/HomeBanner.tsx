@@ -6,7 +6,7 @@ import {
   Text,
   Grid,
 } from '@mantine/core';
-import harindu from './harindu.jpg';
+import harindu from '../../public/images/harindu.jpg';
 
 const useStyles = createStyles((theme) => ({
   homeleft: {
