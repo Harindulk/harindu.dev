@@ -1,5 +1,11 @@
-import { createStyles, Text, Container, ActionIcon, Group } from '@mantine/core';
-import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons';
+import { createStyles, Text, Container, ActionIcon, Group, Title } from '@mantine/core';
+import {
+  IconBrandTwitter,
+  IconBrandYoutube,
+  IconBrandInstagram,
+  IconBrandLinkedin,
+} from '@tabler/icons';
+import Link from 'next/link';
 
 const useStyles = createStyles((theme) => ({
   footer: {
@@ -24,6 +30,7 @@ const useStyles = createStyles((theme) => ({
 
   description: {
     marginTop: 5,
+    textDecoration: 'none',
 
     [theme.fn.smallerThan('sm')]: {
       marginTop: theme.spacing.xs,
@@ -74,6 +81,10 @@ const useStyles = createStyles((theme) => ({
     color: theme.colorScheme === 'dark' ? theme.white : theme.black,
   },
 
+  linkfooter: {
+    textDecoration: 'none',
+  },
+
   afterFooter: {
     display: 'flex',
     justifyContent: 'space-between',
@@ -109,13 +120,7 @@ export function FooterLinks({ data }: FooterLinksProps) {
 
   const groups = data.map((group) => {
     const links = group.links.map((link, index) => (
-      <Text<'a'>
-        key={index}
-        className={classes.link}
-        component="a"
-        href={link.link}
-        onClick={(event) => event.preventDefault()}
-      >
+      <Text<'a'> key={index} className={classes.link} component="a" href={link.link}>
         {link.label}
       </Text>
     ));
@@ -132,8 +137,11 @@ export function FooterLinks({ data }: FooterLinksProps) {
     <footer className={classes.footer}>
       <Container className={classes.inner}>
         <div className={classes.logo}>
+          <Title order={2} weight={800} style={{ fontFamily: 'Poppins' }}>
+            harindu.dev
+          </Title>
           <Text size="xs" color="dimmed" className={classes.description}>
-            Build fully functional accessible web applications faster than ever
+            Site source code on GitHub.
           </Text>
         </div>
         <div className={classes.groups}>{groups}</div>
@@ -144,15 +152,29 @@ export function FooterLinks({ data }: FooterLinksProps) {
         </Text>
 
         <Group spacing={0} className={classes.social} position="right" noWrap>
-          <ActionIcon size="lg">
-            <IconBrandTwitter size={18} stroke={1.5} />
-          </ActionIcon>
-          <ActionIcon size="lg">
-            <IconBrandYoutube size={18} stroke={1.5} />
-          </ActionIcon>
-          <ActionIcon size="lg">
-            <IconBrandInstagram size={18} stroke={1.5} />
-          </ActionIcon>
+          <Link href="https://twitter.com/Harindu_Fonseka">
+            <ActionIcon size="lg">
+              <IconBrandTwitter size={23} stroke={1.5} />
+            </ActionIcon>
+          </Link>
+
+          <Link href="https://www.youtube.com/channel/UCRyQGxzCgFb5wmsp1XAlWpQ">
+            <ActionIcon size="lg">
+              <IconBrandYoutube size={23} stroke={1.5} />
+            </ActionIcon>
+          </Link>
+
+          <Link href="https://www.instagram.com/harindulk/">
+            <ActionIcon size="lg">
+              <IconBrandInstagram size={23} stroke={1.5} />
+            </ActionIcon>
+          </Link>
+
+          <Link href="https://www.linkedin.com/in/harindu-fonseka/">
+            <ActionIcon size="lg">
+              <IconBrandLinkedin size={23} stroke={1.5} />
+            </ActionIcon>
+          </Link>
         </Group>
       </Container>
     </footer>
