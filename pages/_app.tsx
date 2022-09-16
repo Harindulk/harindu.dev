@@ -8,6 +8,8 @@ import { NotificationsProvider } from '@mantine/notifications';
 import '../src/Fonts/styles.css';
 import { HeaderResponsive } from '../components/Header/Header';
 import attributes from '../components/Header/attributes.json';
+import { FooterLinks } from '../components/Footer/FooterLinks';
+import footerdata from '../components/Footer/attributes.json';
 
 export default function App(props: AppProps & { colorScheme: ColorScheme }) {
   const { Component, pageProps } = props;
@@ -27,8 +29,6 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
         <link rel="shortcut icon" href="/favicon.svg" />
       </Head>
 
-      
-
       <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
         <MantineProvider
           theme={{ colorScheme, fontFamily: 'Poppins' }}
@@ -36,8 +36,9 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
           withNormalizeCSS
         >
           <NotificationsProvider>
-          <HeaderResponsive links={attributes.props.links}  />
+            <HeaderResponsive links={attributes.props.links} />
             <Component {...pageProps} />
+            <FooterLinks data={footerdata.data} />
           </NotificationsProvider>
         </MantineProvider>
       </ColorSchemeProvider>
@@ -48,4 +49,3 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
 App.getInitialProps = ({ ctx }: { ctx: GetServerSidePropsContext }) => ({
   colorScheme: getCookie('mantine-color-scheme', ctx) || 'light',
 });
-
