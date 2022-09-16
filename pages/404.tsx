@@ -53,7 +53,7 @@ export function NotFoundTitle() {
       <Group position="center">
         <Link href="/">
         <Button size="md">
-          Take me back to harindu.dev home
+          Take me back to home
         </Button>
         </Link>
       </Group>
