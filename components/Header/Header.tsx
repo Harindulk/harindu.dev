@@ -7,14 +7,12 @@ import {
   Burger,
   Paper,
   Transition,
-  Text,
   Title,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import logo from './logo.png';
 import { ColorSchemeToggle } from '../ColorSchemeToggle/ColorSchemeToggle';
 
-const HEADER_HEIGHT = 60;
+const HEADER_HEIGHT =70;
 
 const useStyles = createStyles((theme) => ({
   root: {
@@ -63,12 +61,12 @@ const useStyles = createStyles((theme) => ({
     padding: '8px 12px',
     borderRadius: theme.radius.sm,
     textDecoration: 'none',
-    color: theme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.colors.gray[7],
+    color: theme.colorScheme === 'dark' ? theme.colors.gray[0] : theme.colors.dark[9],
     fontSize: theme.fontSizes.sm,
     fontWeight: 500,
 
     '&:hover': {
-      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
+      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[3],
     },
 
     [theme.fn.smallerThan('sm')]: {
@@ -109,10 +107,10 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
   ));
 
   return (
-    <Header height={HEADER_HEIGHT} mb={120} className={classes.root}>
+    <Header height={HEADER_HEIGHT} mb={100} className={classes.root}>
       <Container className={classes.header}>
         <Group spacing="xl">
-          <Title order={2} weight={900} style={{ fontFamily: 'Poppins' }}>
+          <Title order={2} weight={800} style={{ fontFamily: 'Poppins' }}>
             harindu.dev
           </Title>
           <div className={classes.burger}>
