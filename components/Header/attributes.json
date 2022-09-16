@@ -2,9 +2,9 @@
     "props": {
       "links": [
         { "link": "/", "label": "Home", "active": "0" },
-        { "link": "/pricing", "label": "Games" },
-        { "link": "/timeline", "label": "Timeline" },
-        { "link": "/gallery", "label": "Gallery" },
+        { "link": "/games", "label": "Games" },
+        { "link": "/about", "label": "About" },
+        { "link": "/posts", "label": "Posts" },
         { "link": "https://mantine.dev/", "label": "Contact" } 
       ]
     }
