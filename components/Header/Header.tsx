@@ -11,8 +11,9 @@ import {
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { ColorSchemeToggle } from '../ColorSchemeToggle/ColorSchemeToggle';
+import Link from 'next/link';
 
-const HEADER_HEIGHT =70;
+const HEADER_HEIGHT = 70;
 
 const useStyles = createStyles((theme) => ({
   root: {
@@ -93,17 +94,18 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
   const [active, setActive] = useState(links[0].link);
   const { classes, cx } = useStyles();
   const items = links.map((link) => (
-    <a
-      key={link.label}
-      href={link.link}
-      className={cx(classes.link, { [classes.linkActive]: active == link.link })}
-      onClick={(event) => {
-        setActive(link.link);
-        close();
-      }}
-    >
-      {link.label}
-    </a>
+    <Link href={link.link}>
+      <a
+        key={link.label}
+        className={cx(classes.link, { [classes.linkActive]: active == link.link })}
+        onClick={(event) => {
+          setActive(link.link);
+          close();
+        }}
+      >
+        {link.label}
+      </a>
+    </Link>
   ));
 
   return (
@@ -114,8 +116,8 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
             harindu.dev
           </Title>
           <div className={classes.burger}>
-              <ColorSchemeToggle />
-            </div>
+            <ColorSchemeToggle />
+          </div>
         </Group>
 
         <Group spacing={5} className={classes.links}>
