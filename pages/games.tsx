@@ -6,7 +6,7 @@ import {
   Group,
   Text,
   UnstyledButton,
-  Avatar,
+  Tooltip,
 } from '@mantine/core';
 import { IconCheck } from '@tabler/icons';
 import Link from 'next/link';
@@ -17,6 +17,9 @@ import finalroom from '../public/images/the-final-room.jpg';
 import microraly from '../public/images/micro-rally.jpg';
 import bugstar from '../public/images/bug-star.jpg';
 import ghostzone from '../public/images/ghost-zone.jpg';
+import epicgames from '../public/images/icons/EpicLogo_150.png';
+import steam from '../public/images/icons/SteamLogo_150.png';
+import gog from '../public/images/icons/GOGLogo_150.png';
 
 const useStyles = createStyles((theme) => ({
   inner: {
@@ -71,6 +74,11 @@ const useStyles = createStyles((theme) => ({
     maxWidth: 170,
   },
 
+  buttonicon: {
+    width: '50px',
+    maxWidth: 170,
+  },
+
   highlight: {
     position: 'relative',
     backgroundColor: theme.fn.variant({ variant: 'light', color: theme.primaryColor }).background,
@@ -96,13 +104,17 @@ export function games() {
               Coming Soon
             </Title>
             <Group>
-              <UnstyledButton className={classes.button}>
-                <Image src={googleplay.src} className={classes.buttonimage} />
-              </UnstyledButton>
+              <Tooltip label="Google Play Store" color="dark" position="bottom" withArrow>
+                <UnstyledButton className={classes.button}>
+                  <Image src={googleplay.src} className={classes.buttonimage} />
+                </UnstyledButton>
+              </Tooltip>
 
-              <UnstyledButton className={classes.button}>
-                <Image src={appstore.src} className={classes.buttonimage} />
-              </UnstyledButton>
+              <Tooltip label="Apple App Store" color="dark" position="bottom" withArrow>
+                <UnstyledButton className={classes.button}>
+                  <Image src={appstore.src} className={classes.buttonimage} />
+                </UnstyledButton>
+              </Tooltip>
             </Group>
           </div>
           <Image
@@ -131,19 +143,24 @@ export function games() {
             <Title mt={20} order={3}>
               Coming Soon
             </Title>
-            <Group>
-              <UnstyledButton className={classes.button}>
-                <Link
-                  href="https://play.google.com/store/apps/details?id=com.HarindulkGames.microrally"
-                  onClick={(event) => event.preventDefault()}
-                >
-                  <Image src={itchio.src} className={classes.buttonimage} />
-                </Link>
-              </UnstyledButton>
+            <Group mt="md">
+              <Tooltip label="Steam" color="dark" position="bottom" withArrow>
+                <UnstyledButton className={classes.buttonicon}>
+                  <Image src={steam.src} />
+                </UnstyledButton>
+              </Tooltip>
 
-              <UnstyledButton className={classes.button}>
-                <Image src={googleplay.src} className={classes.buttonimage} />
-              </UnstyledButton>
+              <Tooltip label="Epic Games" color="dark" position="bottom" withArrow>
+                <UnstyledButton className={classes.buttonicon}>
+                  <Image src={epicgames.src} />
+                </UnstyledButton>
+              </Tooltip>
+
+              <Tooltip label="gog.com" color="dark" position="bottom" withArrow>
+                <UnstyledButton className={classes.buttonicon}>
+                  <Image src={gog.src} />
+                </UnstyledButton>
+              </Tooltip>
             </Group>
           </div>
         </div>
@@ -160,10 +177,7 @@ export function games() {
             </Title>
             <Group>
               <UnstyledButton className={classes.button}>
-                <Link
-                  href="https://play.google.com/store/apps/details?id=com.HarindulkGames.microrally"
-                  onClick={(event) => event.preventDefault()}
-                >
+                <Link href="https://play.google.com/store/apps/details?id=com.HarindulkGames.microrally">
                   <Image src={itchio.src} className={classes.buttonimage} />
                 </Link>
               </UnstyledButton>
@@ -200,16 +214,14 @@ export function games() {
               </UnstyledButton>
 
               <UnstyledButton className={classes.button}>
-                <Link
-                  href="https://play.google.com/store/apps/details?id=com.HarindulkGames.microrally"
-                  onClick={(event) => event.preventDefault()}
-                >
+                <Link href="https://play.google.com/store/apps/details?id=com.HarindulkGames.microrally">
                   <Image src={itchio.src} className={classes.buttonimage} />
                 </Link>
               </UnstyledButton>
             </Group>
           </div>
         </div>
+        
       </Container>
     </div>
   );
