@@ -68,7 +68,7 @@ const useStyles = createStyles((theme) => ({
 export function EmailBanner() {
   const { classes } = useStyles();
   return (
-    <Container>
+    <Container  mt={100}>
     <div className={classes.wrapper}>
       <div className={classes.body}>
         <Title className={classes.title}>Wait a minute...</Title>
