@@ -1,6 +1,6 @@
 import React from 'react';
 import { createStyles, Text, Title, TextInput, Button, Container } from '@mantine/core';
-import Images from 'next/image'
+import Images from 'next/image';
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
@@ -69,28 +69,27 @@ export function EmailBanner() {
   const { classes } = useStyles();
   return (
     <Container mt={100}>
-    <div className={classes.wrapper}>
-      <div className={classes.body}>
-        <Title className={classes.title}>Wait a minute...</Title>
-        <Text weight={500} size="lg" mb={5}>
-          Subscribe to our newsletter!
-        </Text>
-        <Text size="sm" color="dimmed">
-          You will never miss important product updates, latest news and community QA sessions. Our
-          newsletter is once a week, every Sunday.
-        </Text>
+      <div className={classes.wrapper}>
+        <div className={classes.body}>
+          <Title className={classes.title}>Wait a minute...</Title>
+          <Text weight={500} size="lg" mb={5}>
+            Subscribe to our newsletter!
+          </Text>
+          <Text size="sm" color="dimmed">
+            You will never miss important product updates, latest news and community QA sessions.
+            Our newsletter is once a week, every Sunday.
+          </Text>
 
-        <div className={classes.controls}>
-          <TextInput
-            placeholder="Your email"
-            classNames={{ input: classes.input, root: classes.inputWrapper }}
-          />
-          <Button className={classes.control}>Subscribe</Button>
+          <div className={classes.controls}>
+            <TextInput
+              type={'email'}
+              placeholder={'Your email'}
+              classNames={{ input: classes.input, root: classes.inputWrapper }}
+            />
+            <Button className={classes.control}>Subscribe</Button>
+          </div>
         </div>
       </div>
-    </div>
-
     </Container>
-
   );
 }
