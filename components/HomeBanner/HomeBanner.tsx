@@ -117,9 +117,10 @@ export function HomeBanner() {
                   I'm a 16 year old game developer & a student studying GCE O/l at Nalanda College
                   Colombo 10.
                 </Text>
+                
                 <Text mt={20} className={classes.p}>
-                  In my free time, I make games & Websites.
-                </Text>
+                  I'm the youngest Google Verified Student in Sri Lanka.
+                </Text> 
               </div>
             </div>
           </Grid.Col>
