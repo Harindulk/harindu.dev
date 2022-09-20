@@ -119,7 +119,7 @@ export function HomeBanner() {
                 </Text>
                 
                 <Text mt={20} className={classes.p}>
-                  I'm the youngest Google Verified Student in Sri Lanka.
+                 The youngest Google Verified Student in Sri Lanka.
                 </Text> 
               </div>
             </div>
