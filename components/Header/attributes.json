@@ -4,7 +4,7 @@
         { "link": "/", "label": "Home", "active": "0" },
         { "link": "/games", "label": "Games" },
         { "link": "/about", "label": "About" },
-        { "link": "/posts", "label": "Posts" },
+        { "link": "/blog", "label": "Blog" },
         { "link": "https://mantine.dev/", "label": "Contact" } 
       ]
     }
