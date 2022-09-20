@@ -8,7 +8,6 @@ import {
   UnstyledButton,
   Tooltip,
 } from '@mantine/core';
-import { IconCheck } from '@tabler/icons';
 import Link from 'next/link';
 import googleplay from '../public/images/playstorebutton.png';
 import appstore from '../public/images/appstorebutton.png';
