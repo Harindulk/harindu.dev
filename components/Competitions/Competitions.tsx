@@ -1,4 +1,4 @@
-import { Table, Container, Title, createStyles } from '@mantine/core';
+import { Table, Container, Title, createStyles, Badge, useMantineTheme } from '@mantine/core';
 import attributes from './elements.json';
 
 const useStyles = createStyles((theme) => ({
@@ -10,14 +10,33 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
+const jobColors: Record<string, string> = {
+  "winner": "red",
+  "2nd runners up" :"red",
+  "2nd runner up" :"red",
+  "4th" : "green",
+  "5th" : "green",
+  "top 10" : "green",
+  "finalist" : "yellow",
+  "semi-finalist" : "yellow",
+  "n/a" : "gray",
+  "pending" : "gray",
+  "most innovative idea" : "red",
+};
+
 export function Competitions() {
   const { classes } = useStyles();
   const elements = attributes.competitions;
+  const theme = useMantineTheme();
 
   const rows = elements.map((element) => (
     <tr key={element.name}>
       <td>{element.name}</td>
-      <td>{element.Rank}</td>
+      <td>
+        <Badge color={jobColors[element.Rank.toLowerCase()]}
+          variant={theme.colorScheme === 'dark' ? 'light' : 'outline'}>{element.Rank}</Badge>
+        
+        </td>
     </tr>
   ));
 
