@@ -1,5 +1,5 @@
 import { Table, Container, Title, createStyles, Badge, useMantineTheme } from '@mantine/core';
-import attributes from './elements.json';
+import competitionsdata from '../../data/competitions.json';
 
 const useStyles = createStyles((theme) => ({
   title: {
@@ -8,35 +8,42 @@ const useStyles = createStyles((theme) => ({
     lineHeight: 1,
     marginBottom: theme.spacing.md,
   },
+
+  table: {
+    borderStyle: 'solid',
+  },
 }));
 
 const jobColors: Record<string, string> = {
-  "winner": "red",
-  "2nd runners up" :"red",
-  "2nd runner up" :"red",
-  "4th" : "green",
-  "5th" : "green",
-  "top 10" : "green",
-  "finalist" : "yellow",
-  "semi-finalist" : "yellow",
-  "n/a" : "gray",
-  "pending" : "gray",
-  "most innovative idea" : "red",
+  winner: 'red',
+  '2nd runners up': 'red',
+  '2nd runner up': 'red',
+  '4th': 'green',
+  '5th': 'green',
+  'top 10': 'green',
+  finalist: 'yellow',
+  'semi-finalist': 'yellow',
+  'n/a': 'gray',
+  pending: 'gray',
+  'most innovative idea': 'red',
 };
 
 export function Competitions() {
   const { classes } = useStyles();
-  const elements = attributes.competitions;
+  const elements = competitionsdata.competitions;
   const theme = useMantineTheme();
 
   const rows = elements.map((element) => (
     <tr key={element.name}>
-      <td>{element.name}</td>
-      <td>
-        <Badge color={jobColors[element.Rank.toLowerCase()]}
-          variant={theme.colorScheme === 'dark' ? 'light' : 'outline'}>{element.Rank}</Badge>
-        
-        </td>
+      <td >{element.name}</td>
+      <td >
+        <Badge
+          color={jobColors[element.Rank.toLowerCase()]}
+          variant={theme.colorScheme === 'dark' ? 'light' : 'outline'}
+        >
+          {element.Rank}
+        </Badge>
+      </td>
     </tr>
   ));
 
@@ -46,13 +53,13 @@ export function Competitions() {
         Competitions
       </Title>
       <Table mt={30} highlightOnHover fontSize={17}>
-        <thead>
+        <thead >
           <tr>
             <th>Name</th>
             <th>Rank</th>
           </tr>
         </thead>
-        <tbody>{rows}</tbody>
+        <tbody >{rows}</tbody>
       </Table>
     </Container>
   );
