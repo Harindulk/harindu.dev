@@ -7,7 +7,7 @@ export default function HomePage() {
   return (
     <>
       <HomeBanner />
-      <Demo />
+      {/* <Demo /> */}
       <Competitions />      
       <EmailBanner />
 
