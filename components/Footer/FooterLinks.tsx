@@ -141,7 +141,7 @@ export function FooterLinks({ data }: FooterLinksProps) {
             harindu.dev
           </Title>
           <Text size="xs" color="dimmed" className={classes.description}>
-            Site source code on GitHub.
+            if you want to contact me, please use Linkedin, Email, or Twitter.
           </Text>
         </div>
         <div className={classes.groups}>{groups}</div>
