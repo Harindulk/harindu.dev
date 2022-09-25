@@ -1,5 +1,5 @@
 import { createStyles, Text } from '@mantine/core';
-import socialstats from './socialstats.json';
+import socialstatsdata from '../../data/socialstats.json';
 
 const useStyles = createStyles((theme) => ({
   root: {
