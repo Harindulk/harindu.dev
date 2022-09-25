@@ -7,9 +7,9 @@ import { MantineProvider, ColorScheme, ColorSchemeProvider } from '@mantine/core
 import { NotificationsProvider } from '@mantine/notifications';
 import '../src/Fonts/styles.css';
 import { HeaderResponsive } from '../components/Header/Header';
-import attributes from '../components/Header/attributes.json';
 import { FooterLinks } from '../components/Footer/FooterLinks';
-import footerdata from '../components/Footer/attributes.json';
+import navbardata from '../data/navbar.json';
+import footerdata from '../data/footer.json';
 
 export default function App(props: AppProps & { colorScheme: ColorScheme }) {
   const { Component, pageProps } = props;
@@ -36,7 +36,7 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
           withNormalizeCSS
         >
           <NotificationsProvider>
-            <HeaderResponsive links={attributes.props.links} />
+            <HeaderResponsive links={navbardata.props.links} />
             <Component {...pageProps} />
             <FooterLinks data={footerdata.data} />
           </NotificationsProvider>
