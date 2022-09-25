@@ -7,11 +7,12 @@ import {
   Text,
   UnstyledButton,
   Avatar,
+  Highlight,
 } from '@mantine/core';
 import { IconCheck } from '@tabler/icons';
 import Link from 'next/link';
 import { SocialMedia } from '../components/SocialMedia/Socialstats';
-import attributes from '../components/SocialMedia/socialstats.json';
+import socialstatsdata from '../data/socialstats.json';
 import Progress from '../components/Timeline/timeline';
 
 const useStyles = createStyles((theme) => ({
@@ -70,6 +71,11 @@ const useStyles = createStyles((theme) => ({
     borderRadius: theme.radius.sm,
     padding: '4px 12px',
   },
+
+  paragraph: {
+    fontSize: 19,
+    lineHeight: 2,
+  },
 }));
 
 export function about() {
@@ -79,30 +85,44 @@ export function about() {
       <Container>
         <div className={classes.inner}>
           <div className={classes.content}>
-            <Text mt="md">
-              I'm Harindu Fonseka ( commonly known as harindulk ). I'm a Sri Lankan Game Developer, <br />
-              Web Developer and a Student. Verified on Google at 15 ( Sri Lanka's youngest google
-              verified age ). <br /><br /> When I was 11, I started doing simple projects with MicroBit. I began
-              to learn Arduino. <br /><br /> when I was 12 years old and built over 30+ Arduino and NodeMcu
-              projects and participated in many Robotics and invention competitions. <br /><br /> When I was 13,
-              I tried to learn HTML and CSS and built my first website with all skills that I knew.
-              I also participated in Sri Lankan Robotics Challenge 2019 and scored 12th place in Sri
-              Lanka. <br /><br /> When I was 14, I played many games during the lockdown. One day I got an idea
-              to try to make my own game (I got inspiration from danidev ). After learning a lot of
-              stuff from youtube (especially from brackeys and blackthornprod ), I created my first
-              game called ghost zone and published it on the google play store for mobile and on
-              itch.io for windows. It's a 2D arcade runner game with pretty basic controls. And
-              earned a small amount of money from displaying ads on mobile devices. In 2020
-              September started my first company called "Harindulk Games."
+            <Title className={classes.title} order={3}>
+              About
+            </Title>
+            <Text className={classes.paragraph} mt="md">
+              <Highlight
+                highlight={[
+                  'age of 15',
+                  'age 16',
+                  'starfun games',
+                  'places in 22',
+                  '28 hackathons',
+                ]}
+                highlightStyles={(theme) => ({
+                  backgroundImage: theme.fn.linearGradient(
+                    45,
+                    theme.colors.cyan[5],
+                    theme.colors.indigo[5]
+                  ),
+                  fontWeight: 700,
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                })}
+              >
+                Harindu Fonseka is an entrepreneur, game developer & web developer. He's mainly
+                working in the video game development industry and he got verified on google at the
+                age of 15. Harindu's first startup company starfun games was started in 2020 as
+                Harindulk Games and he changed its name to starfun games in august 2022. His Second
+                Game "Bug Star" was released in 2021 December. it got the attention of a
+                Live-streamer from Australia and she live-streamed it on Twitch. also, Harindu got
+                his first internship for 2 Weeks at the age of 15. before Harindu turning age 16 He
+                Participated in over 28 Hackathons and got places in 22.
+              </Highlight>
             </Text>
           </div>
-
         </div>
 
-        
         <Progress />
         {/* <SocialMedia data={attributes.data} /> */}
-
       </Container>
     </div>
   );
