@@ -73,8 +73,8 @@ const useStyles = createStyles((theme) => ({
   },
 
   paragraph: {
-    fontSize: 19,
-    lineHeight: 2,
+    fontSize: 17,
+    lineHeight: 1.8,
   },
 }));
 
@@ -88,8 +88,8 @@ export function about() {
             <Title className={classes.title} order={3}>
               About
             </Title>
-            <Text className={classes.paragraph} mt="md">
-              <Highlight
+            <Text mt="md">
+              <Highlight className={classes.paragraph} 
                 highlight={[
                   'age of 15',
                   'age 16',
@@ -99,9 +99,9 @@ export function about() {
                 ]}
                 highlightStyles={(theme) => ({
                   backgroundImage: theme.fn.linearGradient(
-                    45,
-                    theme.colors.cyan[5],
-                    theme.colors.indigo[5]
+                    0,
+                    theme.colors.blue[6],
+                    theme.colors.blue[6]
                   ),
                   fontWeight: 700,
                   WebkitBackgroundClip: 'text',
@@ -117,12 +117,13 @@ export function about() {
                 his first internship for 2 Weeks at the age of 15. before Harindu turning age 16 He
                 Participated in over 28 Hackathons and got places in 22.
               </Highlight>
+              
             </Text>
           </div>
         </div>
 
         <Progress />
-        {/* <SocialMedia data={attributes.data} /> */}
+        <SocialMedia data={socialstatsdata.data} />
       </Container>
     </div>
   );
