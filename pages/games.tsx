@@ -90,71 +90,10 @@ const useStyles = createStyles((theme) => ({
 export function games() {
   const { classes } = useStyles();
   const elements = gamesdata.games;
-  const games = elements.map((game) => (
-    <div className={classes.inner}>
-      <Image src={game.image} width="380px" height="380px" radius="md" className={classes.image} />
-      <div className={classes.content}>
-        <Title className={classes.title}>{game.title}</Title>
-        <Text color="dimmed" mt="md">
-          {game.description}
-        </Text>
-        <Title mt={20} order={3}>
-          {game.comingsoon}
-        </Title>
-        <Group>
-          {game.googleplay && (
-            <Tooltip label="Google Play Store" color="dark" position="bottom" withArrow>
-              <UnstyledButton className={classes.button}>
-                <Image src={googleplay.src} className={classes.buttonimage} />
-              </UnstyledButton>
-            </Tooltip>
-          )}
-          {game.appstore && (
-            <Tooltip label="Apple App Store" color="dark" position="bottom" withArrow>
-              <UnstyledButton className={classes.button}>
-                <Image src={appstore.src} className={classes.buttonimage} />
-              </UnstyledButton>
-            </Tooltip>
-          )}
-          {game.itchio && (
-            <Tooltip label="Itch.io" color="dark" position="bottom" withArrow>
-              <UnstyledButton className={classes.button}>
-                <Image src={itchio.src} className={classes.buttonimage} />
-              </UnstyledButton>
-            </Tooltip>
-          )}
-          {game.epicgames && (
-            <Tooltip label="Epic Games Store" color="dark" position="bottom" withArrow>
-              <UnstyledButton className={classes.button}>
-                <Image src={epicgames.src} className={classes.buttonicon} />
-              </UnstyledButton>
-            </Tooltip>
-          )}
-          {game.steam && (
-            <Tooltip label="Steam" color="dark" position="bottom" withArrow>
-              <UnstyledButton className={classes.button}>
-                <Image src={steam.src} className={classes.buttonicon} />
-              </UnstyledButton>
-            </Tooltip>
-          )}
-          {game.gog && (
-            <Tooltip label="GOG" color="dark" position="bottom" withArrow>
-              <UnstyledButton className={classes.button}>
-                <Image src={gog.src} className={classes.buttonicon} />
-              </UnstyledButton>
-            </Tooltip>
-          )}
-        </Group>
-      </div>
-    </div>
-  ));
-
-
-
+  
   return (
     <div>
       <Container>
-        {games}
 
         <div className={classes.inner}>
           <div className={classes.content}>
