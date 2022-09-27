@@ -89,7 +89,8 @@ export function about() {
               About
             </Title>
             <Text mt="md">
-              <Highlight className={classes.paragraph} 
+              <Highlight
+                className={classes.paragraph}
                 highlight={[
                   'age of 15',
                   'age 16',
@@ -111,13 +112,13 @@ export function about() {
                 Harindu Fonseka is an entrepreneur, game developer & web developer. He's mainly
                 working in the video game development industry and he got verified on google at the
                 age of 15. Harindu's first startup company starfun games was started in 2020 as
-                Harindulk Games and he changed its name to starfun games in august 2022. His Second
-                Game "Bug Star" was released in 2021 December. it got the attention of a
-                Live-streamer from Australia and she live-streamed it on Twitch. also, Harindu got
-                his first internship for 2 Weeks at the age of 15. before Harindu turning age 16 He
-                Participated in over 28 Hackathons and got places in 22.
+                Harindulk Games and he changed its name to starfun games in august 2022. His first
+                game "Ghost Zone" was Released in 2021 march for Android and PC and he got some
+                downloads for that game. His Second Game "Bug Star" was released in 2021 December.
+                it got the attention of a Live-streamer from Australia and she live-streamed it on
+                Twitch. also, Harindu got his first internship for 2 Weeks at the age of 15. before
+                Harindu turning age 16 He Participated in over 28 Hackathons and got places in 22.
               </Highlight>
-              
             </Text>
           </div>
         </div>
