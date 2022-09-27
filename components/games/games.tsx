@@ -9,8 +9,10 @@ import {
   Button,
   useMantineTheme,
   Container,
+  Space,
 } from '@mantine/core';
 import Link from 'next/link';
+import { ClassNames } from '@emotion/react';
 
 const useStyles = createStyles((theme) => ({
   cardcopy: {
@@ -21,15 +23,14 @@ const useStyles = createStyles((theme) => ({
     alignItems: 'flex-start',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
+    cursor: 'pointer',
   },
 
   title: {
+    color: theme.colorScheme === 'dark' ? theme.white : theme.black,
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-    fontWeight: 900,
-    color: theme.white,
-    lineHeight: 1.2,
-    fontSize: 32,
-    marginTop: theme.spacing.xs,
+    lineHeight: 1,
+    marginBottom: theme.spacing.md,
   },
 
   category: {
@@ -85,6 +86,8 @@ const data = [
 function Demo() {
   const theme = useMantineTheme();
   const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm}px)`);
+  const { classes } = useStyles();
+  
   const slides = data.map((item) => (
     <Carousel.Slide>
       <Cardtest {...item} />
@@ -92,7 +95,14 @@ function Demo() {
   ));
 
   return (
+    
     <Container>
+      <Space h={60} />
+      <Title className={classes.title}>
+        Games
+      </Title>
+      <Space h={30} />
+
       <Carousel
         slideSize="50%"
         breakpoints={[{ maxWidth: 'xs', slideSize: '100%', slideGap: 3 }]}
