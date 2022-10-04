@@ -73,7 +73,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   paragraph: {
-    fontSize: 17,
+    fontSize: 16.9,
     lineHeight: 1.8,
   },
 }));
@@ -99,25 +99,20 @@ export function about() {
                   '28 hackathons',
                 ]}
                 highlightStyles={(theme) => ({
-                  backgroundImage: theme.fn.linearGradient(
-                    0,
-                    theme.colors.blue[6],
-                    theme.colors.blue[6]
-                  ),
-                  fontWeight: 700,
+                  fontWeight: 600,
+                  color: theme.colorScheme === 'dark' ? theme.white : theme.black,
                   WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
                 })}
               >
-                Harindu Fonseka is an entrepreneur, game developer & web developer. He's mainly
-                working in the video game development industry and he got verified on google at the
-                age of 15. Harindu's first startup company starfun games was started in 2020 as
-                Harindulk Games and he changed its name to starfun games in august 2022. His first
-                game "Ghost Zone" was Released in 2021 march for Android and PC and he got some
-                downloads for that game. His Second Game "Bug Star" was released in 2021 December.
-                it got the attention of a Live-streamer from Australia and she live-streamed it on
-                Twitch. also, Harindu got his first internship for 2 Weeks at the age of 15. before
-                Harindu turning age 16 He Participated in over 28 Hackathons and got places in 22.
+                Harindu Fonseka is an entrepreneur, game developer & web developer. he's mainly
+                working in the video game development industry and he got verified on Google at the
+                age of 15. Harindu's first startup company "starfun games" was started in 2020 as
+                Harindulk Games and he changed its name to "starfun games" in august 2022. his first
+                game "Ghost Zone" was released in 2021 march for Android and PC and he got some
+                downloads for that game. his second game "Bug Star" was released in 2021 December.
+                it got the attention of a live-streamer from Australia and she live-streamed it on
+                Twitch. also, Harindu got his first internship for 2 weeks at the age of 15. before
+                Harindu turned age 16 he participated in over 28 Hackathons and got places in 22.
               </Highlight>
             </Text>
           </div>

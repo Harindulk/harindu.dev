@@ -1,6 +1,11 @@
 {
     "competitions": [
       {
+        "name": "Thinkwave 4.0 - AIESEC in University of Moratuwa",
+        "Rank": "pending",
+        "Team": "Team Posiedon"
+      },
+      {
         "name": "Young Computer Scientist Competition  2022",
         "Rank": "pending",
         "Team": "Harindu"
@@ -11,7 +16,7 @@
         "Team": "Harindu"
       },
       {
-        "name": "IDEALIZE 2022 -  AIESEC in University of Moratuwa",
+        "name": "IDEALIZE 2022 - AIESEC in University of Moratuwa",
         "Rank": "2nd Runners Up",
         "Team": "Team Posiedon"
       },
@@ -31,7 +36,7 @@
         "Team": "Harindu"
       },
       {
-        "name": "CodeFlow 2022 -  Ananda College",
+        "name": "CodeFlow 2022 - Ananda College",
         "Rank": "Winner",
         "Team": "Harindu"
       },

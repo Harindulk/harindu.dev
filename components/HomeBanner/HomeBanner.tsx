@@ -37,7 +37,7 @@ const useStyles = createStyles((theme) => ({
     // Media query with value from theme
     [`@media (max-width: ${theme.breakpoints.xs}px)`]: {
       fontSize: 32,
-      fontFamily: `Inconsolata, ${theme.fontFamily}`,
+      fontFamily: `Poppins, ${theme.fontFamily}`,
     },
 
     // Static media query
@@ -127,7 +127,7 @@ export function HomeBanner() {
 
           <Grid.Col xs={12} sm={4}>
             <div className={classes.homeright}>
-              <Image src={harindu.src} radius={350} className={classes.image} />
+              <Image src={harindu.src} alt="harindu fonseka" radius={350} className={classes.image} />
             </div>
           </Grid.Col>
         </Grid>

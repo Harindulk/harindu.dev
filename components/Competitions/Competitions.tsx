@@ -4,14 +4,20 @@ import competitionsdata from '../../data/competitions.json';
 const useStyles = createStyles((theme) => ({
   title: {
     color: theme.colorScheme === 'dark' ? theme.white : theme.black,
-    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+    fontFamily: `Poppins, ${theme.fontFamily}`,
     lineHeight: 1,
     marginBottom: theme.spacing.md,
+    
   },
 
   table: {
     borderStyle: 'solid',
   },
+
+  tableitem:{
+    fontFamily: `Inconsolata, ${theme.fontFamily}`,
+    fontWeight: 600,
+  }
 }));
 
 const jobColors: Record<string, string> = {
@@ -35,7 +41,7 @@ export function Competitions() {
 
   const rows = elements.map((element) => (
     <tr key={element.name}>
-      <td >{element.name}</td>
+      <td  className={classes.tableitem} >{element.name}</td>
       <td >
         <Badge
           color={jobColors[element.Rank.toLowerCase()]}
