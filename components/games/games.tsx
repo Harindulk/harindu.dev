@@ -7,12 +7,15 @@ import {
   Text,
   Title,
   Button,
+  Image,
   useMantineTheme,
+  BackgroundImage,
   Container,
   Space,
 } from '@mantine/core';
 import Link from 'next/link';
 import { ClassNames } from '@emotion/react';
+import microrally from '../../public/images/micro-rally.jpg';
 
 const useStyles = createStyles((theme) => ({
   cardcopy: {
@@ -52,13 +55,13 @@ function Cardtest({ image, href }: CardProps) {
   return (
     <Link href={href}>
       <Container>
-        <Paper
-          shadow="md"
-          p="xl"
-          radius="md"
-          sx={{ backgroundImage: `url(${image})` }}
-          className={classes.cardcopy}
-        ></Paper>
+        <Paper shadow="md" p="xl" radius="md" className={classes.cardcopy}>
+        <Image
+        radius="md"
+        src={microrally.src}
+        alt="Random unsplash image"
+      />
+        </Paper>
       </Container>
     </Link>
   );
@@ -66,11 +69,11 @@ function Cardtest({ image, href }: CardProps) {
 
 const data = [
   {
-    image: 'http://localhost:3000/_next/static/media/micro-rally.fae05684.jpg',
+    image: '../../public/images/micro-rally.jpg',
     href: '/games',
   },
   {
-    image: 'http://localhost:3000/_next/static/media/the-final-room.c53087e7.jpg',
+    image: '',
     href: '',
   },
   {
@@ -87,7 +90,7 @@ function Demo() {
   const theme = useMantineTheme();
   const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm}px)`);
   const { classes } = useStyles();
-  
+
   const slides = data.map((item) => (
     <Carousel.Slide>
       <Cardtest {...item} />
@@ -95,12 +98,9 @@ function Demo() {
   ));
 
   return (
-    
     <Container>
       <Space h={60} />
-      <Title className={classes.title}>
-        Games
-      </Title>
+      <Title className={classes.title}>Games</Title>
       <Space h={30} />
 
       <Carousel
