@@ -1,6 +1,5 @@
 import { createStyles, Text } from '@mantine/core';
-import socialstatsdata from '../../data/socialstats.json';
-
+import { useState, useEffect } from 'react';
 const useStyles = createStyles((theme) => ({
   root: {
     display: 'flex',
@@ -62,6 +61,7 @@ interface SocialMedia {
 }
 
 export function SocialMedia({ data }: SocialMedia) {
+  
   const { classes } = useStyles();
   const stats = data.map((stat) => (
     <div key={stat.title} className={classes.stat}>
@@ -71,5 +71,3 @@ export function SocialMedia({ data }: SocialMedia) {
   ));
   return <div className={classes.root}>{stats}</div>;
 }
-
-
