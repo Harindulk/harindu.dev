@@ -27,6 +27,19 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
         <title>Harindu Fonseka</title>
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
         <link rel="shortcut icon" href="/favicon.svg" />
+        <meta name="title" content="Harindu Fonseka ( Harindulk )" />
+        <meta
+          name="description"
+          content="Hi! I make games, I'm 15 years old programmer & Game Dev with over 4 years of experience. Harindu Fonseka, Student, GameDev, Web Designer, Visit harindu.dev"
+        />
+
+        <meta
+          name="google-site-verification"
+          content="RQKIyXih772pTDirvoZsElb7O5YbZ_dHFiykklbPgKg"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="language" content="English" />
       </Head>
 
       <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
