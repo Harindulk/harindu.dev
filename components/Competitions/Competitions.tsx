@@ -45,9 +45,7 @@ export function Competitions() {
       <td >
         <Badge
           color={jobColors[element.Rank.toLowerCase()]}
-          variant={theme.colorScheme === 'dark' ? 'light' : 'outline'}
-          className={classes.badge}
-        >
+          variant={theme.colorScheme === 'dark' ? 'light' : 'outline'} >
           {element.Rank}
         </Badge>
       </td>
