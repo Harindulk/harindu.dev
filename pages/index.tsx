@@ -8,9 +8,7 @@ export default function HomePage() {
     <>
       <HomeBanner />
       <Competitions />      
-      <Demo />
       <EmailBanner />
-
     </>
   );
 }

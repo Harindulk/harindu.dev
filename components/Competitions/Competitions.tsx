@@ -15,9 +15,9 @@ const useStyles = createStyles((theme) => ({
   },
 
   tableitem:{
-    fontFamily: `Inconsolata, ${theme.fontFamily}`,
-    fontWeight: 600,
-  }
+    fontSize: 10,
+  },
+  
 }));
 
 const jobColors: Record<string, string> = {
@@ -41,11 +41,12 @@ export function Competitions() {
 
   const rows = elements.map((element) => (
     <tr key={element.name}>
-      <td  className={classes.tableitem} >{element.name}</td>
+      <td className={classes.tableitem} >{element.name}</td>
       <td >
         <Badge
           color={jobColors[element.Rank.toLowerCase()]}
           variant={theme.colorScheme === 'dark' ? 'light' : 'outline'}
+          className={classes.badge}
         >
           {element.Rank}
         </Badge>

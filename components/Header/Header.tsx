@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import {
   createStyles,
   Header,
@@ -11,6 +10,7 @@ import {
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { ColorSchemeToggle } from '../ColorSchemeToggle/ColorSchemeToggle';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
 
 const HEADER_HEIGHT = 70;
@@ -90,23 +90,8 @@ interface HeaderResponsiveProps {
 
 export function HeaderResponsive({ links }: HeaderResponsiveProps) {
   const [opened, { toggle, close }] = useDisclosure(false);
-  var activenum = 0;
-  const [active, setActive] = useState(links[0].link);
   const { classes, cx } = useStyles();
-  const items = links.map((link) => (
-    <Link href={link.link}>
-      <a
-        key={link.label}
-        className={cx(classes.link, { [classes.linkActive]: active == link.link })}
-        onClick={(event) => {
-          setActive(link.link);
-          close();
-        }}
-      >
-        {link.label}
-      </a>
-    </Link>
-  ));
+  const router = useRouter();
 
   return (
     <Header height={HEADER_HEIGHT} mb={100} className={classes.root}>
@@ -121,7 +106,66 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
         </Group>
 
         <Group spacing={5} className={classes.links}>
-          {items}
+          <Link href="/">
+            <a
+              key="Home"
+              className={cx(classes.link, router.pathname == '/' ? classes.linkActive : '')}
+              onClick={(event) => {
+                close();
+              }}
+            >
+              Home
+            </a>
+          </Link>
+
+          <Link href="/about">
+            <a
+              key="About"
+              className={cx(classes.link, router.pathname == '/about' ? classes.linkActive : '')}
+              onClick={(event) => {
+                close();
+              }}
+            >
+              About
+            </a>
+          </Link>
+
+          <Link href="/games">
+            <a
+              key="Games"
+              className={cx(classes.link, router.pathname == '/games' ? classes.linkActive : '')}
+              onClick={(event) => {
+                close();
+              }}
+            >
+              Games
+            </a>
+          </Link>
+
+          <Link href="/blog">
+            <a
+              key="Blog"
+              className={cx(classes.link, router.pathname == '/blog' ? classes.linkActive : '')}
+              onClick={(event) => {
+                close();
+              }}
+            >
+              Blog
+            </a>
+          </Link>
+
+          <Link href="/social">
+            <a
+              key="Social"
+              className={cx(classes.link, router.pathname == '/social' ? classes.linkActive : '')}
+              onClick={(event) => {
+                close();
+              }}
+            >
+              Social
+            </a>
+          </Link>
+
           <ColorSchemeToggle />
         </Group>
 
@@ -130,7 +174,74 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
         <Transition transition="pop-top-right" duration={200} mounted={opened}>
           {(styles) => (
             <Paper className={classes.dropdown} withBorder style={styles}>
-              {items}
+              <Link href="/">
+                <a
+                  key="Home"
+                  className={cx(classes.link, router.pathname == '/' ? classes.linkActive : '')}
+                  onClick={(event) => {
+                    close();
+                  }}
+                >
+                  Home
+                </a>
+              </Link>
+
+              <Link href="/about">
+                <a
+                  key="About"
+                  className={cx(
+                    classes.link,
+                    router.pathname == '/about' ? classes.linkActive : ''
+                  )}
+                  onClick={(event) => {
+                    close();
+                  }}
+                >
+                  About
+                </a>
+              </Link>
+
+              <Link href="/games">
+                <a
+                  key="Games"
+                  className={cx(
+                    classes.link,
+                    router.pathname == '/games' ? classes.linkActive : ''
+                  )}
+                  onClick={(event) => {
+                    close();
+                  }}
+                >
+                  Games
+                </a>
+              </Link>
+
+              <Link href="/blog">
+                <a
+                  key="Blog"
+                  className={cx(classes.link, router.pathname == '/blog' ? classes.linkActive : '')}
+                  onClick={(event) => {
+                    close();
+                  }}
+                >
+                  Blog
+                </a>
+              </Link>
+
+              <Link href="/social">
+                <a
+                  key="Social"
+                  className={cx(
+                    classes.link,
+                    router.pathname == '/social' ? classes.linkActive : ''
+                  )}
+                  onClick={(event) => {
+                    close();
+                  }}
+                >
+                  Social
+                </a>
+              </Link>
             </Paper>
           )}
         </Transition>

@@ -2,11 +2,11 @@ import {
   createStyles,
   Image,
   Container,
-  Title,
   Group,
   Text,
   UnstyledButton,
   Tooltip,
+  Space,
 } from '@mantine/core';
 import Link from 'next/link';
 import googleplay from '../public/images/playstorebutton.png';
@@ -29,38 +29,45 @@ const useStyles = createStyles((theme) => ({
   },
 
   content: {
-    maxWidth: 380,
+    maxWidth: 400,
     justifyContent: 'center',
     display: 'flex',
     flexDirection: 'column',
 
     [theme.fn.smallerThan('md')]: {
-      maxWidth: '100%',
+      maxWidth: '100',
       marginRight: 0,
     },
   },
 
-  title: {
-    color: theme.colorScheme === 'dark' ? theme.white : theme.black,
-    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-    fontSize: 44,
-    lineHeight: 1.2,
-    fontWeight: 1000,
+  contentmobile: {
+    maxWidth: 600,
+    [theme.fn.smallerThan(425)]: {
+      maxWidth: '100%',
+    },
+  },
 
+  title: {
+    fontSize: 42,
+    fontWeight: 650,
     [theme.fn.smallerThan('xs')]: {
       fontSize: 28,
     },
   },
 
-  control: {
+  gamestatus: {
+    fontSize: 20,
+    fontWeight: 700,
     [theme.fn.smallerThan('xs')]: {
-      flex: 1,
+      fontSize: 14,
     },
   },
 
-  image: {
-    [theme.fn.smallerThan('md')]: {
-      display: 'none',
+  p: {
+    fontSize: 16,
+    fontWeight: 400,
+    [theme.fn.smallerThan('xs')]: {
+      fontSize: 16,
     },
   },
 
@@ -72,6 +79,24 @@ const useStyles = createStyles((theme) => ({
     width: '300px',
     height: 80,
     maxWidth: 170,
+
+    [theme.fn.smallerThan(407)]: {
+      width: '150px',
+      height: 60,
+      maxWidth: 150,
+    },
+
+    [theme.fn.smallerThan(365)]: {
+      width: '135px',
+      height: 50,
+      maxWidth: 125,
+    },
+
+    [theme.fn.smallerThan(300)]: {
+      width: '100px',
+      height: 40,
+      maxWidth: 100,
+    },
   },
 
   buttonicon: {
@@ -79,11 +104,27 @@ const useStyles = createStyles((theme) => ({
     maxWidth: 170,
   },
 
-  highlight: {
-    position: 'relative',
-    backgroundColor: theme.fn.variant({ variant: 'light', color: theme.primaryColor }).background,
-    borderRadius: theme.radius.sm,
-    padding: '4px 12px',
+  hideonmobile: {
+    [theme.fn.smallerThan(991)]: {
+      display: 'none',
+    },
+  },
+
+  hideondesktop: {
+    [theme.fn.largerThan(991)]: {
+      display: 'none',
+    },
+  },
+
+  image: {
+    maxWidth: 500,
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    [theme.fn.smallerThan(425)]: {
+      width: '100%',
+      height: '100%',
+      objectFit: 'cover',
+    },
   },
 }));
 
@@ -93,140 +134,352 @@ export function games() {
   
   return (
     <div>
-      <Container>
-
+    <Container>
+      <div className={classes.hideonmobile}>
         <div className={classes.inner}>
+          <Image
+            src="https://res.cloudinary.com/starfun-games/image/upload/v1665115444/micro_rally.jpg"
+            width="450px"
+            height="450px"
+            radius="md"
+            alt="micro rally"
+          />
           <div className={classes.content}>
-            <Title className={classes.title}>Micro Rally</Title>
-            <Text color="dimmed" mt="md">
+            <Text className={classes.title}>Micro Rally</Text>
+            <Text className={classes.p} mt="md">
               Face the challenges of unique theme maps with many colorful cars. Gain bonuses 🚗.
-              from daring tricks and collect coins to get maps and by leveling up you can reach even
-              😎. greater distances with a small fuel capacity⛽.
+              from daring tricks and collect coins to get maps and by leveling up you can reach
+              even 😎. greater distances with a small fuel capacity⛽.
             </Text>
-            <Title mt={20} order={3}>
-              Coming Soon
-            </Title>
+            <Text mt={20} className={classes.gamestatus}>
+              coming soon
+            </Text>
+
             <Group>
               <Tooltip label="Google Play Store" color="dark" position="bottom" withArrow>
-                <UnstyledButton className={classes.button}>
-                  <Image src={googleplay.src} className={classes.buttonimage} />
+                <UnstyledButton aria-label="google play button" className={classes.button}>
+                  <Image
+                    alt="play store button image"
+                    src={googleplay.src}
+                    className={classes.buttonimage}
+                    width="170"
+                    height="51"
+                  />
                 </UnstyledButton>
               </Tooltip>
 
               <Tooltip label="Apple App Store" color="dark" position="bottom" withArrow>
-                <UnstyledButton className={classes.button}>
-                  <Image src={appstore.src} className={classes.buttonimage} />
+                <UnstyledButton aria-label="app store button" className={classes.button}>
+                  <Image
+                    alt="app store button image"
+                    src={appstore.src}
+                    className={classes.buttonimage}
+                    width="170"
+                    height="51"
+                  />
                 </UnstyledButton>
               </Tooltip>
             </Group>
           </div>
-          <Image
-            src={microraly.src}
-            width="380px"
-            height="380px"
-            radius="md"
-            className={classes.image}
-          />
         </div>
 
         <div className={classes.inner}>
-          <Image
-            src={finalroom.src}
-            width="380px"
-            height="380px"
-            radius="md"
-            className={classes.image}
-          />
           <div className={classes.content}>
-            <Title className={classes.title}>The Final Room</Title>
-            <Text color="dimmed" mt="md">
+            <Text className={classes.title}>The Final Room</Text>
+            <Text className={classes.p} mt="md">
               the final room is a First person psychological thriller game and we are hoping to
               release it in 2023 Q4
             </Text>
-            <Title mt={20} order={3}>
+            <Text mt={20} className={classes.gamestatus}>
               Coming Soon
-            </Title>
+            </Text>
             <Group mt="md">
               <Tooltip label="Steam" color="dark" position="bottom" withArrow>
-                <UnstyledButton className={classes.buttonicon}>
-                  <Image src={steam.src} />
+                <UnstyledButton aria-label="steam button" className={classes.buttonicon}>
+                  <Image width="50" height="50" alt="steam button image" src={steam.src} />
                 </UnstyledButton>
               </Tooltip>
 
               <Tooltip label="Epic Games" color="dark" position="bottom" withArrow>
-                <UnstyledButton className={classes.buttonicon}>
-                  <Image src={epicgames.src} />
+                <UnstyledButton aria-label="epic games button" className={classes.buttonicon}>
+                  <Image width="50" height="50" alt="epic game button image" src={epicgames.src} />
                 </UnstyledButton>
               </Tooltip>
-
               <Tooltip label="gog.com" color="dark" position="bottom" withArrow>
-                <UnstyledButton className={classes.buttonicon}>
-                  <Image src={gog.src} />
+                <UnstyledButton aria-label="gog.com button" className={classes.buttonicon}>
+                  <Image width="50" height="50" alt="gog.com button image" src={gog.src} />
                 </UnstyledButton>
               </Tooltip>
             </Group>
           </div>
+          <Image
+            src="https://res.cloudinary.com/starfun-games/image/upload/v1665115445/the_final_room.jpg"
+            width="450px"
+            height="450px"
+            radius="md"
+            alt="The Final Room"
+          />
         </div>
 
         <div className={classes.inner}>
+          <Image
+            src="https://res.cloudinary.com/starfun-games/image/upload/v1665115444/bug_star.jpg"
+            width="450px"
+            height="450px"
+            radius="md"
+            alt="bug star"
+          />
           <div className={classes.content}>
-            <Title className={classes.title}>Bug Star</Title>
-            <Text color="dimmed" mt="md">
+            <Text className={classes.title}>Bug Star</Text>
+            <Text className={classes.p} mt="md">
               "Bug Star" is a game based on bugs, which means you need to find the bugs that I
               intentionally added to the game & you need to use them to complete the levels.
             </Text>
-            <Title mt={20} order={3}>
+            <Text mt={20} className={classes.gamestatus}>
               Available Now
-            </Title>
+            </Text>
             <Group>
-              <UnstyledButton className={classes.button}>
-                <Link href="https://play.google.com/store/apps/details?id=com.HarindulkGames.microrally">
-                  <Image src={itchio.src} className={classes.buttonimage} />
-                </Link>
-              </UnstyledButton>
+              <Tooltip label="itch.io" color="dark" position="bottom" withArrow>
+                <UnstyledButton aria-label="itch.io button" className={classes.button}>
+                  <a target="_blank" href="https://harindulk.itch.io/bug-star">
+                    <Image
+                      alt="itch.io button image"
+                      src={itchio.src}
+                      className={classes.buttonimage}
+                      width="170"
+                      height="51"
+                    />
+                  </a>
+                </UnstyledButton>
+              </Tooltip>
             </Group>
           </div>
-          <Image
-            src={bugstar.src}
-            width="380px"
-            height="380px"
-            radius="md"
-            className={classes.image}
-          />
         </div>
 
         <div className={classes.inner}>
-          <Image
-            src={ghostzone.src}
-            width="380px"
-            height="380px"
-            radius="md"
-            className={classes.image}
-          />
           <div className={classes.content}>
-            <Title className={classes.title}>Ghost Zone</Title>
-            <Text color="dimmed" mt="md">
-              run fast. pass the incoming ghosts.👻
+            <Text className={classes.title}>Ghost Zone</Text>
+            <Text className={classes.p} mt="md">
+              Ghost zone is a small 2D game where you need to run fast and pass the incoming
+              ghosts.
             </Text>
-            <Title mt={20} order={3}>
+            <Text mt={20} className={classes.gamestatus}>
               Available Now
-            </Title>
+            </Text>
             <Group>
-              <UnstyledButton className={classes.button}>
-                <Image src={googleplay.src} className={classes.buttonimage} />
+              <Tooltip label="Google Play Store" color="dark" position="bottom" withArrow>
+                <UnstyledButton aria-label="play store button" className={classes.button}>
+                  <a
+                    target="_blank"
+                    href="https://play.google.com/store/apps/details?id=com.Harindulk.Ghostzone"
+                  >
+                    <Image
+                      alt="play store button image"
+                      src={googleplay.src}
+                      className={classes.buttonimage}
+                      width="170"
+                      height="51"
+                    />
+                  </a>
+                </UnstyledButton>
+              </Tooltip>
+
+              <Tooltip label="itch.io" color="dark" position="bottom" withArrow>
+                <UnstyledButton aria-label="itch.io button" className={classes.button}>
+                  <a target="_blank" href="https://harindulk.itch.io/ghost-zone">
+                    <Image
+                      alt="itch.io button image"
+                      src={itchio.src}
+                      className={classes.buttonimage}
+                      width="170"
+                      height="51"
+                    />
+                  </a>
+                </UnstyledButton>
+              </Tooltip>
+            </Group>
+          </div>
+          <Image
+            src="https://res.cloudinary.com/starfun-games/image/upload/v1665115444/ghost_zone.jpg"
+            width="450px"
+            height="450px"
+            radius="md"
+            alt="Ghost Zone"
+          />
+        </div>
+      </div>
+
+      <div className={classes.hideondesktop}>
+        <Image
+          src="https://res.cloudinary.com/starfun-games/image/upload/v1665115444/micro_rally.jpg"
+          className={classes.image}
+          radius="md"
+          alt="micro rally"
+          width= "500"
+          height="500"
+        />
+        <Space h="xl" />
+        <div className={classes.inner}>
+          <div className={classes.contentmobile}>
+            <Text className={classes.title}>Micro Rally</Text>
+            <Text className={classes.p} mt="md">
+              Face the challenges of unique theme maps with many colorful cars. Gain bonuses 🚗.
+              from daring tricks and collect coins to get maps and by leveling up you can reach
+              even 😎. greater distances with a small fuel capacity⛽.
+            </Text>
+            <Text mt={20} className={classes.gamestatus}>
+              coming soon
+            </Text>
+
+            <Group>
+              <UnstyledButton aria-label="google play button" className={classes.button}>
+                <Image
+                  alt="play store button image"
+                  src={googleplay.src}
+                  className={classes.buttonimage}
+                  width="170"
+                  height="51"
+                />
               </UnstyledButton>
 
-              <UnstyledButton className={classes.button}>
-                <Link href="https://play.google.com/store/apps/details?id=com.HarindulkGames.microrally">
-                  <Image src={itchio.src} className={classes.buttonimage} />
-                </Link>
+              <UnstyledButton aria-label="app store button" className={classes.button}>
+                <Image
+                  alt="app store button image"
+                  src={appstore.src}
+                  className={classes.buttonimage}
+                  width="170"
+                  height="51"
+                />
+              </UnstyledButton>
+            </Group>
+            <Space h="xl" />
+          </div>
+        </div>
+
+        <Image
+          src="
+          https://res.cloudinary.com/starfun-games/image/upload/v1665115445/the_final_room.jpg"
+          radius="md"
+          className={classes.image}
+          alt="the final room"
+          width= "500"
+          height="500"
+        />
+        <Space h="xl" />
+        <div className={classes.inner}>
+          <div className={classes.contentmobile}>
+            <Text className={classes.title}>The Final Room</Text>
+            <Text className={classes.p} mt="md">
+              the final room is a First person psychological thriller game and we are hoping to
+              release it in 2023 Q4
+            </Text>
+            <Text mt={20} className={classes.gamestatus}>
+              Coming Soon
+            </Text>
+            <Group mt="md">
+              <UnstyledButton aria-label="steam button" className={classes.buttonicon}>
+                <Image width="50" height="50" alt="steam button image" src={steam.src} />
+              </UnstyledButton>
+
+              <UnstyledButton aria-label="epic games button" className={classes.buttonicon}>
+                <Image width="50" height="50" alt="epic games button image" src={epicgames.src} />
+              </UnstyledButton>
+              <UnstyledButton aria-label="gog.com button" className={classes.buttonicon}>
+                <Image width="50" height="50" alt="gog.com button image" src={gog.src} />
+              </UnstyledButton>
+            </Group>
+            <Space h="xl" />
+          </div>
+        </div>
+
+        <Image
+          src="https://res.cloudinary.com/starfun-games/image/upload/v1665115444/bug_star.jpg"
+          className={classes.image}
+          radius="md"
+          alt="bug star"
+          width= "500"
+          height="500"
+        />
+        <Space h="xl" />
+        <div className={classes.inner}>
+          <div className={classes.contentmobile}>
+            <Text className={classes.title}>Bug Star</Text>
+            <Text className={classes.p} mt="md">
+              "Bug Star" is a game based on bugs, which means you need to find the bugs that I
+              intentionally added to the game & you need to use them to complete the levels.
+            </Text>
+            <Text mt={20} className={classes.gamestatus}>
+              Available Now
+            </Text>
+            <Group>
+              <UnstyledButton aria-label="itch.io button" className={classes.button}>
+                <a target="_blank" href="https://harindulk.itch.io/bug-star">
+                  <Image
+                    alt="itch.io button image"
+                    src={itchio.src}
+                    className={classes.buttonimage}
+                    width="170"
+                    height="51"
+                  />
+                </a>
+              </UnstyledButton>
+            </Group>
+            <Space h="xl" />
+          </div>
+        </div>
+
+        <Image
+          src="https://res.cloudinary.com/starfun-games/image/upload/v1665115444/ghost_zone.jpg"
+          className={classes.image}
+          radius="md"
+          alt="Ghost Zone"
+          width= "500"
+          height="500"
+        />
+        <Space h="xl" />
+        <div className={classes.inner}>
+          <div className={classes.contentmobile}>
+            <Text className={classes.title}>Ghost Zone</Text>
+            <Text className={classes.p} mt="md">
+              Ghost zone is a small 2D game where you need to run fast and pass the incoming
+              ghosts.
+            </Text>
+            <Text mt={20} className={classes.gamestatus}>
+              Available Now
+            </Text>
+            <Group>
+              <UnstyledButton aria-label="play store button" className={classes.button}>
+                <a
+                  target="_blank"
+                  href="https://play.google.com/store/apps/details?id=com.Harindulk.Ghostzone"
+                >
+                  <Image
+                    alt="play store button image"
+                    src={googleplay.src}
+                    className={classes.buttonimage}
+                    width="170"
+                    height="51"
+                  />
+                </a>
+              </UnstyledButton>
+
+              <UnstyledButton aria-label="itch.io button" className={classes.button}>
+                <a target="_blank" href="https://harindulk.itch.io/ghost-zone">
+                  <Image
+                    alt="itch.io button image"
+                    src={itchio.src}
+                    className={classes.buttonimage}
+                    width="170"
+                    height="51"
+                  />
+                </a>
               </UnstyledButton>
             </Group>
           </div>
         </div>
-        
-      </Container>
-    </div>
+      </div>
+    </Container>
+  </div>
   );
 }
 
