@@ -5,8 +5,12 @@ import {
   Title,
   Text,
   Grid,
+  Button,
+  Space,
+  Group,
 } from '@mantine/core';
 import harindu from '../../public/images/harindu.jpg';
+import Link from 'next/link';
 
 const useStyles = createStyles((theme) => ({
   homeleft: {
@@ -117,17 +121,39 @@ export function HomeBanner() {
                   I'm a 16 year old game developer & a student studying GCE O/l at Nalanda College
                   Colombo 10.
                 </Text>
-                
+
                 <Text mt={20} className={classes.p}>
-                 The youngest Google Verified Student in Sri Lanka.
-                </Text> 
+                  2021 Best ICT student in Sri Lanka Award Winner
+                </Text>
+                <Text className={classes.p}>
+                  The youngest Google Verified Student in Sri Lanka.
+                </Text>
+                <Space h="md" />
+                <Group>
+                  <Link href="/about" passHref>
+                    <Button variant="gradient" gradient={{ from: 'indigo', to: 'cyan' }}>
+                      About Harindu
+                    </Button>
+                  </Link>
+
+                  <Link href="/games" passHref>
+                    <Button variant="default">
+                      Video Games
+                    </Button>
+                  </Link>
+                </Group>
               </div>
             </div>
           </Grid.Col>
 
           <Grid.Col xs={12} sm={4}>
             <div className={classes.homeright}>
-              <Image src={harindu.src} alt="harindu fonseka" radius={350} className={classes.image} />
+              <Image
+                src={harindu.src}
+                alt="harindu fonseka"
+                radius={350}
+                className={classes.image}
+              />
             </div>
           </Grid.Col>
         </Grid>
