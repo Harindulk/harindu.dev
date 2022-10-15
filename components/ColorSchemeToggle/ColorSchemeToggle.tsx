@@ -8,6 +8,7 @@ export function ColorSchemeToggle() {
     <Group position="center" mt="xm">
       <ActionIcon
         onClick={() => toggleColorScheme()}
+        aria-label="dark/light mode toggle" 
         size="xl"
         sx={(theme) => ({
           backgroundColor:
