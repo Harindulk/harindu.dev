@@ -134,6 +134,7 @@ export function games() {
   
   return (
     <div>
+      <Space h="xl" />
     <Container>
       <div className={classes.hideonmobile}>
         <div className={classes.inner}>
