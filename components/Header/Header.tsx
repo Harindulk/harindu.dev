@@ -19,6 +19,17 @@ const useStyles = createStyles((theme) => ({
   root: {
     position: 'relative',
     zIndex: 1,
+    marginBottom: theme.spacing.xl * 4,
+    
+   
+    '@media (max-width: 768px)': {
+      marginBottom: theme.spacing.xl * 2,
+    },
+
+    '@media (max-width: 500px)': {
+      marginBottom: theme.spacing.xl * 0,
+    },
+
   },
 
   dropdown: {
@@ -54,7 +65,14 @@ const useStyles = createStyles((theme) => ({
     [theme.fn.largerThan('sm')]: {
       display: 'none',
     },
+   
   },
+
+hide: {
+  '@media (max-width: 309px)': {
+    display: 'none',
+  },
+},
 
   link: {
     display: 'block',
@@ -94,14 +112,16 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
   const router = useRouter();
 
   return (
-    <Header height={HEADER_HEIGHT} mb={100} className={classes.root}>
+    <Header height={HEADER_HEIGHT} className={classes.root}>
       <Container className={classes.header}>
         <Group spacing="xl">
           <Title order={2} weight={800} style={{ fontFamily: 'Poppins' }}>
             harindu.dev
           </Title>
           <div className={classes.burger}>
+            <div className={classes.hide}>
             <ColorSchemeToggle />
+            </div>
           </div>
         </Group>
 
@@ -165,11 +185,10 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
               Social
             </a>
           </Link>
-
           <ColorSchemeToggle />
         </Group>
 
-        <Burger opened={opened} onClick={toggle} className={classes.burger} size="sm" />
+        <Burger opened={opened} onClick={toggle} className={classes.burger} size="sm" aria-label="togglebutton" />
 
         <Transition transition="pop-top-right" duration={200} mounted={opened}>
           {(styles) => (
