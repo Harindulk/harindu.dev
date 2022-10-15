@@ -80,8 +80,8 @@ const useStyles = createStyles((theme) => ({
     justifyContent: 'center',
     marginLeft: 'auto',
     marginRight: 'auto',
-    height: '100px',
-    width: '100px',
+    maxWidth: '299px',
+    maxHeight: '299px',
     pointerEvents: 'none',
     WebkitUserSelect: 'none',
 
@@ -152,6 +152,8 @@ export function HomeBanner() {
                 src={harindu.src}
                 alt="harindu fonseka"
                 radius={350}
+                width="299"
+                height="299"
                 className={classes.image}
               />
             </div>
