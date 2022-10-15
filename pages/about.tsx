@@ -1,16 +1,10 @@
 import {
   createStyles,
-  Image,
   Container,
   Title,
-  Group,
   Text,
-  UnstyledButton,
-  Avatar,
   Highlight,
 } from '@mantine/core';
-import { IconCheck } from '@tabler/icons';
-import Link from 'next/link';
 import { SocialMedia } from '../components/SocialMedia/Socialstats';
 import socialstatsdata from '../data/socialstats.json';
 import Progress from '../components/Timeline/timeline';
@@ -18,6 +12,10 @@ import Progress from '../components/Timeline/timeline';
 const useStyles = createStyles((theme) => ({
   inner: {
     paddingBottom: theme.spacing.xl * 3,
+  
+    '@media (max-width: 500px)': {
+      marginTop: theme.spacing.xl * 2,
+    },
   },
 
   content: {
