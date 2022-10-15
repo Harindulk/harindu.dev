@@ -153,25 +153,25 @@ export function FooterLinks({ data }: FooterLinksProps) {
 
         <Group spacing={0} className={classes.social} position="right" noWrap>
           <Link href="https://twitter.com/Harindu_Fonseka">
-            <ActionIcon size="lg">
+            <ActionIcon aria-label='twitter' size="lg">
               <IconBrandTwitter size={23} stroke={1.5} />
             </ActionIcon>
           </Link>
 
           <Link href="https://www.youtube.com/channel/UCRyQGxzCgFb5wmsp1XAlWpQ">
-            <ActionIcon size="lg">
+            <ActionIcon aria-label='youtube' size="lg">
               <IconBrandYoutube size={23} stroke={1.5} />
             </ActionIcon>
           </Link>
 
           <Link href="https://www.instagram.com/harindulk/">
-            <ActionIcon size="lg">
+            <ActionIcon aria-label='instragram' size="lg">
               <IconBrandInstagram size={23} stroke={1.5} />
             </ActionIcon>
           </Link>
 
           <Link href="https://www.linkedin.com/in/harindu-fonseka/">
-            <ActionIcon size="lg">
+            <ActionIcon aria-label='linkedin' size="lg">
               <IconBrandLinkedin size={23} stroke={1.5} />
             </ActionIcon>
           </Link>
