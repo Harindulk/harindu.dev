@@ -3,8 +3,8 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 });
 
 module.exports = withBundleAnalyzer({
-  reactStrictMode: false,
-  eslint: {
-    ignoreDuringBuilds: true,
+  i18n: {
+    locales: ['en'],
+    defaultLocale: 'en',
   },
 });
