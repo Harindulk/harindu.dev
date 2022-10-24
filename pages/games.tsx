@@ -8,7 +8,6 @@ import {
   Tooltip,
   Space,
 } from '@mantine/core';
-import Link from 'next/link';
 import googleplay from '../public/images/playstorebutton.png';
 import appstore from '../public/images/appstorebutton.png';
 import itchio from '../public/images/itchiodark.png';
@@ -20,6 +19,7 @@ import epicgames from '../public/images/icons/EpicLogo_150.png';
 import steam from '../public/images/icons/SteamLogo_150.png';
 import gog from '../public/images/icons/GOGLogo_150.png';
 import gamesdata from '../data/games.json';
+import Head from 'next/head';
 
 const useStyles = createStyles((theme) => ({
   inner: {
