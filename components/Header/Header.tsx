@@ -20,14 +20,14 @@ const useStyles = createStyles((theme) => ({
     position: 'relative',
     zIndex: 1,
     marginBottom: theme.spacing.xl * 4,
-    
-   
+
+
     '@media (max-width: 768px)': {
       marginBottom: theme.spacing.xl * 2,
     },
 
     '@media (max-width: 500px)': {
-      marginBottom: theme.spacing.xl * 0,
+      marginBottom: theme.spacing.xl * 3,
     },
 
   },
@@ -65,14 +65,14 @@ const useStyles = createStyles((theme) => ({
     [theme.fn.largerThan('sm')]: {
       display: 'none',
     },
-   
+
   },
 
-hide: {
-  '@media (max-width: 309px)': {
-    display: 'none',
+  hide: {
+    '@media (max-width: 309px)': {
+      display: 'none',
+    },
   },
-},
 
   link: {
     display: 'block',
@@ -85,7 +85,7 @@ hide: {
     fontWeight: 500,
 
     '&:hover': {
-      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[3],
+      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[1],
     },
 
     [theme.fn.smallerThan('sm')]: {
@@ -94,19 +94,22 @@ hide: {
     },
   },
 
+  title: {
+    fontFamily: 'Poppins',
+    fontWeight: 700,
+    color: theme.colorScheme === 'dark' ? theme.colors.gray[0] : theme.colors.dark[9],
+  },
+
   linkActive: {
     '&, &:hover': {
-      backgroundColor: theme.fn.variant({ variant: 'light', color: theme.primaryColor }).background,
-      color: theme.fn.variant({ variant: 'light', color: theme.primaryColor }).color,
+      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[3],
     },
   },
 }));
 
-interface HeaderResponsiveProps {
-  links: { link: string; label: string }[];
-}
 
-export function HeaderResponsive({ links }: HeaderResponsiveProps) {
+
+export function HeaderResponsive() {
   const [opened, { toggle, close }] = useDisclosure(false);
   const { classes, cx } = useStyles();
   const router = useRouter();
@@ -115,12 +118,12 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
     <Header height={HEADER_HEIGHT} className={classes.root}>
       <Container className={classes.header}>
         <Group spacing="xl">
-          <Title order={2} weight={800} style={{ fontFamily: 'Poppins' }}>
+          <Title order={2} weight={800} className={classes.title}>
             harindu.dev
           </Title>
           <div className={classes.burger}>
             <div className={classes.hide}>
-            <ColorSchemeToggle />
+              <ColorSchemeToggle />
             </div>
           </div>
         </Group>
@@ -162,7 +165,7 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
             </a>
           </Link>
 
-          <Link href="/blog">
+          {/* <Link href="/blog">
             <a
               key="Blog"
               className={cx(classes.link, router.pathname == '/blog' ? classes.linkActive : '')}
@@ -184,7 +187,7 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
             >
               Social
             </a>
-          </Link>
+          </Link> */}
           <ColorSchemeToggle />
         </Group>
 
@@ -235,7 +238,7 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
                 </a>
               </Link>
 
-              <Link href="/blog">
+              {/* <Link href="/blog">
                 <a
                   key="Blog"
                   className={cx(classes.link, router.pathname == '/blog' ? classes.linkActive : '')}
@@ -260,7 +263,7 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
                 >
                   Social
                 </a>
-              </Link>
+              </Link> */}
             </Paper>
           )}
         </Transition>
