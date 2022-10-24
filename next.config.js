@@ -7,4 +7,7 @@ module.exports = withBundleAnalyzer({
     locales: ['en'],
     defaultLocale: 'en',
   },
+  images: {
+    domains: ['res.cloudinary.com'],
+  },
 });
