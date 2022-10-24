@@ -7,9 +7,10 @@ export function ColorSchemeToggle() {
   return (
     <Group position="center" mt="xm">
       <ActionIcon
+      radius="sm"
         onClick={() => toggleColorScheme()}
         aria-label="dark/light mode toggle" 
-        size="xl"
+        size="lg"
         sx={(theme) => ({
           backgroundColor:
             theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
