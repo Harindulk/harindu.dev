@@ -1,13 +1,12 @@
-import { Table, Container, Title, createStyles, Badge, useMantineTheme } from '@mantine/core';
+import { Table, Container, Title, createStyles, Badge, useMantineTheme, Stack,Button  } from '@mantine/core';
 import competitionsdata from '../../data/competitions.json';
 
 const useStyles = createStyles((theme) => ({
   title: {
     color: theme.colorScheme === 'dark' ? theme.white : theme.black,
-    fontFamily: `Poppins, ${theme.fontFamily}`,
     lineHeight: 1,
     marginBottom: theme.spacing.md,
-    
+    fontSize: 34,
   },
 
   table: {
@@ -57,7 +56,8 @@ export function Competitions() {
       <Title mt={100} className={classes.title}>
         Competitions
       </Title>
-      <Table mt={30} highlightOnHover fontSize={17}>
+
+      <Table>
         <thead >
           <tr>
             <th>Name</th>
