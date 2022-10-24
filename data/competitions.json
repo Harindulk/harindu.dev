@@ -1,6 +1,11 @@
 {
     "competitions": [
       {
+        "name": "Apicta - The Asia Pacific ICT Alliance Awards",
+        "Rank": "pending",
+        "Team": "Team 1"
+      },
+      {
         "name": "Thinkwave 4.0 - AIESEC in University of Moratuwa",
         "Rank": "pending",
         "Team": "Team Posiedon"

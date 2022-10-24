@@ -1,13 +1,18 @@
-import { HomeBanner } from '../components/HomeBanner/HomeBanner';
+import { Home } from '../components/Home/Home';
 import Demo from '../components/games/games';
-import { EmailBanner } from '../components/email/email';
 import Competitions from '../components/Competitions/Competitions';
+import { ArticleCardVertical } from '../components/expierience/expierience';
+import { EmailBanner } from '../components/banner/banner';
+import { Space } from '@mantine/core';
 
 export default function HomePage() {
   return (
     <>
-      <HomeBanner />
-      <Competitions />      
+      <Home />
+      <Space h={100} />
+      <ArticleCardVertical />
+      <Competitions />
+
     </>
   );
 }

@@ -11,6 +11,7 @@ import { FooterLinks } from '../components/Footer/FooterLinks';
 import navbardata from '../data/navbar.json';
 import footerdata from '../data/footer.json';
 
+
 export default function App(props: AppProps & { colorScheme: ColorScheme }) {
   const { Component, pageProps } = props;
   const [colorScheme, setColorScheme] = useState<ColorScheme>(props.colorScheme);
@@ -49,7 +50,7 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
           withNormalizeCSS
         >
           <NotificationsProvider>
-            <HeaderResponsive links={navbardata.props.links} />
+            <HeaderResponsive />
             <Component {...pageProps} />
             <FooterLinks data={footerdata.data} />
           </NotificationsProvider>

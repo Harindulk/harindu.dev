@@ -28,11 +28,10 @@ function Progress() {
           <Timeline active={4} reverseActive lineWidth={5} bulletSize={22}>
             <Timeline.Item title="2022">
             <Space h="xs" />
-              <Text className={classes.bold} size="lg" >
-              Got Selected for the "Best ICT Student in Sri Lanka" National Award
-              </Text>
+      
               <Space h="xs" />
               <List size="sm">
+                <List.Item>Got Selected for the "Best ICT Student in Sri Lanka" National Award</List.Item>
                 <List.Item>3rd Place in IDEALIZE 2022 - AIESEC in University of Moratuwa</List.Item>
                 <List.Item>4th Place in Cutting Edge Coding Competition IIT</List.Item>
                 <List.Item>made "Pain and Dice" Game in 48 hours</List.Item>
