@@ -13,11 +13,10 @@ const useStyles = createStyles((theme) => ({
     },
 
     image: {
-        maxWidth: '299px',
-        maxHeight: '299px',
+        maxWidth: '269px',
+        maxHeight: '269px',
         pointerEvents: 'none',
         WebkitUserSelect: 'none',
-
         [`@media (max-width: ${theme.breakpoints.md}px)`]: {
             maxWidth: '100%',
         },
@@ -104,7 +103,7 @@ export function Home() {
             <div className={classes.wrapper}>
                 <div className={classes.body}>
                     <Title className={classes.title}>
-                        Hi, I'm Harindu. <br /> I make games and apps.
+                        Hi, I'm Harindu. <br /> I make video games
                     </Title>
                     <Text mt={30} className={classes.p}>
                         I'm a 16 year old game developer & a student studying GCE O/l at Nalanda College
