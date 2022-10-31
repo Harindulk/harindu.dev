@@ -8,9 +8,8 @@ import { NotificationsProvider } from '@mantine/notifications';
 import '../src/Fonts/styles.css';
 import { HeaderResponsive } from '../components/Header/Header';
 import { FooterLinks } from '../components/Footer/FooterLinks';
-import navbardata from '../data/navbar.json';
 import footerdata from '../data/footer.json';
-
+import { RouterTransition } from '../components/routertransition/RouterTransition';
 
 export default function App(props: AppProps & { colorScheme: ColorScheme }) {
   const { Component, pageProps } = props;
@@ -21,6 +20,7 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
     setColorScheme(nextColorScheme);
     setCookie('mantine-color-scheme', nextColorScheme, { maxAge: 60 * 60 * 24 * 30 });
   };
+
 
   return (
     <>
@@ -50,6 +50,7 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
           withNormalizeCSS
         >
           <NotificationsProvider>
+          <RouterTransition />
             <HeaderResponsive />
             <Component {...pageProps} />
             <FooterLinks data={footerdata.data} />

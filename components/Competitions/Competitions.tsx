@@ -30,7 +30,7 @@ const jobColors: Record<string, string> = {
   'semi-finalist': 'yellow',
   'n/a': 'gray',
   pending: 'gray',
-  'most innovative idea': 'red',
+  'best idea': 'red',
 };
 
 export function Competitions() {
