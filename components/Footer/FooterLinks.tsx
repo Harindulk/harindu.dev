@@ -6,6 +6,8 @@ import {
   IconBrandLinkedin,
 } from '@tabler/icons';
 import Link from 'next/link';
+import footerdata from '../../data/footer.json';
+
 
 const useStyles = createStyles((theme) => ({
   footer: {
@@ -116,6 +118,7 @@ interface FooterLinksProps {
 
 export function FooterLinks({ data }: FooterLinksProps) {
   const { classes } = useStyles();
+  data= footerdata.data;
 
   const groups = data.map((group) => {
     const links = group.links.map((link, index) => (
@@ -179,3 +182,5 @@ export function FooterLinks({ data }: FooterLinksProps) {
     </footer>
   );
 }
+
+export default FooterLinks;

@@ -271,3 +271,5 @@ export function HeaderResponsive() {
     </Header>
   );
 }
+
+export default HeaderResponsive;

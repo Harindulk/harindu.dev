@@ -53,7 +53,7 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
           <RouterTransition />
             <HeaderResponsive />
             <Component {...pageProps} />
-            <FooterLinks data={footerdata.data} />
+            <FooterLinks data={[]} />
           </NotificationsProvider>
         </MantineProvider>
       </ColorSchemeProvider>
