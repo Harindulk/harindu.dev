@@ -1,2 +1,9 @@
+# *
 User-agent: *
 Allow: /
+
+# Host
+Host: https://harindu.dev
+
+# Sitemaps
+Sitemap: https://harindu.dev/sitemap.xml

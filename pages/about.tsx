@@ -6,7 +6,6 @@ import {
   Highlight,
 } from '@mantine/core';
 import { SocialMedia } from '../components/SocialMedia/Socialstats';
-import socialstatsdata from '../data/socialstats.json';
 import Progress from '../components/Timeline/timeline';
 
 const useStyles = createStyles((theme) => ({
@@ -117,7 +116,7 @@ export function about() {
         </div>
 
         <Progress />
-        <SocialMedia data={socialstatsdata.data} />
+        <SocialMedia data={[]} />
       </Container>
     </div>
   );

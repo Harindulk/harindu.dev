@@ -61,7 +61,7 @@ const useStyles = createStyles((theme) => ({
     },
 }));
 
-export function EmailBanner() {
+export function Email() {
     const { classes } = useStyles();
     return (
         <Container>
@@ -91,3 +91,5 @@ export function EmailBanner() {
 
     );
 }
+
+export default Email;

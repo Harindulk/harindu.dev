@@ -1,4 +1,4 @@
-import { createStyles, Card, Text, Group, Container } from '@mantine/core';
+import { createStyles, Card, Text, Group, Container, Button } from '@mantine/core';
 import { Carousel } from '@mantine/carousel';
 import Image from 'next/dist/client/image';
 
@@ -58,7 +58,7 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-export function ArticleCardVertical() {
+export function Expierience() {
   const { classes } = useStyles();
 
   return (
@@ -96,8 +96,10 @@ export function ArticleCardVertical() {
 
             <Text className={classes.description}>
               I won the 2021 best ICT student in Sri Lanka national award at the national ICT conference organized by the computer society of Sri Lanka. I got this award when I was 16 and I'm the youngest person from among other students who got this award in other years.
-
             </Text>
+
+           
+
           </div>
         </div>
 
@@ -170,7 +172,7 @@ export function ArticleCardVertical() {
             </Text>
 
             <Text className={classes.description}>
-            I'm proud to have completed over 31 invention, programming, and game development competitions from 2018 to 2022, and a lot of them are completed during the Covid-19 lockdown time. and I became the winner, 1st and 2nd runners-up, merit, and finalist in 23 of them.            </Text>
+              I'm proud to have completed over 31 invention, programming, and game development competitions from 2018 to 2022, and a lot of them are completed during the Covid-19 lockdown time. and I became the winner, 1st and 2nd runners-up, merit, and finalist in 23 of them.            </Text>
           </div>
         </div>
 
@@ -217,5 +219,6 @@ export function ArticleCardVertical() {
     </Container>
   );
 
-
 }
+
+export default Expierience;

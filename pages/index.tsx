@@ -1,8 +1,6 @@
 import { Home } from '../components/Home/Home';
-import Demo from '../components/games/games';
 import Competitions from '../components/Competitions/Competitions';
-import { ArticleCardVertical } from '../components/expierience/expierience';
-import { EmailBanner } from '../components/banner/banner';
+import { Expierience } from '../components/expierience/expierience';
 import { Space } from '@mantine/core';
 
 export default function HomePage() {
@@ -10,9 +8,8 @@ export default function HomePage() {
     <>
       <Home />
       <Space h={100} />
-      <ArticleCardVertical />
+      <Expierience />
       <Competitions />
-
     </>
   );
 }
