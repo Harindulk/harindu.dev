@@ -27,7 +27,6 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
       <Head>
         <title>Harindu Fonseka</title>
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
-        <link rel="shortcut icon" href="/favicon.svg" />
         <meta name="title" content="Harindu Fonseka ( Harindulk )" />
         <meta
           name="description"
@@ -41,6 +40,7 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
         <meta name="robots" content="index, follow" />
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="English" />
+        <link rel="icon" href="./favicon.png" />
       </Head>
 
       <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
