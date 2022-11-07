@@ -7,6 +7,7 @@ import {
 } from '@mantine/core';
 import { SocialMedia } from '../components/SocialMedia/Socialstats';
 import Progress from '../components/Timeline/timeline';
+import Head from 'next/head';
 
 const useStyles = createStyles((theme) => ({
   inner: {
@@ -29,11 +30,10 @@ const useStyles = createStyles((theme) => ({
   },
 
   title: {
-    color: theme.colorScheme === 'dark' ? theme.white : theme.black,
-    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+    color: theme.colorScheme === 'dark' ? theme.colors.gray[1] : theme.colors.gray[8],
     fontSize: 44,
     lineHeight: 1.2,
-    fontWeight: 1000,
+    fontWeight: 800,
 
     [theme.fn.smallerThan('xs')]: {
       fontSize: 28,
@@ -79,6 +79,11 @@ export function about() {
   const { classes } = useStyles();
   return (
     <div>
+      <Head>
+        <title>About</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+
+      </Head>
       <Container>
         <div className={classes.inner}>
           <div className={classes.content}>

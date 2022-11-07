@@ -82,7 +82,7 @@ const useStyles = createStyles((theme) => ({
     textDecoration: 'none',
     color: theme.colorScheme === 'dark' ? theme.colors.gray[0] : theme.colors.dark[9],
     fontSize: theme.fontSizes.sm,
-    fontWeight: 500,
+    fontWeight: 600,
 
     '&:hover': {
       backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[1],
@@ -95,9 +95,8 @@ const useStyles = createStyles((theme) => ({
   },
 
   title: {
-    fontFamily: 'Poppins',
     fontWeight: 700,
-    color: theme.colorScheme === 'dark' ? theme.colors.gray[0] : theme.colors.dark[9],
+    color: theme.colorScheme === 'dark' ? theme.colors.gray[0] : theme.colors.gray[8],
   },
 
   linkActive: {

@@ -1,7 +1,7 @@
 {
     "competitions": [
       {
-        "name": "Apicta - The Asia Pacific ICT Alliance Awards",
+        "name": "APICTA - The Asia Pacific ICT Alliance Awards",
         "Rank": "pending",
         "Team": "Team 1"
       },
@@ -12,18 +12,18 @@
       },
       {
         "name": "Young Computer Scientist Competition  2022",
-        "Rank": "pending",
-        "Team": "Harindu"
-      },
-      {
-        "name": "Cutting Edge Coding Competition  - IIT",
-        "Rank": "4th",
+        "Rank": "Winner",
         "Team": "Harindu"
       },
       {
         "name": "IDEALIZE 2022 - AIESEC in University of Moratuwa",
         "Rank": "2nd Runners Up",
         "Team": "Team Posiedon"
+      },
+      {
+        "name": "Cutting Edge Coding Competition  - IIT",
+        "Rank": "4th",
+        "Team": "Harindu"
       },
       {
         "name": "GMTK Game Jam 2022",

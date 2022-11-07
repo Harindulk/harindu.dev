@@ -1,0 +1,48 @@
+---
+title: Steps to get the SHA1/SHA256 key for windows users
+date: 'August 31, 2022'
+description: Learn how to get the SHA1 key for Firebase/Google Play Games in Unity.
+thumbnailUrl: '/unity-firebase.webp'
+tags: ['functions', 'javascript']
+---
+
+<div>
+  This is a blog post about <strong>functions</strong>. <br/>
+  We'll learn what functions are, how to write functions, and how to use them.
+</div>
+
+<br/>
+
+I saw a lot of people came into trouble about how to get the **SHA1 key**  after watching the ([Getting started with Firebase in Unity (2019) - Firecasts](https://www.youtube.com/watch?v=A6du3DUTIPI&list=PLl-K7zZEsYLmnCN-bgE-OYPTfbDKM9t1y)) youtube video 
+
+here is the quick process I did to get the SHA1 key
+
+open CMD and navigate into the `.android` folder by typing 
+
+> `cd .android`
+
+
+![cmd screenshot](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/hnlxp86hkntiyrksw0er.png) 
+ 
+after that type
+
+> `keytool -exportcert -keystore debug.keystore -list -v`
+
+![cmd screenshot](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/trd5n4m03kb39lxl9p44.png)
+
+ 
+and hit enter. it will ask you about the Keystore password
+your password is:
+
+> `android` 
+
+type `android` and hit enter (note: it's not showing the typing indicator at this point untill you type the password and hit enter)  
+
+that's it 🎉
+
+![cmd screenshot](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/szqjdsmbf4z7v5pdlaeg.png)
+ 
+now you can see the **SHA1 Key** 
+
+
+<div>Here I'm using a component inside my MarkDown file: {<Button text={"Click me"}/>}</div>

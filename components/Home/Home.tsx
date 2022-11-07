@@ -1,4 +1,4 @@
-import { createStyles, Text, Title, Space, Button, Image, Container, Group } from '@mantine/core';
+import { createStyles, Text, Title, Space, Button, Image, Group } from '@mantine/core';
 import Link from 'next/link';
 
 const useStyles = createStyles((theme) => ({
@@ -37,9 +37,10 @@ const useStyles = createStyles((theme) => ({
     },
 
     title: {
-        color: theme.colorScheme === 'dark' ? theme.white : theme.black,
-        fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+        color: theme.colorScheme === 'dark' ? theme.colors.gray[1] : theme.colors.gray[8],
         lineHeight: 1,
+        fontWeight: 800,
+        fontSize: 35,
         marginBottom: theme.spacing.md,
         paddingTop: theme.spacing.xl * 2,
 
@@ -85,7 +86,6 @@ const useStyles = createStyles((theme) => ({
         // Media query with value from theme
         [`@media (max-width: ${theme.breakpoints.sm}px)`]: {
             fontSize: 18,
-            fontFamily: `Inconsolata, ${theme.fontFamily}`,
         },
 
         // Static media query
@@ -99,7 +99,6 @@ const useStyles = createStyles((theme) => ({
 export function Home() {
     const { classes } = useStyles();
     return (
-        <Container>
             <div className={classes.wrapper}>
                 <div className={classes.body}>
                     <Title className={classes.title}>
@@ -140,7 +139,6 @@ export function Home() {
                     className={classes.image}
                 />
             </div>
-        </Container>
     );
 }
 

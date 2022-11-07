@@ -1,0 +1,80 @@
+import {
+  createStyles, Card, Container, Text, Group
+} from '@mantine/core';
+import Link from 'next/link'
+import fs from 'fs'
+import path from 'path'
+import matter from 'gray-matter'
+import Image from 'next/image';
+
+const useStyles = createStyles((theme) => ({
+  card: {
+    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.white,
+  },
+
+  title: {
+    fontWeight: 700,
+    fontFamily: `Roboto, ${theme.fontFamily}`,
+    lineHeight: 1.2,
+    fontSize: 22,
+  },
+
+  body: {
+    padding: theme.spacing.md,
+  },
+}));
+
+
+export function Blog({ posts }) {
+  const { classes } = useStyles();
+
+  return (
+    <Container>
+        {posts.map((post, index) => (
+          <Link href={'/blog/' + post.slug} passHref key={index}>
+            <Card  mt="xl" withBorder radius="md" p={0} className={classes.card}>
+              <Group noWrap spacing={0}>
+                <Image src={post.frontMatter.thumbnailUrl} height={140} width={140} />
+                <div className={classes.body}>
+                  <Text className={classes.title} mt="xs" mb="md">
+                    {post.frontMatter.title}
+                  </Text>
+                  <Text transform="uppercase" color="dimmed" weight={700} size="xs">
+                    {post.frontMatter.description}
+                  </Text>
+                  <Group noWrap spacing="xs">
+                    <Text size="xs" color="dimmed">
+                      {post.frontMatter.date}
+                    </Text>
+                  </Group>
+                </div>
+              </Group>
+            </Card>
+          </Link>
+        ))}
+    </Container>
+
+  )
+}
+
+export const getStaticProps = async () => {
+  const files = fs.readdirSync(path.join('posts'))
+
+  const posts = files.map(filename => {
+    const markdownWithMeta = fs.readFileSync(path.join('posts', filename), 'utf-8')
+    const { data: frontMatter } = matter(markdownWithMeta)
+
+    return {
+      frontMatter,
+      slug: filename.split('.')[0]
+    }
+  })
+
+  return {
+    props: {
+      posts
+    }
+  }
+}
+
+export default Blog;

@@ -139,7 +139,7 @@ export function FooterLinks({ data }: FooterLinksProps) {
     <footer className={classes.footer}>
       <Container className={classes.inner}>
         <div className={classes.logo}>
-          <Title order={2} weight={800} style={{ fontFamily: 'Poppins' }}>
+          <Title order={2} weight={800}>
             harindu.dev
           </Title>
           <Text size="xs" color="dimmed" className={classes.description}>
