@@ -9,7 +9,7 @@ import {
   Title,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { ColorSchemeToggle } from '../ColorSchemeToggle/ColorSchemeToggle';
+import { ColorSchemeToggle } from './ColorSchemeToggle';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 
@@ -95,8 +95,9 @@ const useStyles = createStyles((theme) => ({
   },
 
   title: {
+    fontFamily: 'OpenSans',
     fontWeight: 700,
-    color: theme.colorScheme === 'dark' ? theme.colors.gray[0] : theme.colors.gray[8],
+    color: theme.colorScheme === 'dark' ? theme.colors.gray[0] : theme.colors.gray[9],
   },
 
   linkActive: {
@@ -164,7 +165,7 @@ export function HeaderResponsive() {
             </a>
           </Link>
 
-          {/* <Link href="/blog">
+          <Link href="/blog">
             <a
               key="Blog"
               className={cx(classes.link, router.pathname == '/blog' ? classes.linkActive : '')}
@@ -175,7 +176,7 @@ export function HeaderResponsive() {
               Blog
             </a>
           </Link>
-
+          {/*
           <Link href="/social">
             <a
               key="Social"
@@ -237,7 +238,7 @@ export function HeaderResponsive() {
                 </a>
               </Link>
 
-              {/* <Link href="/blog">
+              <Link href="/blog">
                 <a
                   key="Blog"
                   className={cx(classes.link, router.pathname == '/blog' ? classes.linkActive : '')}
@@ -248,7 +249,7 @@ export function HeaderResponsive() {
                   Blog
                 </a>
               </Link>
-
+              {/*
               <Link href="/social">
                 <a
                   key="Social"

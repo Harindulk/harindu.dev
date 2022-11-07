@@ -4,16 +4,20 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import SyntaxHighlighter from 'react-syntax-highlighter'
+import { Container  } from '@mantine/core';
 
 
 const components = { SyntaxHighlighter }
 
 const PostPage = ({ frontMatter: { title, date }, mdxSource }) => {
   return (
+    <Container>
     <div className="mt-4">
       <h1>{title}</h1>
+      <h5>Posted on {date}</h5>
       <MDXRemote {...mdxSource} components={components}/>
     </div>
+    </Container>
   )
 }
 

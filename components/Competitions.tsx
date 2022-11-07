@@ -1,14 +1,12 @@
 import { Table, Container, Title, createStyles, Badge, useMantineTheme, Stack,Button  } from '@mantine/core';
-import competitionsdata from '../../data/competitions.json';
+import competitionsdata from '../data/competitions.json';
 
 const useStyles = createStyles((theme) => ({
   title: {
-    color: theme.colorScheme === 'dark' ? theme.colors.gray[1] : theme.colors.gray[8],
+    color: theme.colorScheme === 'dark' ? theme.white : theme.black,
     lineHeight: 1,
-    fontWeight: 800,
-    fontSize: 35,
     marginBottom: theme.spacing.md,
-
+    fontSize: 34,
   },
 
   table: {
@@ -17,33 +15,6 @@ const useStyles = createStyles((theme) => ({
 
   tableitem:{
     fontSize: 10,
-  },
-
-  leftwrapper: {
-    display: 'flex',
-    alignItems: 'center',
-    borderRadius: theme.radius.md,
-    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.white,
-    border: `1px solid ${theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[3]
-      }`,
-
-    [`@media (max-width: ${theme.breakpoints.sm}px)`]: {
-      flexDirection: 'column',
-    },
-  },
-
-  box: {
-    margin: theme.spacing.md,
-    display: 'flex',
-    alignItems: 'center',
-    borderRadius: theme.radius.md,
-    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.white,
-    border: `1px solid ${theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[3]
-      }`,
-
-    [`@media (max-width: ${theme.breakpoints.sm}px)`]: {
-      flexDirection: 'column',
-    },
   },
   
 }));
@@ -68,7 +39,6 @@ export function Competitions() {
   const theme = useMantineTheme();
 
   const rows = elements.map((element) => (
-    <body className={classes.box}>
     <tr key={element.name}>
       <td className={classes.tableitem} >{element.name}</td>
       <td >
@@ -79,16 +49,15 @@ export function Competitions() {
         </Badge>
       </td>
     </tr>
-    </body>
   ));
 
   return (
     <Container>
-      <div>
       <Title mt={100} className={classes.title}>
         Competitions
       </Title>
-      <div className={classes.leftwrapper}>
+
+      <Table>
         <thead >
           <tr>
             <th>Name</th>
@@ -96,9 +65,7 @@ export function Competitions() {
           </tr>
         </thead>
         <tbody >{rows}</tbody>
-      </div>
-      </div>
-
+      </Table>
     </Container>
   );
 }

@@ -86,7 +86,7 @@ export function Expierience() {
               }}
             >
 
-              <Carousel.Slide><Image loading='lazy' src="https://res.cloudinary.com/harindu-dev/image/upload/v1666548396/Untitled_design_2_ifo6sl.jpg" alt='@ National ICT Awards'   width="30" height="30"  /></Carousel.Slide>
+              <Carousel.Slide><Image loading='lazy' src="https://res.cloudinary.com/harindu-dev/image/upload/v1666548396/Untitled_design_2_ifo6sl.jpg" layout='fill' /></Carousel.Slide>
 
             </Carousel>
 
@@ -135,8 +135,8 @@ export function Expierience() {
                 },
               }}
             >
-              <Carousel.Slide><Image loading='lazy' src="https://res.cloudinary.com/harindu-dev/image/upload/v1666439267/15_pgf4qk.jpg" alt='@99x'  width="30" height="30" /></Carousel.Slide>
-              <Carousel.Slide><Image loading='lazy' src="https://res.cloudinary.com/harindu-dev/image/upload/v1666444005/8_ml3aeo.jpg" alt='@99x'  width="30" height="30"/></Carousel.Slide>
+              <Carousel.Slide><Image loading='lazy' src="https://res.cloudinary.com/harindu-dev/image/upload/v1666439267/15_pgf4qk.jpg" layout="fill" /></Carousel.Slide>
+              <Carousel.Slide><Image loading='lazy' src="https://res.cloudinary.com/harindu-dev/image/upload/v1666444005/8_ml3aeo.jpg" layout="fill" /></Carousel.Slide>
               {/* ...other slides */}
             </Carousel>
           </div>
@@ -161,9 +161,9 @@ export function Expierience() {
                 },
               }}
             >
-              <Carousel.Slide><Image loading='lazy' src="https://res.cloudinary.com/harindu-dev/image/upload/v1666548652/Untitled_design_4_ehs6ur.jpg" alt='competitions'  width="30" height="30" /></Carousel.Slide>
-              <Carousel.Slide><Image loading='lazy' src="https://res.cloudinary.com/harindu-dev/image/upload/v1666548513/Untitled_design_3_nynae3.jpg" alt='competitions'  width="30" height="30" /></Carousel.Slide>
-              <Carousel.Slide><Image loading='lazy' src="https://res.cloudinary.com/harindu-dev/image/upload/v1666548766/Untitled_design_5_s52gcn.jpg" alt='competitions'  width="30" height="30" /></Carousel.Slide>
+              <Carousel.Slide><Image loading='lazy' src="https://res.cloudinary.com/harindu-dev/image/upload/v1666548652/Untitled_design_4_ehs6ur.jpg" layout="fill" /></Carousel.Slide>
+              <Carousel.Slide><Image loading='lazy' src="https://res.cloudinary.com/harindu-dev/image/upload/v1666548513/Untitled_design_3_nynae3.jpg" layout="fill" /></Carousel.Slide>
+              <Carousel.Slide><Image loading='lazy' src="https://res.cloudinary.com/harindu-dev/image/upload/v1666548766/Untitled_design_5_s52gcn.jpg" layout="fill" /></Carousel.Slide>
             </Carousel>
             <div className={classes.body}>
 
@@ -207,7 +207,7 @@ export function Expierience() {
                 },
               }}
             >
-              <Carousel.Slide><Image loading='lazy' src="https://res.cloudinary.com/harindu-dev/image/upload/v1666548766/Untitled_design_6_b59vsf" alt='starfun games'  width="30" height="30" /></Carousel.Slide>
+              <Carousel.Slide><Image loading='lazy' src="https://res.cloudinary.com/harindu-dev/image/upload/v1666548766/Untitled_design_6_b59vsf" layout="fill" /></Carousel.Slide>
             </Carousel>
           </div>
 

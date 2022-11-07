@@ -6,6 +6,7 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 import Image from 'next/image';
+import Head from 'next/head'
 
 const useStyles = createStyles((theme) => ({
   card: {
@@ -29,10 +30,15 @@ export function Blog({ posts }) {
   const { classes } = useStyles();
 
   return (
-    <Container>
+    <div>
+      <Head>
+        <title>Blog</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+      <Container>
         {posts.map((post, index) => (
           <Link href={'/blog/' + post.slug} passHref key={index}>
-            <Card  mt="xl" withBorder radius="md" p={0} className={classes.card}>
+            <Card mt="xl" withBorder radius="md" p={0} className={classes.card}>
               <Group noWrap spacing={0}>
                 <Image src={post.frontMatter.thumbnailUrl} height={140} width={140} />
                 <div className={classes.body}>
@@ -52,8 +58,8 @@ export function Blog({ posts }) {
             </Card>
           </Link>
         ))}
-    </Container>
-
+      </Container>
+    </div>
   )
 }
 

@@ -6,7 +6,7 @@ import {
   IconBrandLinkedin,
 } from '@tabler/icons';
 import Link from 'next/link';
-import footerdata from '../../data/footer.json';
+import footerdata from '../data/footer.json';
 
 
 const useStyles = createStyles((theme) => ({
@@ -150,7 +150,7 @@ export function FooterLinks({ data }: FooterLinksProps) {
       </Container>
       <Container className={classes.afterFooter}>
         <Text color="dimmed" size="sm">
-          © 2020 harindu.dev. All rights reserved.
+          © 2022 harindu.dev.
         </Text>
 
         <Group spacing={0} className={classes.social} position="right" noWrap>

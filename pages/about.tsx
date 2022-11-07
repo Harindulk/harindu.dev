@@ -5,8 +5,8 @@ import {
   Text,
   Highlight,
 } from '@mantine/core';
-import { SocialMedia } from '../components/SocialMedia/Socialstats';
-import Progress from '../components/Timeline/timeline';
+import { SocialMedia } from '../components/Socialstats';
+import Progress from '../components/timeline';
 import Head from 'next/head';
 
 const useStyles = createStyles((theme) => ({
@@ -82,8 +82,8 @@ export function about() {
       <Head>
         <title>About</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-
       </Head>
+      
       <Container>
         <div className={classes.inner}>
           <div className={classes.content}>
