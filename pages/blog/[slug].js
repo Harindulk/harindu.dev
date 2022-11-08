@@ -3,20 +3,56 @@ import { MDXRemote } from 'next-mdx-remote'
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import SyntaxHighlighter from 'react-syntax-highlighter'
-import { Container  } from '@mantine/core';
+import { Container } from '@mantine/core';
+import { Prism } from '@mantine/prism';
+import { Image, Code, Title, createStyles } from '@mantine/core';
+import Head from 'next/head'
 
+const useStyles = createStyles((theme) => ({
+  title: {
+    color: theme.colorScheme === 'dark' ? theme.white : theme.black,
+    lineHeight: 1,
+    marginBottom: theme.spacing.md,
+    fontSize: 45,
+    textheight: 1.2,
+  },
 
-const components = { SyntaxHighlighter }
+  table: {
+    borderStyle: 'solid',
+  },
 
-const PostPage = ({ frontMatter: { title, date }, mdxSource }) => {
+  tableitem: {
+    fontSize: 10,
+  },
+
+}));
+
+const components = { Prism, Image, Code }
+
+const PostPage = ({ frontMatter: { title, date, thumbnailUrl, description }, mdxSource }) => {
+  const { classes } = useStyles();
   return (
-    <Container>
-    <div className="mt-4">
-      <h1>{title}</h1>
-      <h5>Posted on {date}</h5>
-      <MDXRemote {...mdxSource} components={components}/>
-    </div>
+    <Container size={800}>
+      <Head>
+        <title>{title} - Harindu Fonseka</title>
+
+        <meta name="title" content={title} />
+        <meta name="description" content={description} />
+        <meta name="author" content="Harindu Fonseka" />
+
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://harindu.dev" />
+        <meta property="og:image" content={thumbnailUrl}/>
+
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+      <div className="mt-4">
+        <Title className={classes.title}>{title}</Title>
+        <h5>Posted on {date}</h5>
+        <MDXRemote {...mdxSource} components={components} />
+      </div>
     </Container>
   )
 }
