@@ -48,6 +48,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   title: {
+    color: theme.colorScheme === 'dark' ? theme.colors.gray[0] : theme.colors.dark[9],
     fontSize: 42,
     fontWeight: 650,
     [theme.fn.smallerThan('xs')]: {

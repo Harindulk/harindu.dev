@@ -34,13 +34,13 @@ const PostPage = ({ frontMatter: { title, date, thumbnailUrl, description }, mdx
   return (
     <Container size={800}>
       <Head>
-        <title>{title} - Harindu Fonseka</title>
+        <title>{title + ' - Harindu Fonseka'}</title>
 
-        <meta name="title" content={title} />
+        <meta name="title" content={title + ' - Harindu Fonseka'} />
         <meta name="description" content={description} />
         <meta name="author" content="Harindu Fonseka" />
 
-        <meta property="og:title" content={title} />
+        <meta property="og:title" content={title + ' - Harindu Fonseka'} />
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://harindu.dev" />

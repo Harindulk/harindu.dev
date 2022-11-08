@@ -1,5 +1,4 @@
 import { Home } from '../components/Home';
-import Competitions from '../components/Competitions';
 import { Expierience } from '../components/expierience';
 import { TableSort } from '../components/hackthons';
 import { Space,Container } from '@mantine/core';

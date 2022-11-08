@@ -9,6 +9,7 @@ import '../src/Fonts/styles.css';
 import { HeaderResponsive } from '../components/Header';
 import { FooterLinks } from '../components/FooterLinks';
 import { RouterTransition } from '../components/RouterTransition';
+import favicon from '../public/favicon.png';
 
 export default function App(props: AppProps & { colorScheme: ColorScheme }) {
   const { Component, pageProps } = props;
@@ -35,7 +36,7 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
         <meta name="google-site-verification" content="RQKIyXih772pTDirvoZsElb7O5YbZ_dHFiykklbPgKg"/>
         <meta name="robots" content="index, follow" />
         <meta name="language" content="English" />
-        <link rel="icon" href="./favicon.png" />
+        <link rel="shortcut icon" href={favicon.src} type="image/x-icon" />
       </Head>
 
       <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>

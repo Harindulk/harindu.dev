@@ -34,6 +34,28 @@ const jobColors: Record<string, string> = {
     pending: 'gray',
     'best idea': 'red',
 };
+
+const useStyles = createStyles((theme) => ({
+    title: {
+      color: theme.colorScheme === 'dark' ? theme.colors.gray[1] : theme.colors.dark,
+      fontSize: 40,
+      lineHeight: 1.2,
+      fontWeight: 800,
+  
+      [theme.fn.smallerThan('xs')]: {
+        fontSize: 28,
+      },
+    },
+
+    paragraph : {
+        fontSize: 16,
+        lineHeight: 1.4,
+        fontWeight: 400,
+        marginTop: theme.spacing.lg,
+        marginBottom: theme.spacing.xl,
+    }
+  
+  }));
   
 function filterData(data: RowData[], search: string) {
     data = competitionsdata.competitions;
@@ -68,6 +90,7 @@ function sortData(
 export function TableSort({ data }: TableSortProps) {
     data = competitionsdata.competitions;
     const theme = useMantineTheme();
+    const { classes } = useStyles();
 
     const [search, setSearch] = useState('');
     const [sortedData, setSortedData] = useState(data);
@@ -92,7 +115,10 @@ export function TableSort({ data }: TableSortProps) {
     ));
 
     return (
+        
         <div>
+            <Text className={classes.title}>Competitions</Text>
+            <Text className={classes.paragraph}>I'm participating in different kinds of competitions since  2018, mostly about coding and inventions. in total, I've completed 33 competitions. Use the search below to filter by name or rank.</Text>
             <TextInput
                 placeholder="Search by any field"
                 mb="md"

@@ -40,7 +40,6 @@ export function Blog({ posts }) {
           <Link href={'/blog/' + post.slug} passHref key={index}>
             <Card mt="xl" withBorder radius="md" p={0} className={classes.card}>
               <Group noWrap spacing={0}>
-                <Image src={post.frontMatter.thumbnailUrl} height={140} width={140} />
                 <div className={classes.body}>
                   <Text className={classes.title} mt="xs" mb="md">
                     {post.frontMatter.title}

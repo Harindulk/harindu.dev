@@ -22,7 +22,6 @@ const useStyles = createStyles((theme) => ({
     },
 
     title: {
-        fontFamily: 'OpenSans',
         color: theme.colorScheme === 'dark' ? theme.colors.gray[0] : theme.colors.dark[9],
         lineHeight: 1,
         fontSize: 35,
@@ -68,7 +67,7 @@ const useStyles = createStyles((theme) => ({
     },
 
     p: {
-        color: theme.colorScheme === 'dark' ? theme.colors.gray[0] : theme.colors.gray[8],
+        color: theme.colorScheme === 'dark' ? theme.colors.gray[0] : theme.colors.gray[9],
         fontSize: 16,
         lineHeight: 1.2,
         letterSpacing: 0.9,
@@ -85,11 +84,10 @@ const useStyles = createStyles((theme) => ({
     },
 
     p2: {
-        color: theme.colorScheme === 'dark' ? theme.colors.gray[5] : theme.colors.gray[8],
-        fontSize: 16,
-        lineHeight: 1.2,
         letterSpacing: 0.9,
-        fontWeight: 500,
+        fontSize: 16,
+        lineHeight: 1.4,
+        fontWeight: 400,
         // Media query with value from theme
         [`@media (max-width: ${theme.breakpoints.sm}px)`]: {
             fontSize: 18,
@@ -126,9 +124,9 @@ export function Home() {
                 <Grid justify="space-between">
 
                     <Grid.Col sm={7} lg={8}>
-                        <Title order={1} className={classes.title}>
+                        <Text className={classes.title}>
                             Hi, I'm Harindu. <br />I make video games
-                        </Title>
+                        </Text>
                         <Text className={classes.p}>
                             2021 Best ICT student in Sri Lanka
                         </Text>
@@ -184,9 +182,9 @@ export function Home() {
                     </Grid.Col>
 
                     <Grid.Col sm={7} lg={8}>
-                        <Title order={1} className={classes.title}>
+                        <Text className={classes.title}>
                             Hi, I'm Harindu. <br />I make video games
-                        </Title>
+                        </Text>
                         <Text className={classes.p}>
                             2021 Best ICT student in Sri Lanka
                         </Text>
@@ -213,8 +211,8 @@ export function Home() {
                                 </Button>
                             </Link>
                         </Group>
-                    </Grid.Col>
 
+                    </Grid.Col>
                 </Grid>
             </div>
         </div>
