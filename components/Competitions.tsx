@@ -43,9 +43,9 @@ export function Competitions() {
       <td className={classes.tableitem} >{element.name}</td>
       <td >
         <Badge
-          color={jobColors[element.Rank.toLowerCase()]}
+          color={jobColors[element.rank.toLowerCase()]}
           variant={theme.colorScheme === 'dark' ? 'light' : 'outline'} >
-          {element.Rank}
+          {element.rank}
         </Badge>
       </td>
     </tr>
@@ -61,7 +61,7 @@ export function Competitions() {
         <thead >
           <tr>
             <th>Name</th>
-            <th>Rank</th>
+            <th>rank</th>
           </tr>
         </thead>
         <tbody >{rows}</tbody>
