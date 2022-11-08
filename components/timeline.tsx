@@ -15,7 +15,7 @@ const useStyles = createStyles((theme) => ({
 
   bold: {
     fontWeight: 700,
-    color : theme.colorScheme === 'dark' ? theme.colors.red[6] : theme.colors.red[7],
+    color: theme.colorScheme === 'dark' ? theme.colors.red[6] : theme.colors.red[7],
   },
 }));
 
@@ -27,23 +27,18 @@ function Progress() {
         <div className={classes.content}>
           <Timeline active={4} reverseActive lineWidth={5} bulletSize={22}>
             <Timeline.Item title="2022">
-            <Space h="xs" />
-      
               <Space h="xs" />
+
               <List size="sm">
-                <List.Item>Got Selected for the "Best ICT Student in Sri Lanka" National Award</List.Item>
+                <List.Item>Won the Young Computer Scientist Competition 2022 organuzed by Ministry of Education Sri Lanka </List.Item>
+                <List.Item>Got Selected as the "Best ICT Student in Sri Lanka" ( National Award )</List.Item>
                 <List.Item>3rd Place in IDEALIZE 2022 - AIESEC in University of Moratuwa</List.Item>
                 <List.Item>4th Place in Cutting Edge Coding Competition IIT</List.Item>
                 <List.Item>made "Pain and Dice" Game in 48 hours</List.Item>
                 <List.Item>got first internship from 99x at the age of 15</List.Item>
                 <List.Item>made "Poly Car" Game in 14 days</List.Item>
-                <List.Item>
-                  Won the Codeflow Hackathon - organized by Ananda College Colombo 10
-                </List.Item>
-                <List.Item>
-                  Bug Star Game Live-Steamed by Mish Manners and It got attension from foreign
-                  Gamers.
-                </List.Item>
+                <List.Item>Won the Codeflow Hackathon - organized by the Ananda College Colombo 10</List.Item>
+                <List.Item>Bug Star Game Live-Steamed by Mish Manners and It got attension from foreign Gamers.</List.Item>
               </List>
 
               <Space h="xs" />
@@ -73,7 +68,7 @@ function Progress() {
                   <List.Item>INNOV8 2020 - NSBM 3rd Place</List.Item>
                   <List.Item>Got 1st Place in Novus Technica 2019 - Nalanda College </List.Item>
                   <List.Item>
-                    one of my invention got selected to the top 10 inventions in Aurora 2019
+                    One of my invention got selected to the top 10 inventions in Aurora 2019
                     organized by Ananda College
                   </List.Item>
                 </List>
@@ -113,7 +108,11 @@ function Progress() {
             </Timeline.Item>
 
             <Timeline.Item title="2017">
-              <Text size="sm">December: Hello World! using Microbit Online Editor</Text>
+              <Text size="sm">
+                <List size="sm">
+                  <List.Item>Started learning MicroBit using the online playground</List.Item>
+                </List>
+              </Text>
             </Timeline.Item>
           </Timeline>
         </div>
