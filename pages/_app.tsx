@@ -8,7 +8,6 @@ import { NotificationsProvider } from '@mantine/notifications';
 import '../src/Fonts/styles.css';
 import { HeaderResponsive } from '../components/Header';
 import { FooterLinks } from '../components/FooterLinks';
-import footerdata from '../data/footer.json';
 import { RouterTransition } from '../components/RouterTransition';
 
 export default function App(props: AppProps & { colorScheme: ColorScheme }) {
@@ -33,12 +32,8 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
           content="Hi! I make games, I'm 15 years old programmer & Game Dev with over 4 years of experience. Harindu Fonseka, Student, GameDev, Web Designer, Visit harindu.dev"
         />
 
-        <meta
-          name="google-site-verification"
-          content="RQKIyXih772pTDirvoZsElb7O5YbZ_dHFiykklbPgKg"
-        />
+        <meta name="google-site-verification" content="RQKIyXih772pTDirvoZsElb7O5YbZ_dHFiykklbPgKg"/>
         <meta name="robots" content="index, follow" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="English" />
         <link rel="icon" href="./favicon.png" />
       </Head>
@@ -57,6 +52,7 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
           </NotificationsProvider>
         </MantineProvider>
       </ColorSchemeProvider>
+      
     </>
   );
 }
