@@ -31,7 +31,7 @@ const useStyles = createStyles((theme) => ({
 
   title: {
     color: theme.colorScheme === 'dark' ? theme.colors.gray[1] : theme.colors.gray[8],
-    fontSize: 44,
+    fontSize: 40,
     lineHeight: 1.2,
     fontWeight: 800,
 
@@ -83,13 +83,13 @@ export function about() {
         <title>About</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      
+
       <Container>
         <div className={classes.inner}>
           <div className={classes.content}>
-            <Title className={classes.title} order={3}>
+            <Text className={classes.title} >
               About
-            </Title>
+            </Text>
             <Text mt="md">
               <Highlight
                 className={classes.paragraph}
