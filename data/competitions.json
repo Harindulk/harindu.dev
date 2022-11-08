@@ -2,128 +2,164 @@
   "competitions": [
     {
       "name": "APICTA - The Asia Pacific ICT Alliance Awards",
-      "Rank": "pending"
+      "rank": "pending",
+      "year": "2022"
     },
     {
-      "name": "NSSC - NATIONAL SCHOOLS SOFTWARE COMPETITION",
-      "Rank": "pending"
+      "name": "NATIONAL SCHOOLS SOFTWARE COMPETITION - Ministry of Education Sri Lanka",
+      "rank": "pending",
+      "year": "2022"
     },
     {
       "name": "Thinkwave 4.0 - AIESEC in University of Moratuwa",
-      "Rank": "pending",
-      "Team": "Team Posiedon"
+      "rank": "pending",
+      "year": "2022"
     },
     {
-      "name": "YCS - Young Computer Scientist Competition 2022",
-      "Rank": "Winner"
+      "name": "Young Computer Scientist Competition 2022 - Ministry of Education Sri Lanka",
+      "rank": "Winner",
+      "year": "2022"
     },
     {
       "name": "IDEALIZE 2022 - AIESEC in University of Moratuwa",
-      "Rank": "2nd Runners Up"
+      "rank": "2nd Runners Up",
+      "year": "2022"
+    },
+    {
+      "name": "Hacktoberfest 2022",
+      "rank": "8 Approved PRs",
+      "year": "2022"
     },
     {
       "name": "Cutting Edge Coding Competition  - IIT",
-      "Rank": "4th"
+      "rank": "4th",
+      "year": "2022"
     },
     {
       "name": "GMTK Game Jam 2022",
-      "Rank": "352 / 3019"
+      "rank": "352 / 3019",
+      "year": "2022"
     },
     {
       "name": "Virtual Hackathon 2022 - Microsoft ",
-      "Rank": "Finalist"
+      "rank": "Finalist",
+      "year": "2022"
     },
     {
       "name": "DimensionX 2022 - Ananda College",
-      "Rank": "N/A"
+      "rank": "N/A",
+      "year": "2022"
     },
     {
       "name": "CodeFlow 2022 - Ananda College",
-      "Rank": "Winner"
+      "rank": "Winner",
+      "year": "2022"
     },
     {
       "name": "Aurora 2022 - University of Sri Jayewardenepura",
-      "Rank": "Finalist"
+      "rank": "Finalist",
+      "year": "2022"
     },
     {
       "name": "Million dollar challenge - TigerGraph ",
-      "Rank": "N/A"
+      "rank": "N/A",
+      "year": "2022"
     },
     {
       "name": "Codefest 2021 - SLIIT",
-      "Rank": "Finalist"
+      "rank": "Finalist",
+      "year": "2022"
     },
     {
       "name": "Hack: AI 2021",
-      "Rank": "Semi-Finalist"
+      "rank": "Semi-Finalist",
+      "year": "2021"
     },
     {
       "name": "GitHub GameOff Game Jam 2021",
-      "Rank": "40 / 519"
+      "rank": "40 / 519",
+      "year": "2021"
     },
     {
       "name": "GitHub OpenHackDay Sri Lanka 2021",
-      "Rank": "Top 10"
+      "rank": "Top 10",
+      "year": "2021"
     },
     {
       "name": "Hacktoberfest 2021",
-      "Rank": "7 Approved PRs"
+      "rank": "7 Approved PRs",
+      "year": "2021"
     },
     {
       "name": "Brackeys Game Jam 2021.2",
-      "Rank": "853 / 1729"
+      "rank": "853 / 1729",
+      "year": "2021"
     },
     {
       "name": "HackX Junior 2021 - University of Kelaniya",
-      "Rank": "N/A"
+      "rank": "N/A",
+      "year": "2021"
     },
     {
       "name": "IDEALIZE 2021 - AIESEC in University of Moratuwa",
-      "Rank": "Semi-Finalist"
+      "rank": "Semi-Finalist",
+      "year": "2021"
     },
     {
-      "name": "Sri Lankan Robotics Challenge 2020 - University of Moratuwa",
-      "Rank": "Semi-Finalist"
+      "name": "Sri Lankan Robotics Challenge 2021 - University of Moratuwa",
+      "rank": "N/A",
+      "year": "2021"
     },
     {
       "name": "INSTINCTUS 20 - Musaeus College",
-      "Rank": "5th"
+      "rank": "5th",
+      "year": "2021"
     },
     {
       "name": "Novus Technica 2020 - Nalanda College",
-      "Rank": "Winner"
+      "rank": "Winner",
+      "year": "2021"
     },
     {
       "name": "Sahasak Nimavum 2020 - Sri Lanka Inventors Commission",
-      "Rank": "N/A"
+      "rank": "N/A",
+      "year": "2020"
     },
     {
       "name": "INNOV8 2020 - NSBM",
-      "Rank": "2nd Runner Up"
+      "rank": "2nd Runner Up",
+      "year": "2020"
     },
     {
       "name": "Aurora 2019 - Ananda College",
-      "Rank": "Top 10"
+      "rank": "Top 10",
+      "year": "2020"
     },
     {
       "name": "Novus Technica 2019 - Nalanda College",
-      "Rank": "Winner"
+      "rank": "Winner",
+      "year": "2020"
     },
     {
       "name": "Sri Lankan Robotics Challenge 2019 - University of Moratuwa",
-      "Rank": "12th"
+      "rank": "12th",
+      "year": "2019"
     },
     {
       "name": "INNOVATIVE SAINTS 2019 - All Saints College",
-      "Rank": "2nd Runner Up"
+      "rank": "2nd Runner Up",
+      "year": "2019"
     },
     {
       "name": "Robotics Championship 2019 - Gateway College",
-      "Rank": "N/A"
+      "rank": "N/A",
+      "year": "2019"
+      
     },
     {
       "name": "Novus Technica 2018 - Nalanda College",
-      "Rank": "Best Idea"
+      "rank": "Best Idea",
+      "year": "2018"
     }
   ]
 }
