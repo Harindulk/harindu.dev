@@ -6,7 +6,7 @@ import {
   Burger,
   Paper,
   Transition,
-  Title,
+  Text,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { ColorSchemeToggle } from './ColorSchemeToggle';
@@ -85,7 +85,7 @@ const useStyles = createStyles((theme) => ({
     fontWeight: 600,
 
     '&:hover': {
-      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[1],
+      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.light,
     },
 
     [theme.fn.smallerThan('sm')]: {
@@ -95,9 +95,10 @@ const useStyles = createStyles((theme) => ({
   },
 
   title: {
-    fontFamily: 'OpenSans',
+    fontSize: 26,
     fontWeight: 700,
     color: theme.colorScheme === 'dark' ? theme.colors.gray[0] : theme.colors.gray[9],
+
   },
 
   linkActive: {
@@ -118,9 +119,9 @@ export function HeaderResponsive() {
     <Header height={HEADER_HEIGHT} className={classes.root}>
       <Container className={classes.header}>
         <Group spacing="xl">
-          <Title order={2} weight={800} className={classes.title}>
+          <Text className={classes.title}>
             harindu.dev
-          </Title>
+          </Text>
           <div className={classes.burger}>
             <div className={classes.hide}>
               <ColorSchemeToggle />
