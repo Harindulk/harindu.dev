@@ -11,13 +11,30 @@ import Head from 'next/head'
 const useStyles = createStyles((theme) => ({
   card: {
     backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.white,
+    cursor: 'pointer',
+
   },
 
   title: {
-    fontWeight: 700,
-    fontFamily: `Roboto, ${theme.fontFamily}`,
+    color: theme.colorScheme === 'dark' ? theme.colors.gray[0] : theme.black,
+    fontWeight: 600,
     lineHeight: 1.2,
-    fontSize: 22,
+    fontSize: 24,
+    cursor: 'pointer',
+
+    '&:hover': {
+      //underline text with a transition
+      transition: 'all 0.3s ease',
+    },
+    //transition to onclick other page
+  },
+
+  description: {
+    fontWeight: 400,
+    fontSize: 16,
+    lineHeight: 1.5,
+    color: theme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.colors.gray[7],
+
   },
 
   body: {
@@ -35,27 +52,27 @@ export function Blog({ posts }) {
         <title>Blog</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <Container>
+      <Container size={900}>
+
         {posts.map((post, index) => (
-          <Link href={'/blog/' + post.slug} passHref key={index}>
-            <Card mt="xl" withBorder radius="md" p={0} className={classes.card}>
+          <Link href={`/blog/${encodeURIComponent(post.slug)}`} passHref key={index}>
               <Group noWrap spacing={0}>
                 <div className={classes.body}>
-                  <Text className={classes.title} mt="xs" mb="md">
+                  <Text className={classes.title}  mb="xs">
                     {post.frontMatter.title}
-                  </Text>
-                  <Text transform="uppercase" color="dimmed" weight={700} size="xs">
-                    {post.frontMatter.description}
                   </Text>
                   <Group noWrap spacing="xs">
                     <Text size="xs" color="dimmed">
                       {post.frontMatter.date}
                     </Text>
                   </Group>
+                  <Text className={classes.description}>
+                    {post.frontMatter.description}
+                  </Text>
                 </div>
               </Group>
-            </Card>
           </Link>
+          
         ))}
       </Container>
     </div>
