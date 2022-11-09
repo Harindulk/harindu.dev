@@ -14,7 +14,6 @@ import competitionsdata from '../data/competitions.json';
 interface RowData {
     name: string;
     rank: string;
-    year: string;
 }
 
 interface TableSortProps {
@@ -115,8 +114,7 @@ export function TableSort({ data }: TableSortProps) {
     ));
 
     return (
-        
-        <div>
+        <div id='competitions'>
             <Text className={classes.title}>Competitions</Text>
             <Text className={classes.paragraph}>I'm participating in different kinds of competitions since  2018, mostly about coding and inventions. in total, I've completed 33 competitions. Use the search below to filter by name or rank.</Text>
             <TextInput
