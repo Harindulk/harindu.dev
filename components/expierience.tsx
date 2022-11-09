@@ -42,6 +42,7 @@ const useStyles = createStyles((theme) => ({
     [`@media (max-width: ${theme.breakpoints.sm}px)`]: {
       flexDirection: 'column',
     },
+
   },
 
   titlemain: {
@@ -74,6 +75,8 @@ export function Expierience() {
   const { classes } = useStyles();
 
   return (
+    <div id='highlights'>
+
     <Container size="md">
       <Text className={classes.titlemain}>Highlights</Text>
       <div>
@@ -126,7 +129,7 @@ export function Expierience() {
               <Group noWrap spacing="xs">
 
                 <Text className={classes.description}>
-                  I'm proud to have done an internship at 99x (one of the best software company in Sri Lanka) when I was 15 years old. I got it for 2 weeks after winning an all-island coding competition called 'Codeflow' by Ananda College Colombo 10.
+                  I'm proud to have done an internship at 99x (one of the best software company in Sri Lanka) when I was 15 years old. I got it after winning an all-island coding competition called 'Codeflow' by Ananda College Colombo 10.
                 </Text>
               </Group>
             </div>
@@ -227,6 +230,7 @@ export function Expierience() {
         </Group>
       </div>
     </Container>
+    </div>
   );
 
 }
