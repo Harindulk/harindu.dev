@@ -19,6 +19,8 @@ const useStyles = createStyles((theme) => ({
             maxWidth: '50%',
             marginTop: '0px',
         },
+
+        
     },
 
     title: {
