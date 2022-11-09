@@ -6,7 +6,7 @@ import {
   IconBrandLinkedin,
 } from '@tabler/icons';
 import Link from 'next/link';
-import footerdata from '../../data/footer.json';
+import footerdata from '../data/footer.json';
 
 
 const useStyles = createStyles((theme) => ({
@@ -14,7 +14,6 @@ const useStyles = createStyles((theme) => ({
     marginTop: 120,
     paddingTop: theme.spacing.xl * 2,
     paddingBottom: theme.spacing.xl * 2,
-    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
     borderTop: `1px solid ${
       theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[2]
     }`,
@@ -93,10 +92,6 @@ const useStyles = createStyles((theme) => ({
     marginTop: theme.spacing.xl,
     paddingTop: theme.spacing.xl,
     paddingBottom: theme.spacing.xl,
-    borderTop: `1px solid ${
-      theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[2]
-    }`,
-
     [theme.fn.smallerThan('sm')]: {
       flexDirection: 'column',
     },
@@ -107,6 +102,13 @@ const useStyles = createStyles((theme) => ({
       marginTop: theme.spacing.xs,
     },
   },
+
+  maintext : {
+    color: theme.colorScheme === 'dark' ? theme.white : theme.black,
+    fontSize: 28,
+    fontWeight: 700,
+  },
+
 }));
 
 interface FooterLinksProps {
@@ -139,9 +141,9 @@ export function FooterLinks({ data }: FooterLinksProps) {
     <footer className={classes.footer}>
       <Container className={classes.inner}>
         <div className={classes.logo}>
-          <Title order={2} weight={800} style={{ fontFamily: 'Poppins' }}>
+          <Text className={classes.maintext}>
             harindu.dev
-          </Title>
+          </Text>
           <Text size="xs" color="dimmed" className={classes.description}>
             if you want to contact me, please use Linkedin, Email, or Twitter.
           </Text>
@@ -150,7 +152,7 @@ export function FooterLinks({ data }: FooterLinksProps) {
       </Container>
       <Container className={classes.afterFooter}>
         <Text color="dimmed" size="sm">
-          © 2020 harindu.dev. All rights reserved.
+          © 2022 harindu.dev.
         </Text>
 
         <Group spacing={0} className={classes.social} position="right" noWrap>

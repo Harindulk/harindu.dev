@@ -15,8 +15,6 @@
     "prettier:check": "prettier --check \"**/*.{ts,tsx}\"",
     "prettier:write": "prettier --write \"**/*.{ts,tsx}\"",
     "test": "npm run prettier:check && npm run lint && npm run typecheck && npm run jest",
-    "storybook": "start-storybook -p 7001",
-    "storybook:build": "build-storybook",
     "sitemap": "next-sitemap --config next-sitemap.config.js"
   },
   "dependencies": {
@@ -30,21 +28,25 @@
     "@mantine/next": "5.2.7",
     "@mantine/notifications": "5.2.7",
     "@mantine/nprogress": "^5.6.2",
-    "@mantine/prism": "5.2.7",
+    "@mantine/prism": "^5.7.1",
     "@next/bundle-analyzer": "^12.3.1",
+    "@next/font": "^13.0.2",
     "@tabler/icons": "^1.78.1",
     "cookies-next": "^2.1.1",
     "dayjs": "^1.11.0",
     "embla-carousel-react": "^7.0.0",
+    "gray-matter": "^4.0.3",
     "next": "12.2.5",
+    "next-mdx-remote": "^4.1.0",
+    "next-seo": "^5.13.0",
     "next-sitemap": "^3.1.30",
     "next-seo": "^5.13.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "reading-time": "^1.5.0"
   },
   "devDependencies": {
     "@babel/core": "^7.17.8",
-    "@storybook/react": "^6.5.9",
     "@testing-library/dom": "^8.12.0",
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^13.0.0",
@@ -56,8 +58,6 @@
     "babel-loader": "^8.2.4",
     "jest": "^27.5.1",
     "prettier": "^2.6.2",
-    "storybook-addon-turbo-build": "^1.1.0",
-    "storybook-dark-mode": "^1.1.0",
     "ts-jest": "^27.1.4",
     "typescript": "4.7.4"
   }

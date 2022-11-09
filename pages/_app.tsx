@@ -6,10 +6,10 @@ import Head from 'next/head';
 import { MantineProvider, ColorScheme, ColorSchemeProvider } from '@mantine/core';
 import { NotificationsProvider } from '@mantine/notifications';
 import '../src/Fonts/styles.css';
-import { HeaderResponsive } from '../components/Header/Header';
-import { FooterLinks } from '../components/Footer/FooterLinks';
-import footerdata from '../data/footer.json';
-import { RouterTransition } from '../components/routertransition/RouterTransition';
+import { HeaderResponsive } from '../components/Header';
+import { FooterLinks } from '../components/FooterLinks';
+import { RouterTransition } from '../components/RouterTransition';
+import favicon from '../public/favicon.png';
 
 export default function App(props: AppProps & { colorScheme: ColorScheme }) {
   const { Component, pageProps } = props;
@@ -28,24 +28,24 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
         <title>Harindu Fonseka</title>
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
         <meta name="title" content="Harindu Fonseka ( Harindulk )" />
+
+        <meta name="referrer" content="origin" />
+
         <meta
           name="description"
           content="Hi! I make games, I'm 15 years old programmer & Game Dev with over 4 years of experience. Harindu Fonseka, Student, GameDev, Web Designer, Visit harindu.dev"
         />
 
-        <meta
-          name="google-site-verification"
-          content="RQKIyXih772pTDirvoZsElb7O5YbZ_dHFiykklbPgKg"
-        />
+        <meta name="google-site-verification" content="RQKIyXih772pTDirvoZsElb7O5YbZ_dHFiykklbPgKg"/>
         <meta name="robots" content="index, follow" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="English" />
-        <link rel="icon" href="./favicon.png" />
+        <link rel="shortcut icon" href={favicon.src} type="image/x-icon" />
       </Head>
+      
 
       <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
         <MantineProvider
-          theme={{ colorScheme, fontFamily: 'Poppins' }}
+          theme={{ colorScheme, fontFamily: 'Inter' }}
           withGlobalStyles
           withNormalizeCSS
         >
@@ -57,6 +57,7 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
           </NotificationsProvider>
         </MantineProvider>
       </ColorSchemeProvider>
+      
     </>
   );
 }

@@ -1,154 +1,164 @@
 {
-    "competitions": [
-      {
-        "name": "Apicta - The Asia Pacific ICT Alliance Awards",
-        "Rank": "pending",
-        "Team": "Team 1"
-      },
-      {
-        "name": "Thinkwave 4.0 - AIESEC in University of Moratuwa",
-        "Rank": "pending",
-        "Team": "Team Posiedon"
-      },
-      {
-        "name": "Young Computer Scientist Competition  2022",
-        "Rank": "pending",
-        "Team": "Harindu"
-      },
-      {
-        "name": "Cutting Edge Coding Competition  - IIT",
-        "Rank": "4th",
-        "Team": "Harindu"
-      },
-      {
-        "name": "IDEALIZE 2022 - AIESEC in University of Moratuwa",
-        "Rank": "2nd Runners Up",
-        "Team": "Team Posiedon"
-      },
-      {
-        "name": "GMTK Game Jam 2022",
-        "Rank": "352 / 3019",
-        "Team": "Harindulk Games"
-      },
-      {
-        "name": "Virtual Hackathon 2022 - Microsoft ",
-        "Rank": "Finalist", 
-        "Team": "Harindulk"
-      },
-      {
-        "name": "DimensionX 2022 - Ananda College",
-        "Rank": "N/A",
-        "Team": "Harindu"
-      },
-      {
-        "name": "CodeFlow 2022 - Ananda College",
-        "Rank": "Winner",
-        "Team": "Harindu"
-      },
-      {
-        "name": "Aurora 2022 - University of Sri Jayewardenepura",
-        "Rank": "Finalist",
-        "Team": "Harindu"
-      },
-      {
-        "name": "Million dollar challenge - TigerGraph ",
-        "Rank": "N/A",
-        "Team": "Harindulk"
-      },
-      {
-        "name": "Codefest 2021 - SLIIT",
-        "Rank": "Finalist",
-        "Team": "Harindulk"
-      },
-      {
-        "name": "Hack: AI 2021",
-        "Rank": "Semi-Finalist",
-        "Team": "Harindu"
-      },
-      {
-        "name": "GitHub GameOff Game Jam 2021",
-        "Rank": "40 / 519",
-        "Team": "Harindulk Games"
-      },
-      {
-        "name": "GitHub OpenHackDay Sri Lanka 2021",
-        "Rank": "Top 10",
-        "Team": "Harindulk"
-      },
-      {
-        "name": "Hacktoberfest 2021",
-        "Rank": "7 Approved PRs",
-        "Team": "Harindulk"
-      },
-      {
-        "name": "Brackeys Game Jam 2021.2",
-        "Rank": "853 / 1729",
-        "Team": "Harindulk Games"
-      },
-      {
-        "name": "HackX Junior 2021 - University of Kelaniya",
-        "Rank": "N/A",
-        "Team": "Sharks"
-      },
-      {
-        "name": "IDEALIZE 2021 - AIESEC in University of Moratuwa",
-        "Rank": "Semi-Finalist",
-        "Team": "Sharks"
-      },
-      {
-        "name": "Sri Lankan Robotics Challenge 2020 - University of Moratuwa",
-        "Rank": "Semi-Finalist",
-        "Team": "Sharks"
-      },
-      {
-        "name": "INSTINCTUS 20 - Musaeus College",
-        "Rank": "5th",
-        "Team": "Harindu"
-      },
-      {
-        "name": "Novus Technica 2020 - Nalanda College",
-        "Rank": "Winner",
-        "Team": "Harindu"
-      },
-      {
-        "name": "Sahasak Nimavum 2020 - Sri Lanka Inventors Commission",
-        "Rank": "N/A",
-        "Team": "Harindu"
-      },
-      {
-        "name": "INNOV8 2020 - NSBM",
-        "Rank": "2nd Runner Up",
-        "Team": "Harindu"
-      },
-      {
-        "name": "Aurora 2019 - Ananda College",
-        "Rank": "Top 10",
-        "Team": "Harindu"
-      },
-      {
-        "name": "Novus Technica 2019 - Nalanda College",
-        "Rank": "Winner",
-        "Team": "Harindu"
-      },
-      {
-        "name": "Sri Lankan Robotics Challenge 2019 - University of Moratuwa",
-        "Rank": "12th",
-        "Team": "Sharks"
-      },
-      {
-        "name": "INNOVATIVE SAINTS 2019 - All Saints College",
-        "Rank": "2nd Runner Up",
-        "Team": "Harindu"
-      },
-      {
-        "name": "Robotics Championship 2019 - Gateway College",
-        "Rank": "N/A",
-        "Team": "Harindu"
-      },
-      {
-        "name": "Novus Technica 2018 - Nalanda College",
-        "Rank": "Best Idea",
-        "Team": "Harindu"
-      }
-    ]
-  }
+  "competitions": [
+    {
+      "name": "APICTA - The Asia Pacific ICT Alliance Awards",
+      "rank": "pending",
+      "keywords": "international"
+    },
+    {
+      "name": "NATIONAL SCHOOLS SOFTWARE COMPETITION - Ministry of Education Sri Lanka",
+      "rank": "pending",
+      "keywords": "natoinal, government, nssc"
+    },
+    {
+      "name": "Thinkwave 4.0 - AIESEC in University of Moratuwa",
+      "rank": "pending",
+      "keywords": "natoinal, university"
+    },
+    {
+      "name": "Young Computer Scientist Competition 2022 - Ministry of Education Sri Lanka",
+      "rank": "Winner",
+      "keywords": "ycs, university, natoinal, government"
+    },
+    {
+      "name": "IDEALIZE 2022 - AIESEC in University of Moratuwa",
+      "rank": "2nd Runners Up",
+      "keywords": "university"
+    },
+    {
+      "name": "Hacktoberfest 2022",
+      "rank": "8 Approved PRs",
+      "keywords": "international"
+    },
+    {
+      "name": "Cutting Edge Coding Competition  - IIT",
+      "rank": "4th",
+      "keywords": "university"
+    },
+    {
+      "name": "GMTK Game Jam 2022",
+      "rank": "352 / 3019",
+      "keywords": "international"
+    },
+    {
+      "name": "Virtual Hackathon 2022 - Microsoft ",
+      "rank": "Finalist",
+      "keywords": "international"
+    },
+    {
+      "name": "DimensionX 2022 - Ananda College",
+      "rank": "N/A",
+      "keywords": "Ananda College, anandacollege, school"
+    },
+    {
+      "name": "CodeFlow 2022 - Ananda College",
+      "rank": "Winner",
+      "keywords": "Ananda College, anandacollege, school"
+    },
+    {
+      "name": "Aurora 2022 - University of Sri Jayewardenepura",
+      "rank": "Finalist",
+      "keywords": "university"
+    },
+    {
+      "name": "Million dollar challenge - TigerGraph ",
+      "rank": "N/A",
+      "keywords": "international"
+    },
+    {
+      "name": "Codefest 2021 - SLIIT",
+      "rank": "Finalist",
+      "keywords": "university"
+    },
+    {
+      "name": "Hack: AI 2021",
+      "rank": "Semi-Finalist",
+      "keywords": "international"
+    },
+    {
+      "name": "GitHub GameOff Game Jam 2021",
+      "rank": "40 / 519",
+      "keywords": "international"
+    },
+    {
+      "name": "GitHub OpenHackDay Sri Lanka 2021",
+      "rank": "Top 10",
+      "keywords": ""
+    },
+    {
+      "name": "Hacktoberfest 2021",
+      "rank": "7 Approved PRs",
+      "keywords": "international"
+    },
+    {
+      "name": "Brackeys Game Jam 2021.2",
+      "rank": "853 / 1729",
+      "keywords": "international"
+    },
+    {
+      "name": "HackX Junior 2021 - University of Kelaniya",
+      "rank": "N/A",
+      "keywords": "university"
+    },
+    {
+      "name": "IDEALIZE 2021 - AIESEC in University of Moratuwa",
+      "rank": "Semi-Finalist",
+      "keywords": "university"
+    },
+    {
+      "name": "Sri Lankan Robotics Challenge 2021 - University of Moratuwa",
+      "rank": "N/A",
+      "keywords": "natoinal, university"
+    },
+    {
+      "name": "INSTINCTUS 20 - Musaeus College",
+      "rank": "5th",
+      "keywords": "natoinal, school"
+    },
+    {
+      "name": "Novus Technica 2020 - Nalanda College",
+      "rank": "Winner",
+      "keywords": "nalanda college, nalandacollege, school"
+    },
+    {
+      "name": "Sahasak Nimavum 2020 - Sri Lanka Inventors Commission",
+      "rank": "N/A",
+      "keywords": "government, national"
+    },
+    {
+      "name": "INNOV8 2020 - NSBM",
+      "rank": "2nd Runner Up",
+      "keywords": "university, robotics"
+    },
+    {
+      "name": "Aurora 2019 - Ananda College",
+      "rank": "Top 10",
+      "keywords": "Ananda College, anandacollege, school"
+    },
+    {
+      "name": "Novus Technica 2019 - Nalanda College",
+      "rank": "Winner",
+      "keywords": "nalanda college, nalandacollege, school"
+    },
+    {
+      "name": "Sri Lankan Robotics Challenge 2019 - University of Moratuwa",
+      "rank": "12th",
+      "keywords": "university, robotics "
+    },
+    {
+      "name": "INNOVATIVE SAINTS 2019 - All Saints College",
+      "rank": "2nd Runner Up",
+      "keywords": "invention, innovation, school"
+    },
+    {
+      "name": "Robotics Championship 2019 - Gateway College",
+      "rank": "N/A",
+      "keywords": "Robotics, school"
+    },
+    {
+      "name": "Novus Technica 2018 - Nalanda College",
+      "rank": "Best Idea",
+      "keywords": "nalanda college, nalandacollege, school"
+    }
+  ]
+}

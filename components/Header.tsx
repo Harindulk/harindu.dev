@@ -6,10 +6,10 @@ import {
   Burger,
   Paper,
   Transition,
-  Title,
+  Text,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { ColorSchemeToggle } from '../ColorSchemeToggle/ColorSchemeToggle';
+import { ColorSchemeToggle } from './ColorSchemeToggle';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 
@@ -82,10 +82,10 @@ const useStyles = createStyles((theme) => ({
     textDecoration: 'none',
     color: theme.colorScheme === 'dark' ? theme.colors.gray[0] : theme.colors.dark[9],
     fontSize: theme.fontSizes.sm,
-    fontWeight: 500,
+    fontWeight: 600,
 
     '&:hover': {
-      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[1],
+      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.light,
     },
 
     [theme.fn.smallerThan('sm')]: {
@@ -95,9 +95,10 @@ const useStyles = createStyles((theme) => ({
   },
 
   title: {
-    fontFamily: 'Poppins',
+    fontSize: 26,
     fontWeight: 700,
-    color: theme.colorScheme === 'dark' ? theme.colors.gray[0] : theme.colors.dark[9],
+    color: theme.colorScheme === 'dark' ? theme.colors.gray[0] : theme.colors.gray[9],
+
   },
 
   linkActive: {
@@ -118,9 +119,9 @@ export function HeaderResponsive() {
     <Header height={HEADER_HEIGHT} className={classes.root}>
       <Container className={classes.header}>
         <Group spacing="xl">
-          <Title order={2} weight={800} className={classes.title}>
+          <Text className={classes.title}>
             harindu.dev
-          </Title>
+          </Text>
           <div className={classes.burger}>
             <div className={classes.hide}>
               <ColorSchemeToggle />
@@ -165,7 +166,7 @@ export function HeaderResponsive() {
             </a>
           </Link>
 
-          {/* <Link href="/blog">
+          <Link href="/blog">
             <a
               key="Blog"
               className={cx(classes.link, router.pathname == '/blog' ? classes.linkActive : '')}
@@ -176,7 +177,7 @@ export function HeaderResponsive() {
               Blog
             </a>
           </Link>
-
+          {/*
           <Link href="/social">
             <a
               key="Social"
@@ -238,7 +239,7 @@ export function HeaderResponsive() {
                 </a>
               </Link>
 
-              {/* <Link href="/blog">
+              <Link href="/blog">
                 <a
                   key="Blog"
                   className={cx(classes.link, router.pathname == '/blog' ? classes.linkActive : '')}
@@ -249,7 +250,7 @@ export function HeaderResponsive() {
                   Blog
                 </a>
               </Link>
-
+              {/*
               <Link href="/social">
                 <a
                   key="Social"
