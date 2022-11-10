@@ -94,7 +94,7 @@ const useStyles = createStyles((theme) => ({
 
     //show only on mobile
     mobile: {
-        marginTop: 60,  
+        marginTop: 60,
         display: 'none',
         '@media (max-width: 768px)': {
             display: 'block',
@@ -169,7 +169,7 @@ export function Home() {
                 <Grid>
                     <Grid.Col md={5} lg={3}>
                         <div className={classes.image}>
-                            <Image src="/https://res.cloudinary.com/harindu-dev/image/upload/v1664971567/harindu_fonseka.jpg"
+                            <Image src="https://res.cloudinary.com/harindu-dev/image/upload/v1664971567/harindu_fonseka.jpg"
                                 alt="harindu fonseka"
                                 width="250"
                                 height="250"
