@@ -20,14 +20,14 @@ const useStyles = createStyles((theme) => ({
     position: 'relative',
     zIndex: 1,
     marginBottom: theme.spacing.xl * 4,
-
+    borderBottom: `0px solid `,
 
     '@media (max-width: 768px)': {
       marginBottom: theme.spacing.xl * 2,
     },
 
     '@media (max-width: 500px)': {
-      marginBottom: theme.spacing.xl * 3,
+      marginBottom: theme.spacing.xl * 0,
     },
 
   },
@@ -75,17 +75,18 @@ const useStyles = createStyles((theme) => ({
   },
 
   link: {
+    fontFamily: `Greycliff CF Bold, ${theme.fontFamily}`,
     display: 'block',
     lineHeight: 1,
     padding: '8px 12px',
     borderRadius: theme.radius.sm,
     textDecoration: 'none',
     color: theme.colorScheme === 'dark' ? theme.colors.gray[0] : theme.colors.dark[9],
-    fontSize: theme.fontSizes.sm,
+    fontSize: 15,
     fontWeight: 600,
 
     '&:hover': {
-      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.light,
+      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[1],
     },
 
     [theme.fn.smallerThan('sm')]: {
@@ -95,6 +96,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   title: {
+    fontFamily: `Greycliff CF Bold, ${theme.fontFamily}`,
     fontSize: 26,
     fontWeight: 700,
     color: theme.colorScheme === 'dark' ? theme.colors.gray[0] : theme.colors.gray[9],
@@ -103,7 +105,7 @@ const useStyles = createStyles((theme) => ({
 
   linkActive: {
     '&, &:hover': {
-      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[3],
+      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[2],
     },
   },
 }));
