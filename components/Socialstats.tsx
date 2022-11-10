@@ -17,15 +17,18 @@ const useStyles = createStyles((theme) => ({
   },
 
   title: {
+    fontFamily: `Greycliff CF Bold, ${theme.fontFamily}`,
+
     color: theme.white,
-    textTransform: 'uppercase',
     fontWeight: 700,
-    fontSize: theme.fontSizes.sm,
+    fontSize: 16,
   },
 
   count: {
+    fontFamily: `Greycliff CF Bold, ${theme.fontFamily}`,
+
     color: theme.white,
-    fontSize: 32,
+    fontSize: 33,
     lineHeight: 1,
     fontWeight: 700,
     marginBottom: theme.spacing.md,
