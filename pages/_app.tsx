@@ -29,8 +29,6 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
         <meta name="title" content="Harindu Fonseka ( Harindulk )" />
         
-        <meta name="referrer" content="origin" />
-
         <meta
           name="description"
           content="Hi! I make games, I'm 15 years old programmer & Game Dev with over 4 years of experience. Harindu Fonseka, Student, GameDev, Web Designer, Visit harindu.dev"
