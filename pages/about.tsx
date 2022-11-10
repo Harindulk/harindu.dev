@@ -30,7 +30,8 @@ const useStyles = createStyles((theme) => ({
   },
 
   title: {
-    color: theme.colorScheme === 'dark' ? theme.colors.gray[1] : theme.colors.gray[8],
+    fontFamily: `Greycliff CF Bold, ${theme.fontFamily}`,
+    color: theme.colorScheme === 'dark' ? theme.colors.gray[1] : theme.colors.dark,
     fontSize: 40,
     lineHeight: 1.2,
     fontWeight: 800,
@@ -70,8 +71,16 @@ const useStyles = createStyles((theme) => ({
   },
 
   paragraph: {
-    fontSize: 16.9,
+    fontFamily: `Inter`,
+    color: theme.colorScheme === 'dark' ? theme.colors.gray[0] : theme.colors.dark,
+    fontSize: 17,
     lineHeight: 1.8,
+    fontWeight: 500,
+    
+    [theme.fn.smallerThan('xs')]: {
+      fontSize: 16,
+      lineHeight: 1.6,
+    },
   },
 }));
 
