@@ -28,7 +28,7 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
         <title>Harindu Fonseka</title>
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
         <meta name="title" content="Harindu Fonseka ( Harindulk )" />
-
+        
         <meta name="referrer" content="origin" />
 
         <meta
