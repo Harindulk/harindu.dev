@@ -156,7 +156,7 @@ export function games() {
             />
             <div className={classes.content}>
               <Text className={classes.title}>Micro Rally</Text>
-              <Text className={classes.p} >
+              <Text className={classes.p} mt="md" >
                 Face the challenges of unique theme maps with many colorful cars. Gain bonuses 🚗.
                 from daring tricks and collect coins to get maps and by leveling up you can reach
                 even 😎. greater distances with a small fuel capacity⛽.
