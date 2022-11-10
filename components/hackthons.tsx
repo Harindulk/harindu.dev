@@ -5,7 +5,10 @@ import {
     Text,
     TextInput,
     Badge,
-    useMantineTheme
+    useMantineTheme,
+    CopyButton,
+    ActionIcon, 
+    Tooltip 
 } from '@mantine/core';
 import { keys } from '@mantine/utils';
 import { IconSearch } from '@tabler/icons';
@@ -36,26 +39,27 @@ const jobColors: Record<string, string> = {
 
 const useStyles = createStyles((theme) => ({
     title: {
-      color: theme.colorScheme === 'dark' ? theme.colors.gray[1] : theme.colors.dark,
-      fontSize: 40,
-      lineHeight: 1.2,
-      fontWeight: 800,
-  
-      [theme.fn.smallerThan('xs')]: {
-        fontSize: 28,
-      },
+        fontFamily: `Greycliff CF Bold, ${theme.fontFamily}`,
+        color: theme.colorScheme === 'dark' ? theme.colors.gray[1] : theme.colors.dark,
+        fontSize: 36,
+        lineHeight: 1.2,
+        fontWeight: 800,
+
+        [theme.fn.smallerThan('xs')]: {
+            fontSize: 28,
+        },
     },
 
-    paragraph : {
+    paragraph: {
         fontSize: 16,
         lineHeight: 1.4,
         fontWeight: 400,
         marginTop: theme.spacing.lg,
         marginBottom: theme.spacing.xl,
     }
-  
-  }));
-  
+
+}));
+
 function filterData(data: RowData[], search: string) {
     data = competitionsdata.competitions;
 
@@ -106,10 +110,10 @@ export function TableSort({ data }: TableSortProps) {
         <tr key={row.name}>
             <td>{row.name}</td>
             <td> <Badge
-          color={jobColors[row.rank.toLowerCase()]}
-          variant={theme.colorScheme === 'dark' ? 'light' : 'outline'} >
-          {row.rank}
-        </Badge></td>
+                color={jobColors[row.rank.toLowerCase()]}
+                variant={theme.colorScheme === 'dark' ? 'light' : 'outline'} >
+                {row.rank}
+            </Badge></td>
         </tr>
     ));
 
