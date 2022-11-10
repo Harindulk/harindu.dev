@@ -16,6 +16,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   title: {
+    fontFamily: `Greycliff CF Bold, ${theme.fontFamily}`,
     fontWeight: 700,
     lineHeight: 1.2,
     fontSize: 25,
@@ -35,10 +36,7 @@ const useStyles = createStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     borderRadius: theme.radius.md,
-    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.white,
-    border: `1px solid ${theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[3]
-      }`,
-
+    backgroundColor: theme.colorScheme === 'dark' ? "#1F2225" :"#f9f9f9" ,
     [`@media (max-width: ${theme.breakpoints.sm}px)`]: {
       flexDirection: 'column',
     },
@@ -46,6 +44,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   titlemain: {
+    fontFamily: `Greycliff CF Bold, ${theme.fontFamily}`,
     color: theme.colorScheme === 'dark' ? theme.colors.gray[1] : theme.colors.dark,
     fontSize: 36,
     lineHeight: 1.1,
@@ -61,9 +60,7 @@ const useStyles = createStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     borderRadius: theme.radius.md,
-    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.white,
-    border: `1px solid ${theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[3]
-      }`,
+    backgroundColor: theme.colorScheme === 'dark' ? "#1F2225" :"#f9f9f9" ,
 
     [`@media (max-width: ${theme.breakpoints.sm}px)`]: {
       flexDirection: 'column-reverse',
@@ -77,7 +74,7 @@ export function Expierience() {
   return (
     <div id='highlights'>
 
-    <Container size="md">
+    <Container>
       <Text className={classes.titlemain}>Highlights</Text>
       <div>
 
