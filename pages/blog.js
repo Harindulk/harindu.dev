@@ -19,9 +19,9 @@ const useStyles = createStyles((theme) => ({
     color: theme.colorScheme === 'dark' ? theme.colors.gray[0] : theme.black,
     fontWeight: 600,
     lineHeight: 1.2,
-    fontSize: 24,
+    fontSize: 25,
     cursor: 'pointer',
-
+    fontFamily: `Greycliff CF Bold, ${theme.fontFamily}`,
     '&:hover': {
       //underline text with a transition
       transition: 'all 0.3s ease',
