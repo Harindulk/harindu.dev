@@ -1,7 +1,6 @@
 import { createStyles, Text, Title, Space, Button, Group, Grid } from '@mantine/core';
 import Link from 'next/link';
 import Image from 'next/image';
-import harindu from '../public/harindu.jpg';
 
 const useStyles = createStyles((theme) => ({
 
@@ -153,7 +152,7 @@ export function Home() {
 
                     <Grid.Col sm={5} lg={3}>
                         <div className={classes.image}>
-                            <Image src={harindu}
+                            <Image src="/../public/images/harindu.jpg"
                                 alt="harindu fonseka"
                                 width="250"
                                 height="250"
@@ -170,7 +169,7 @@ export function Home() {
                 <Grid>
                     <Grid.Col md={5} lg={3}>
                         <div className={classes.image}>
-                            <Image src={harindu}
+                            <Image src="/../public/images/harindu.jpg"
                                 alt="harindu fonseka"
                                 width="250"
                                 height="250"
