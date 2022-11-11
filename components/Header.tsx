@@ -9,7 +9,7 @@ import {
   Text,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { Toggle } from './toggle';
+import { ColorSwitch } from './toggle';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 
@@ -125,7 +125,7 @@ export function HeaderResponsive() {
           </Text>
           <div className={classes.burger}>
             <div className={classes.hide}>
-              <Toggle />
+              <ColorSwitch />
             </div>
           </div>
         </Group>
@@ -190,10 +190,10 @@ export function HeaderResponsive() {
               Social
             </a>
           </Link> */}
-          <Toggle />
+          <ColorSwitch />
         </Group>
 
-        <Burger opened={opened} onClick={toggle} className={classes.burger} size="sm" aria-label="togglebutton" />
+        <Burger opened={opened} onClick={ColorSwitch} className={classes.burger} size="sm" aria-label="togglebutton" />
 
         <Transition transition="pop-top-right" duration={200} mounted={opened}>
           {(styles) => (
