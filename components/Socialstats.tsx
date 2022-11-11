@@ -13,7 +13,7 @@ const useStyles = createStyles((theme) => ({
     [theme.fn.smallerThan('sm')]: {
       flexDirection: 'column',
     },
-  },
+  }, 
 
   title: {
     fontFamily: `Greycliff CF Bold, ${theme.fontFamily}`,
