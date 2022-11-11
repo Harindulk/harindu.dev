@@ -21,7 +21,7 @@ const useStyles = createStyles((theme) => ({
 
 }));
 
-export function Toggle() {
+export function ColorSwitch() {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
   const { classes } = useStyles();
 
