@@ -74,7 +74,6 @@ export function Expierience() {
   return (
     <div id='highlights'>
 
-    <Container>
       <Text className={classes.titlemain}>Highlights</Text>
       <div>
 
@@ -226,7 +225,6 @@ export function Expierience() {
 
         </Group>
       </div>
-    </Container>
     </div>
   );
 

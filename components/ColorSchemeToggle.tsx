@@ -27,8 +27,8 @@ export function ColorSchemeToggle() {
 
 
   return (
-    <Group position="center" mt="xm">
-      <ActionIcon
+    <Group  position="center" >
+      <ActionIcon 
       radius="xl"
         onClick={() => toggleColorScheme()}
         aria-label="dark/light mode toggle" 
@@ -42,7 +42,7 @@ export function ColorSchemeToggle() {
         {colorScheme === 'dark' ? (
           <IconSun className={classes.darkmodebutton} size={24} stroke={2.5} />
         ) : (
-          <IconMoonStars className={classes.darkmodebutton}  size={24} stroke={2.5} />
+          <IconMoonStars className={classes.darkmodebutton} size={24} stroke={2.5} />
         )}
       </ActionIcon>
     </Group>
