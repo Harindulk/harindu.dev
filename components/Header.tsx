@@ -75,7 +75,6 @@ const useStyles = createStyles((theme) => ({
   },
 
   link: {
-    fontFamily: `Greycliff CF Bold, ${theme.fontFamily}`,
     display: 'block',
     lineHeight: 1,
     padding: '8px 12px',
@@ -83,7 +82,7 @@ const useStyles = createStyles((theme) => ({
     textDecoration: 'none',
     color: theme.colorScheme === 'dark' ? theme.colors.gray[0] : theme.colors.dark[9],
     fontSize: 15,
-    fontWeight: 600,
+    fontWeight: 700,
 
     '&:hover': {
       backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[1],
