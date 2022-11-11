@@ -1,4 +1,4 @@
-import { createStyles, Text, Title, Space, Button, Group, Grid } from '@mantine/core';
+import { createStyles, Text, Space, Button, Group, Grid } from '@mantine/core';
 import Link from 'next/link';
 import Image from 'next/image';
 

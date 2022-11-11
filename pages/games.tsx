@@ -51,7 +51,7 @@ const useStyles = createStyles((theme) => ({
     fontFamily: `Greycliff CF Bold, ${theme.fontFamily}`,
     color: theme.colorScheme === 'dark' ? theme.colors.gray[0] : theme.colors.dark[9],
     fontSize: 46,
-    fontWeight: 650,
+    fontWeight: 800,
     [theme.fn.smallerThan('xs')]: {
       fontSize: 35,
     },

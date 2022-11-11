@@ -1,7 +1,6 @@
 import { createStyles, Text, Container } from '@mantine/core';
 import socialstatsdata from '../data/socialstats.json';
 
-
 const useStyles = createStyles((theme) => ({
   root: {
     display: 'flex',

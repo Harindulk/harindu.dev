@@ -5,10 +5,10 @@ import { getCookie, setCookie } from 'cookies-next';
 import Head from 'next/head';
 import { MantineProvider, ColorScheme, ColorSchemeProvider } from '@mantine/core';
 import { NotificationsProvider } from '@mantine/notifications';
-import '../src/Fonts/styles.css';
-import { HeaderResponsive } from '../components/Header';
-import { FooterLinks } from '../components/FooterLinks';
-import { RouterTransition } from '../components/RouterTransition';
+import '../public/Fonts/styles.css';
+import { HeaderResponsive } from '../components/header';
+import { FooterLinks } from '../components/footer';
+import { RouterTransition } from '../components/loader';
 import favicon from '../public/favicon.png';
 
 export default function App(props: AppProps & { colorScheme: ColorScheme }) {
@@ -43,7 +43,7 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
 
       <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
         <MantineProvider
-          theme={{ colorScheme, fontFamily: 'Inter' }}
+          theme={{ colorScheme, fontFamily: 'Quicksand' }}
           withGlobalStyles
           withNormalizeCSS
         >

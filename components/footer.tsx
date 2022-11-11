@@ -1,11 +1,4 @@
-import { createStyles, Text, Container, ActionIcon, Group, Title } from '@mantine/core';
-import {
-  IconBrandTwitter,
-  IconBrandYoutube,
-  IconBrandInstagram,
-  IconBrandLinkedin,
-} from '@tabler/icons';
-import Link from 'next/link';
+import { createStyles, Text, Container} from '@mantine/core';
 import footerdata from '../data/footer.json';
 
 
@@ -64,7 +57,6 @@ const useStyles = createStyles((theme) => ({
 
   link: {
     display: 'block',
-    color: theme.colorScheme === 'dark' ? theme.colors.dark[1] : theme.colors.gray[6],
     fontSize: theme.fontSizes.sm,
     paddingTop: 3,
     paddingBottom: 3,
@@ -90,9 +82,8 @@ const useStyles = createStyles((theme) => ({
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginTop: theme.spacing.xl,
+    marginTop: theme.spacing.md,
     paddingTop: theme.spacing.xl,
-    paddingBottom: theme.spacing.xl,
     [theme.fn.smallerThan('sm')]: {
       flexDirection: 'column',
     },
@@ -149,39 +140,11 @@ export function FooterLinks({ data }: FooterLinksProps) {
           <Text size="xs" color="dimmed" className={classes.description}>
             if you want to contact me, please use Linkedin, Email, or Twitter.
           </Text>
-        </div>
-        <div className={classes.groups}>{groups}</div>
-      </Container>
-      <Container className={classes.afterFooter}>
-        <Text color="dimmed" size="sm">
+          <Text className={classes.afterFooter} color="dimmed" size="sm">
           © 2022 harindu.dev.
         </Text>
-
-        <Group spacing={0} className={classes.social} position="right" noWrap>
-          <Link href="https://twitter.com/Harindu_Fonseka">
-            <ActionIcon aria-label='twitter' size="lg">
-              <IconBrandTwitter size={23} stroke={1.5} />
-            </ActionIcon>
-          </Link>
-
-          <Link href="https://www.youtube.com/channel/UCRyQGxzCgFb5wmsp1XAlWpQ">
-            <ActionIcon aria-label='youtube' size="lg">
-              <IconBrandYoutube size={23} stroke={1.5} />
-            </ActionIcon>
-          </Link>
-
-          <Link href="https://www.instagram.com/harindulk/">
-            <ActionIcon aria-label='instragram' size="lg">
-              <IconBrandInstagram size={23} stroke={1.5} />
-            </ActionIcon>
-          </Link>
-
-          <Link href="https://www.linkedin.com/in/harindu-fonseka/">
-            <ActionIcon aria-label='linkedin' size="lg">
-              <IconBrandLinkedin size={23} stroke={1.5} />
-            </ActionIcon>
-          </Link>
-        </Group>
+        </div>
+        <div className={classes.groups}>{groups}</div>
       </Container>
     </footer>
   );

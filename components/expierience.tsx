@@ -1,4 +1,4 @@
-import { createStyles, Card, Text, Group, Container, Button } from '@mantine/core';
+import { createStyles, Card, Text, Group } from '@mantine/core';
 import { Carousel } from '@mantine/carousel';
 import Image from 'next/dist/client/image';
 
@@ -225,7 +225,7 @@ export function Expierience() {
 
         </Group>
       </div>
-    </div>
+          </div>
   );
 
 }

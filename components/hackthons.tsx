@@ -6,9 +6,6 @@ import {
     TextInput,
     Badge,
     useMantineTheme,
-    CopyButton,
-    ActionIcon, 
-    Tooltip 
 } from '@mantine/core';
 import { keys } from '@mantine/utils';
 import { IconSearch } from '@tabler/icons';

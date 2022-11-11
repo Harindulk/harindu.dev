@@ -1,4 +1,4 @@
-import { Home } from '../components/Home';
+import { Home } from '../components/heroheader';
 import { Expierience } from '../components/expierience';
 import { TableSort } from '../components/hackthons';
 import { Space,Container } from '@mantine/core';
@@ -11,13 +11,13 @@ export default function HomePage() {
     <>
     <SocialProfileJsonLd
       type="Person"
-      name="your name"
-      url="http://www.your-site.com"
+      name="Harindu Fonseka"
+      url="https://harindu.dev"
       sameAs={[
-        'http://www.facebook.com/your-profile',
-        'http://instagram.com/yourProfile',
-        'http://www.linkedin.com/in/yourprofile',
-        'http://plus.google.com/your_profile',
+        'https://www.facebook.com/harindulk',
+        'https://www.instagram.com/harindulk/',
+        'https://www.linkedin.com/in/harindu-fonseka/',
+        'https://twitter.com/Harindu_Fonseka',
       ]}
     />
       <Home />

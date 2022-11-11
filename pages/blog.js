@@ -1,5 +1,5 @@
 import {
-  createStyles, Card, Container, Text, Group
+  createStyles, Card, Container, Text, Group, Space
 } from '@mantine/core';
 import Link from 'next/link'
 import fs from 'fs'
@@ -12,7 +12,13 @@ const useStyles = createStyles((theme) => ({
   card: {
     backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.white,
     cursor: 'pointer',
+  },
 
+  Space: {
+    //only on mobile
+    '@media (max-width: 500px)': {
+    marginTop: 50,
+    },
   },
 
   title: {
@@ -23,10 +29,12 @@ const useStyles = createStyles((theme) => ({
     cursor: 'pointer',
     fontFamily: `Greycliff CF Bold, ${theme.fontFamily}`,
     '&:hover': {
-      //underline text with a transition
       transition: 'all 0.3s ease',
     },
-    //transition to onclick other page
+    //small font size on mobile
+    '@media (max-width: 500px)': {
+      fontSize: 21,
+    },
   },
 
   description: {
@@ -34,11 +42,13 @@ const useStyles = createStyles((theme) => ({
     fontSize: 16,
     lineHeight: 1.5,
     color: theme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.colors.gray[7],
-
+    '@media (max-width: 500px)': {
+      fontSize: 15,
+    },
   },
 
   body: {
-    padding: theme.spacing.md,
+    paddingBottom: 30,
   },
 }));
 
@@ -52,8 +62,7 @@ export function Blog({ posts }) {
         <title>Blog</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <Container size={900}>
-
+      <Container className={classes.Space} size={850} >
         {posts.map((post, index) => (
           <Link href={`/blog/${encodeURIComponent(post.slug)}`} passHref key={index}>
               <Group noWrap spacing={0}>

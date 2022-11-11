@@ -10,11 +10,17 @@ import Head from 'next/head'
 
 const useStyles = createStyles((theme) => ({
   title: {
+    fontFamily: `Greycliff CF Bold, ${theme.fontFamily}`,
+    fontWeight: 900,
     color: theme.colorScheme === 'dark' ? theme.white : theme.black,
     lineHeight: 1,
     marginBottom: theme.spacing.md,
-    fontSize: 45,
+    fontSize: 42,
     textheight: 1.2,
+
+    '@media (max-width: 700px)': {
+      fontSize: 34,
+    },
   },
 
   table: {
@@ -24,6 +30,14 @@ const useStyles = createStyles((theme) => ({
   tableitem: {
     fontSize: 10,
   },
+
+  Space: {
+    //only on mobile
+    '@media (max-width: 500px)': {
+    marginTop: 50,
+    },
+  },
+
 
 }));
 
@@ -48,7 +62,7 @@ const PostPage = ({ frontMatter: { title, date, thumbnailUrl, description }, mdx
 
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <div className="mt-4">
+      <div className={classes.Space}>
         <Title className={classes.title}>{title}</Title>
         <h5>Posted on {date}</h5>
         <MDXRemote {...mdxSource} components={components} />
