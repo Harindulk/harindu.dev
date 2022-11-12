@@ -202,7 +202,7 @@ export function HeaderResponsive() {
             <Paper className={classes.dropdown} withBorder style={styles}>
               <Link href="/">
                 <a
-                  key="Home"
+                  key="Home"  
                   className={cx(classes.link, router.pathname == '/' ? classes.linkActive : '')}
                   onClick={(event) => {
                     close();
