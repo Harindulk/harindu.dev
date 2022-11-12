@@ -12,14 +12,13 @@ import Head from 'next/head';
 const useStyles = createStyles((theme) => ({
   inner: {
     paddingBottom: theme.spacing.xl * 3,
-  
+
     '@media (max-width: 500px)': {
       marginTop: theme.spacing.xl * 2,
     },
   },
 
   cover: {
-    //disable right clicks and image dragging
     pointerEvents: 'none',
     WebkitUserSelect: 'none',
     marginTop: 120,
@@ -27,7 +26,6 @@ const useStyles = createStyles((theme) => ({
     top: 0,
     left: 0,
   },
-
 
   content: {
     justifyContent: 'center',
@@ -41,7 +39,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   title: {
-    fontFamily: `Quicksand Bold, ${theme.fontFamily}`,
+    fontFamily: `Greycliff CF`,
     color: theme.colorScheme === 'dark' ? theme.colors.gray[1] : theme.colors.dark,
     fontSize: 35,
     lineHeight: 1.2,
@@ -87,7 +85,7 @@ const useStyles = createStyles((theme) => ({
     fontSize: 17,
     lineHeight: 1.8,
     fontWeight: 500,
-    
+
     [theme.fn.smallerThan('xs')]: {
       fontSize: 16,
       lineHeight: 1.6,
@@ -114,29 +112,26 @@ export function about() {
       <Container>
         <div className={classes.inner}>
           <div className={classes.content}>
-          <Text className={classes.title} >
-          Bio
+            <Text className={classes.title} >
+              About
             </Text>
             <Text mt="md" className={classes.paragraph}>
-                Harindu Fonseka is an entrepreneur, game developer & web developer. he's mainly
-                working in the video game development industry and he got verified on Google at the
-                age of 15. Harindu's first startup company <a target="_blank" className={classes.link} href="https://starfun.studio/">starfun games</a> was started in 2020 as
-                Harindulk Games and he changed its name to "starfun games" in august 2022. his first
-                game "Ghost Zone" was released in 2021 march for Android and PC and he got some
-                downloads for that game. his second game "Bug Star" was released in 2021 December.
-                it got the attention of a live-streamer from Australia and she live-streamed it on
-                Twitch. also, Harindu got his first Quicksandnship for 2 weeks at the age of 15. before
-                Harindu turned age 16 he participated in over 28 Hackathons and got places in 22.
+              Harindu Fonseka is an entrepreneur, game developer & web developer. he's mainly
+              working in the video game development industry and he got verified on Google at the
+              age of 15. Harindu's first startup company <a target="_blank" className={classes.link} href="https://starfun.studio/">starfun games</a> was started in 2020 as
+              Harindulk Games and he changed its name to "starfun games" in august 2022. his first
+              game "Ghost Zone" was released in 2021 march for Android and PC and he got some
+              downloads for that game. his second game "Bug Star" was released in 2021 December.
+              it got the attention of a live-streamer from Australia and she live-streamed it on
+              Twitch. also, Harindu got his first Quicksandnship for 2 weeks at the age of 15. before
+              Harindu turned age 16 he participated in over 28 Hackathons and got places in 22.
             </Text>
-          </div>  
+          </div>
         </div>
 
         <Progress data={[]} />
         <SocialMedia data={[]} />
-        <Container>
-                <img src="https://res.cloudinary.com/harindu-dev/image/upload/v1668250240/enfj_ohg3xm.svg" className={classes.cover} />
-            </Container>
-
+          <img src="https://res.cloudinary.com/harindu-dev/image/upload/v1668250240/enfj_ohg3xm.svg" className={classes.cover} />
       </Container>
     </div>
   );

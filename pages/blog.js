@@ -25,6 +25,15 @@ const useStyles = createStyles((theme) => ({
     marginTop: 120,
   },
 
+  cover: {
+    pointerEvents: 'none',
+    WebkitUserSelect: 'none',
+    marginTop: 20,
+    objectFit: 'cover',
+    top: 0,
+    left: 0,
+  },
+
   title: {
     color: theme.colorScheme === 'dark' ? theme.colors.gray[0] : theme.black,
     fontWeight: 600,
@@ -85,10 +94,14 @@ export function Blog({ posts }) {
               </div>
             </Group>
           </Link>
-
         ))}
+        
       </Container>
       <div className={classes.margin} />
+      
+      <Container>
+      <img src="https://res.cloudinary.com/harindu-dev/image/upload/v1668265496/diplomats_Protagonist_ENFJ_workplace_habits_zacnwc.svg" className={classes.cover} />
+      </Container>
     </div>
   )
 }

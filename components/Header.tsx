@@ -49,8 +49,6 @@ const useStyles = createStyles((theme) => ({
   },
 
   header: {
-    fontFamily: `Greycliff CF`,
-
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -77,6 +75,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   link: {
+    fontFamily: `Greycliff CF`,
     display: 'block',
     lineHeight: 1,
     padding: '8px 12px',
@@ -91,6 +90,7 @@ const useStyles = createStyles((theme) => ({
     },
 
     [theme.fn.smallerThan('sm')]: {
+      fontWeight: 400,
       borderRadius: 0,
       padding: theme.spacing.md,
     },

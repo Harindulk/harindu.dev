@@ -48,7 +48,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   title: {
-    fontFamily: `Quicksand Bold, ${theme.fontFamily}`,
+    fontFamily: `Greycliff CF`,
     color: theme.colorScheme === 'dark' ? theme.colors.gray[0] : theme.colors.dark[9],
     fontSize: 46,
     fontWeight: 800,
@@ -58,7 +58,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   gamestatus: {
-    fontFamily: `Quicksand Bold, ${theme.fontFamily}`,
+    fontFamily: `Greycliff CF`,
     color: theme.colorScheme === 'dark' ? theme.colors.gray[0] : theme.colors.dark[9],
     fontSize: 23,
     fontWeight: 700,

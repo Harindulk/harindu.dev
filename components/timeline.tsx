@@ -19,6 +19,14 @@ const useStyles = createStyles((theme) => ({
     fontWeight: 700,
     color: theme.colorScheme === 'dark' ? theme.colors.red[6] : theme.colors.red[7],
   },
+
+  title: {
+    fontFamily: `Greycliff CF`,
+    color: theme.colorScheme === 'dark' ? theme.colors.gray[1] : theme.colors.dark,
+    fontSize: 16,
+    lineHeight: 1.2,
+    fontWeight: 800,
+  },
 }));
 
 interface Timelinedata {
@@ -40,7 +48,8 @@ export function Progress({ data }: Timelinedata) {
     ));
 
     return (
-      <Timeline.Item key={timelineinfo.year} title={timelineinfo.year}>
+      <Timeline.Item key={timelineinfo.year} >
+        <Text className={classes.title}>{timelineinfo.year}</Text>
         <Space h="xs" />
         <List size="sm">
           {list}

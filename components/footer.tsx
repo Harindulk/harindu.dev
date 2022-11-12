@@ -1,13 +1,11 @@
-import { createStyles, Text, Container} from '@mantine/core';
+import { createStyles, Text, Container, Group } from '@mantine/core';
 import footerdata from '../data/footer.json';
 
 const useStyles = createStyles((theme) => ({
   footer: {
     paddingTop: theme.spacing.xl * 2,
     paddingBottom: theme.spacing.xl * 2,
-    borderTop: `1px solid ${
-      theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[2]
-    }`,
+    borderTop: `1px solid ${theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[2]}`,
   },
 
   logo: {
@@ -18,7 +16,7 @@ const useStyles = createStyles((theme) => ({
       flexDirection: 'column',
       alignItems: 'center',
     },
-  },
+  },  
 
   description: {
     marginTop: 5,
@@ -26,6 +24,14 @@ const useStyles = createStyles((theme) => ({
 
     [theme.fn.smallerThan('sm')]: {
       marginTop: theme.spacing.xs,
+      textAlign: 'center',
+    },
+  },
+
+  description2: {
+    textDecoration: 'none',
+
+    [theme.fn.smallerThan('sm')]: {
       textAlign: 'center',
     },
   },
@@ -80,20 +86,20 @@ const useStyles = createStyles((theme) => ({
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginTop: theme.spacing.md,
+    marginTop: theme.spacing.xl,
     paddingTop: theme.spacing.xl,
+    paddingBottom: theme.spacing.xl,
     [theme.fn.smallerThan('sm')]: {
       flexDirection: 'column',
     },
   },
-
   social: {
     [theme.fn.smallerThan('sm')]: {
       marginTop: theme.spacing.xs,
     },
   },
 
-  maintext : {
+  maintext: {
     fontFamily: `Quicksand Bold, ${theme.fontFamily}`,
     color: theme.colorScheme === 'dark' ? theme.white : theme.black,
     fontSize: 28,
@@ -119,7 +125,7 @@ interface FooterLinksProps {
 
 export function FooterLinks({ data }: FooterLinksProps) {
   const { classes } = useStyles();
-  data= footerdata.data;
+  data = footerdata.data;
 
   const groups = data.map((group) => {
     const links = group.links.map((link, index) => (
@@ -137,24 +143,33 @@ export function FooterLinks({ data }: FooterLinksProps) {
   });
 
   return (
-   <div>
+    <div>
 
-    <footer className={classes.footer}>
-      <Container className={classes.inner}>
-        <div className={classes.logo}>
-          <Text className={classes.maintext}>
-            harindu.dev
-          </Text>
-          <Text size="xs" color="dimmed" className={classes.description}>
-            if you want to contact me, please use Linkedin, Email, or Twitter.
-          </Text>
-          <Text className={classes.afterFooter} color="dimmed" size="sm">
+      <footer className={classes.footer}>
+        <Container className={classes.inner}>
+          <div className={classes.logo}>
+            <Text className={classes.maintext}>
+              harindu.dev
+            </Text>
+            <Text size="xs" color="dimmed" className={classes.description}>
+              if you want to contact me, please use Linkedin, Email, or Twitter.
+            </Text>
+
+          </div>
+          <div className={classes.groups}>{groups}</div>
+        </Container>
+        <Container className={classes.afterFooter}>
+        <Text color="dimmed" size="sm">
           © 2022 harindu.dev.
         </Text>
-        </div>
-        <div className={classes.groups}>{groups}</div>
+
+        <Group className={classes.social} position="right" noWrap>
+        <Text size="xs" color="dimmed" className={classes.description2}>
+              imges: © 16personalities.com
+            </Text>
+        </Group>
       </Container>
-    </footer>
+      </footer>
     </div>
   );
 }
