@@ -1,10 +1,8 @@
 import { createStyles, Text, Container} from '@mantine/core';
 import footerdata from '../data/footer.json';
 
-
 const useStyles = createStyles((theme) => ({
   footer: {
-    marginTop: 120,
     paddingTop: theme.spacing.xl * 2,
     paddingBottom: theme.spacing.xl * 2,
     borderTop: `1px solid ${
@@ -67,7 +65,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   title: {
-    fontFamily: `Greycliff CF Bold, ${theme.fontFamily}`,
+    fontFamily: `Quicksand Bold, ${theme.fontFamily}`,
     fontSize: 19,
     fontWeight: 700,
     marginBottom: theme.spacing.xs / 2,
@@ -96,10 +94,18 @@ const useStyles = createStyles((theme) => ({
   },
 
   maintext : {
-    fontFamily: `Greycliff CF Bold, ${theme.fontFamily}`,
+    fontFamily: `Quicksand Bold, ${theme.fontFamily}`,
     color: theme.colorScheme === 'dark' ? theme.white : theme.black,
     fontSize: 28,
     fontWeight: 700,
+  },
+
+  //cover image
+  cover: {
+    marginTop: 120,
+    objectFit: 'cover',
+    top: 0,
+    left: 0,
   },
 
 }));
@@ -131,6 +137,8 @@ export function FooterLinks({ data }: FooterLinksProps) {
   });
 
   return (
+   <div>
+
     <footer className={classes.footer}>
       <Container className={classes.inner}>
         <div className={classes.logo}>
@@ -147,6 +155,7 @@ export function FooterLinks({ data }: FooterLinksProps) {
         <div className={classes.groups}>{groups}</div>
       </Container>
     </footer>
+    </div>
   );
 }
 

@@ -6,6 +6,7 @@ import {
     TextInput,
     Badge,
     useMantineTheme,
+    Container
 } from '@mantine/core';
 import { keys } from '@mantine/utils';
 import { IconSearch } from '@tabler/icons';
@@ -36,7 +37,7 @@ const jobColors: Record<string, string> = {
 
 const useStyles = createStyles((theme) => ({
     title: {
-        fontFamily: `Greycliff CF Bold, ${theme.fontFamily}`,
+        fontFamily: `Quicksand Bold, ${theme.fontFamily}`,
         color: theme.colorScheme === 'dark' ? theme.colors.gray[1] : theme.colors.dark,
         fontSize: 36,
         lineHeight: 1.2,
@@ -45,6 +46,9 @@ const useStyles = createStyles((theme) => ({
         [theme.fn.smallerThan('xs')]: {
             fontSize: 28,
         },
+    },
+    margin: {
+        marginTop: 120,
     },
 
     paragraph: {
@@ -147,6 +151,7 @@ export function TableSort({ data }: TableSortProps) {
                     )}
                 </tbody>
             </Table>
+            <div className={classes.margin} />
         </div>
     );
 }

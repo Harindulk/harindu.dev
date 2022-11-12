@@ -18,6 +18,17 @@ const useStyles = createStyles((theme) => ({
     },
   },
 
+  cover: {
+    //disable right clicks and image dragging
+    pointerEvents: 'none',
+    WebkitUserSelect: 'none',
+    marginTop: 120,
+    objectFit: 'cover',
+    top: 0,
+    left: 0,
+  },
+
+
   content: {
     justifyContent: 'center',
     display: 'flex',
@@ -30,7 +41,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   title: {
-    fontFamily: `Greycliff CF Bold, ${theme.fontFamily}`,
+    fontFamily: `Quicksand Bold, ${theme.fontFamily}`,
     color: theme.colorScheme === 'dark' ? theme.colors.gray[1] : theme.colors.dark,
     fontSize: 35,
     lineHeight: 1.2,
@@ -103,7 +114,9 @@ export function about() {
       <Container>
         <div className={classes.inner}>
           <div className={classes.content}>
-
+          <Text className={classes.title} >
+          Bio
+            </Text>
             <Text mt="md" className={classes.paragraph}>
                 Harindu Fonseka is an entrepreneur, game developer & web developer. he's mainly
                 working in the video game development industry and he got verified on Google at the
@@ -120,6 +133,10 @@ export function about() {
 
         <Progress data={[]} />
         <SocialMedia data={[]} />
+        <Container>
+                <img src="https://res.cloudinary.com/harindu-dev/image/upload/v1668250240/enfj_ohg3xm.svg" className={classes.cover} />
+            </Container>
+
       </Container>
     </div>
   );

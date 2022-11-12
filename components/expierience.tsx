@@ -16,7 +16,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   title: {
-    fontFamily: `Greycliff CF Bold, ${theme.fontFamily}`,
+    fontFamily: `Quicksand Bold, ${theme.fontFamily}`,
     fontWeight: 700,
     lineHeight: 1.2,
     fontSize: 25,
@@ -44,7 +44,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   titlemain: {
-    fontFamily: `Greycliff CF Bold, ${theme.fontFamily}`,
+    fontFamily: `Quicksand Bold, ${theme.fontFamily}`,
     color: theme.colorScheme === 'dark' ? theme.colors.gray[1] : theme.colors.dark,
     fontSize: 36,
     lineHeight: 1.1,

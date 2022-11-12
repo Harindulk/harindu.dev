@@ -1,9 +1,7 @@
-import { ActionIcon, Group, useMantineColorScheme,createStyles } from '@mantine/core';
+import { ActionIcon, Group, useMantineColorScheme, createStyles } from '@mantine/core';
 import { IconSun, IconMoonStars } from '@tabler/icons';
 
 const useStyles = createStyles((theme) => ({
-
-
   darkmodebutton : {
     '&:hover': {
     transform: theme.colorScheme === 'dark' ? 'rotate(180deg)' : 'rotate(0deg)',
@@ -14,17 +12,13 @@ const useStyles = createStyles((theme) => ({
     transform: theme.colorScheme === 'dark' ? 'rotate(0deg)' : 'rotate(180deg)',
     transition: 'transform 0.3s ease-in-out',
     },
-
-
   },
   
-
 }));
 
-export function ColorSwitch() {
+export function ColorSchemeToggle() {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
   const { classes } = useStyles();
-
 
   return (
     <Group  position="center" >

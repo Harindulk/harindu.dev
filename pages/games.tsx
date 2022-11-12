@@ -48,7 +48,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   title: {
-    fontFamily: `Greycliff CF Bold, ${theme.fontFamily}`,
+    fontFamily: `Quicksand Bold, ${theme.fontFamily}`,
     color: theme.colorScheme === 'dark' ? theme.colors.gray[0] : theme.colors.dark[9],
     fontSize: 46,
     fontWeight: 800,
@@ -58,7 +58,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   gamestatus: {
-    fontFamily: `Greycliff CF Bold, ${theme.fontFamily}`,
+    fontFamily: `Quicksand Bold, ${theme.fontFamily}`,
     color: theme.colorScheme === 'dark' ? theme.colors.gray[0] : theme.colors.dark[9],
     fontSize: 23,
     fontWeight: 700,
@@ -73,6 +73,10 @@ const useStyles = createStyles((theme) => ({
     [theme.fn.smallerThan('xs')]: {
       fontSize: 16,
     },
+  },
+
+  margin: {
+    marginTop: 120,
   },
 
   buttonimage: {
@@ -489,6 +493,7 @@ export function games() {
           </div>
         </div>
       </Container>
+      <div className={classes.margin} />
     </div>
   );
 }

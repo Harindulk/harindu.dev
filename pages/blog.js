@@ -17,17 +17,21 @@ const useStyles = createStyles((theme) => ({
   Space: {
     //only on mobile
     '@media (max-width: 500px)': {
-    marginTop: 50,
+      marginTop: 70,
     },
+  },
+
+  margin: {
+    marginTop: 120,
   },
 
   title: {
     color: theme.colorScheme === 'dark' ? theme.colors.gray[0] : theme.black,
     fontWeight: 600,
     lineHeight: 1.2,
-    fontSize: 25,
+    fontSize: 27,
     cursor: 'pointer',
-    fontFamily: `Greycliff CF Bold, ${theme.fontFamily}`,
+    fontFamily: `Greycliff CF`,
     '&:hover': {
       transition: 'all 0.3s ease',
     },
@@ -48,7 +52,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   body: {
-    paddingBottom: 30,
+    paddingBottom: 40,
   },
 }));
 
@@ -62,28 +66,29 @@ export function Blog({ posts }) {
         <title>Blog</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <Container className={classes.Space} size={850} >
+      <Container className={classes.Space} size={900} >
         {posts.map((post, index) => (
           <Link href={`/blog/${encodeURIComponent(post.slug)}`} passHref key={index}>
-              <Group noWrap spacing={0}>
-                <div className={classes.body}>
-                  <Text className={classes.title}  mb="xs">
-                    {post.frontMatter.title}
+            <Group noWrap spacing={0}>
+              <div className={classes.body}>
+                <Text className={classes.title} mb="xs">
+                  {post.frontMatter.title}
+                </Text>
+                <Group noWrap spacing="xs">
+                  <Text size="xs" color="dimmed">
+                    {post.frontMatter.date}
                   </Text>
-                  <Group noWrap spacing="xs">
-                    <Text size="xs" color="dimmed">
-                      {post.frontMatter.date}
-                    </Text>
-                  </Group>
-                  <Text className={classes.description}>
-                    {post.frontMatter.description}
-                  </Text>
-                </div>
-              </Group>
+                </Group>
+                <Text className={classes.description}>
+                  {post.frontMatter.description}
+                </Text>
+              </div>
+            </Group>
           </Link>
-          
+
         ))}
       </Container>
+      <div className={classes.margin} />
     </div>
   )
 }

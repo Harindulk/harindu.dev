@@ -10,7 +10,7 @@ import Head from 'next/head'
 
 const useStyles = createStyles((theme) => ({
   title: {
-    fontFamily: `Greycliff CF Bold, ${theme.fontFamily}`,
+    fontFamily: `Greycliff CF`,
     fontWeight: 900,
     color: theme.colorScheme === 'dark' ? theme.white : theme.black,
     lineHeight: 1,
@@ -19,8 +19,12 @@ const useStyles = createStyles((theme) => ({
     textheight: 1.2,
 
     '@media (max-width: 700px)': {
-      fontSize: 34,
+      fontSize: 33,
     },
+  },
+
+  margin: {
+    marginTop: 120,
   },
 
   table: {
@@ -34,7 +38,7 @@ const useStyles = createStyles((theme) => ({
   Space: {
     //only on mobile
     '@media (max-width: 500px)': {
-    marginTop: 50,
+      marginTop: 50,
     },
   },
 
@@ -58,7 +62,7 @@ const PostPage = ({ frontMatter: { title, date, thumbnailUrl, description }, mdx
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://harindu.dev" />
-        <meta property="og:image" content={thumbnailUrl}/>
+        <meta property="og:image" content={thumbnailUrl} />
 
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
@@ -67,6 +71,7 @@ const PostPage = ({ frontMatter: { title, date, thumbnailUrl, description }, mdx
         <h5>Posted on {date}</h5>
         <MDXRemote {...mdxSource} components={components} />
       </div>
+      <div className={classes.margin} />
     </Container>
   )
 }

@@ -28,7 +28,7 @@ const useStyles = createStyles((theme) => ({
         fontWeight: 800,
         marginBottom: theme.spacing.sm,
         paddingTop: theme.spacing.xl * 2,
-        fontFamily: `Greycliff CF Bold, ${theme.fontFamily}`,
+        fontFamily: `Quicksand Bold, ${theme.fontFamily}`,
         [theme.fn.smallerThan('sm')]: {
             paddingTop: theme.spacing.xl * 1,
         },
@@ -67,7 +67,7 @@ const useStyles = createStyles((theme) => ({
     },
 
     p: {
-        fontFamily: `Greycliff CF Bold, ${theme.fontFamily}`,
+        fontFamily: `Quicksand Bold, ${theme.fontFamily}`,
 
         color: theme.colorScheme === 'dark' ? theme.colors.gray[0] : theme.colors.gray[9],
         fontSize: 17,

@@ -9,7 +9,7 @@ import {
   Text,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { ColorSwitch } from './toggle';
+import { ColorSchemeToggle } from './toggle';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 
@@ -49,6 +49,8 @@ const useStyles = createStyles((theme) => ({
   },
 
   header: {
+    fontFamily: `Greycliff CF`,
+
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -95,7 +97,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   title: {
-    fontFamily: `Greycliff CF Bold, ${theme.fontFamily}`,
+    fontFamily: `Greycliff CF`,
     fontSize: 26,
     fontWeight: 700,
     color: theme.colorScheme === 'dark' ? theme.colors.gray[0] : theme.colors.gray[9],
@@ -125,7 +127,7 @@ export function HeaderResponsive() {
           </Text>
           <div className={classes.burger}>
             <div className={classes.hide}>
-              <ColorSwitch />
+              <ColorSchemeToggle />
             </div>
           </div>
         </Group>
@@ -190,10 +192,10 @@ export function HeaderResponsive() {
               Social
             </a>
           </Link> */}
-          <ColorSwitch />
+          <ColorSchemeToggle />
         </Group>
 
-        <Burger opened={opened} onClick={ColorSwitch} className={classes.burger} size="sm" aria-label="togglebutton" />
+        <Burger opened={opened} onClick={toggle} className={classes.burger} size="sm" aria-label="togglebutton" />
 
         <Transition transition="pop-top-right" duration={200} mounted={opened}>
           {(styles) => (
