@@ -6,7 +6,7 @@ import Head from 'next/head';
 import { MantineProvider, ColorScheme, ColorSchemeProvider } from '@mantine/core';
 import { NotificationsProvider } from '@mantine/notifications';
 import '../public/Fonts/styles.css';
-import { HeaderResponsive } from '../components/header';
+import { HeaderResponsive } from '../components/Header';
 import { FooterLinks } from '../components/footer';
 import { RouterTransition } from '../components/loader';
 import favicon from '../public/favicon.png';
