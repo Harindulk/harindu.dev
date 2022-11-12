@@ -1,22 +1,11 @@
-import { createStyles, Text, Container, ActionIcon, Group, Title } from '@mantine/core';
-import {
-  IconBrandTwitter,
-  IconBrandYoutube,
-  IconBrandInstagram,
-  IconBrandLinkedin,
-} from '@tabler/icons';
-import Link from 'next/link';
+import { createStyles, Text, Container, Group } from '@mantine/core';
 import footerdata from '../data/footer.json';
-
 
 const useStyles = createStyles((theme) => ({
   footer: {
-    marginTop: 120,
     paddingTop: theme.spacing.xl * 2,
     paddingBottom: theme.spacing.xl * 2,
-    borderTop: `1px solid ${
-      theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[2]
-    }`,
+    borderTop: `1px solid ${theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[2]}`,
   },
 
   logo: {
@@ -27,7 +16,7 @@ const useStyles = createStyles((theme) => ({
       flexDirection: 'column',
       alignItems: 'center',
     },
-  },
+  },  
 
   description: {
     marginTop: 5,
@@ -35,6 +24,14 @@ const useStyles = createStyles((theme) => ({
 
     [theme.fn.smallerThan('sm')]: {
       marginTop: theme.spacing.xs,
+      textAlign: 'center',
+    },
+  },
+
+  description2: {
+    textDecoration: 'none',
+
+    [theme.fn.smallerThan('sm')]: {
       textAlign: 'center',
     },
   },
@@ -64,7 +61,6 @@ const useStyles = createStyles((theme) => ({
 
   link: {
     display: 'block',
-    color: theme.colorScheme === 'dark' ? theme.colors.dark[1] : theme.colors.gray[6],
     fontSize: theme.fontSizes.sm,
     paddingTop: 3,
     paddingBottom: 3,
@@ -75,7 +71,8 @@ const useStyles = createStyles((theme) => ({
   },
 
   title: {
-    fontSize: theme.fontSizes.lg,
+    fontFamily: `Quicksand Bold, ${theme.fontFamily}`,
+    fontSize: 19,
     fontWeight: 700,
     marginBottom: theme.spacing.xs / 2,
     color: theme.colorScheme === 'dark' ? theme.white : theme.black,
@@ -96,17 +93,25 @@ const useStyles = createStyles((theme) => ({
       flexDirection: 'column',
     },
   },
-
   social: {
     [theme.fn.smallerThan('sm')]: {
       marginTop: theme.spacing.xs,
     },
   },
 
-  maintext : {
+  maintext: {
+    fontFamily: `Quicksand Bold, ${theme.fontFamily}`,
     color: theme.colorScheme === 'dark' ? theme.white : theme.black,
     fontSize: 28,
     fontWeight: 700,
+  },
+
+  //cover image
+  cover: {
+    marginTop: 120,
+    objectFit: 'cover',
+    top: 0,
+    left: 0,
   },
 
 }));
@@ -120,7 +125,7 @@ interface FooterLinksProps {
 
 export function FooterLinks({ data }: FooterLinksProps) {
   const { classes } = useStyles();
-  data= footerdata.data;
+  data = footerdata.data;
 
   const groups = data.map((group) => {
     const links = group.links.map((link, index) => (
@@ -138,50 +143,34 @@ export function FooterLinks({ data }: FooterLinksProps) {
   });
 
   return (
-    <footer className={classes.footer}>
-      <Container className={classes.inner}>
-        <div className={classes.logo}>
-          <Text className={classes.maintext}>
-            harindu.dev
-          </Text>
-          <Text size="xs" color="dimmed" className={classes.description}>
-            if you want to contact me, please use Linkedin, Email, or Twitter.
-          </Text>
-        </div>
-        <div className={classes.groups}>{groups}</div>
-      </Container>
-      <Container className={classes.afterFooter}>
+    <div>
+
+      <footer className={classes.footer}>
+        <Container className={classes.inner}>
+          <div className={classes.logo}>
+            <Text className={classes.maintext}>
+              harindu.dev
+            </Text>
+            <Text size="xs" color="dimmed" className={classes.description}>
+              if you want to contact me, please use Linkedin, Email, or Twitter.
+            </Text>
+
+          </div>
+          <div className={classes.groups}>{groups}</div>
+        </Container>
+        <Container className={classes.afterFooter}>
         <Text color="dimmed" size="sm">
           © 2022 harindu.dev.
         </Text>
 
-        <Group spacing={0} className={classes.social} position="right" noWrap>
-          <Link href="https://twitter.com/Harindu_Fonseka">
-            <ActionIcon aria-label='twitter' size="lg">
-              <IconBrandTwitter size={23} stroke={1.5} />
-            </ActionIcon>
-          </Link>
-
-          <Link href="https://www.youtube.com/channel/UCRyQGxzCgFb5wmsp1XAlWpQ">
-            <ActionIcon aria-label='youtube' size="lg">
-              <IconBrandYoutube size={23} stroke={1.5} />
-            </ActionIcon>
-          </Link>
-
-          <Link href="https://www.instagram.com/harindulk/">
-            <ActionIcon aria-label='instragram' size="lg">
-              <IconBrandInstagram size={23} stroke={1.5} />
-            </ActionIcon>
-          </Link>
-
-          <Link href="https://www.linkedin.com/in/harindu-fonseka/">
-            <ActionIcon aria-label='linkedin' size="lg">
-              <IconBrandLinkedin size={23} stroke={1.5} />
-            </ActionIcon>
-          </Link>
+        <Group className={classes.social} position="right" noWrap>
+        <Text size="xs" color="dimmed" className={classes.description2}>
+              imges: © 16personalities.com
+            </Text>
         </Group>
       </Container>
-    </footer>
+      </footer>
+    </div>
   );
 }
 

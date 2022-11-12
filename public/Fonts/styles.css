@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Quicksand';
+    src: url('./Quicksand-Medium.woff2') format('woff2');
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Quicksand Bold';
+    src: url('./Quicksand-Bold.woff2') format('woff2');
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Greycliff CF';
+    src: url('./GreycliffCF-Bold.woff2') format('woff2');
+    font-style: normal;
+    font-display: swap;
+}

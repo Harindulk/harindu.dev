@@ -1,21 +1,14 @@
-## npm scripts
+## harindu.dev
+
+### To Generate Sitemap & Robots.txt
+- `npm run build` 
+- `npm run sitemap` 
+
 
 ### Build and dev scripts
 
-- `dev` – start dev server
-- `build` – bundle application for production
-- `export` – exports static website to `out` folder
-- `analyze` – analyzes application bundle with [@next/bundle-analyzer](https://www.npmjs.com/package/@next/bundle-analyzer)
+- `npm run dev` – start dev server
+- `npm run build` – bundle application for production
+- `npm run export` – exports static website to `out` folder
+- `npm run analyze` – analyzes application bundle with [@next/bundle-analyzer](https://www.npmjs.com/package/@next/bundle-analyzer)
 
-### Testing scripts
-
-- `typecheck` – checks TypeScript types
-- `lint` – runs ESLint
-- `prettier:check` – checks files with Prettier
-- `jest` – runs jest tests
-- `jest:watch` – starts jest watch
-- `test` – runs `jest`, `prettier:check`, `lint` and `typecheck` scripts
-
-### Other scripts
-
-- `prettier:write` – formats all files with Prettier

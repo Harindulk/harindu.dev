@@ -1,26 +1,24 @@
-import { createStyles, Text, Title, Space, Button, Image, Group, Grid } from '@mantine/core';
+import { createStyles, Text, Space, Button, Group, Grid } from '@mantine/core';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const useStyles = createStyles((theme) => ({
 
     image: {
         maxWidth: '220px',
         maxHeight: '220px',
-
-        //center horizontally and vertically in the parent
-        margin: 'auto',
-        marginTop: '20px',
+        display: 'block',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        paddingTop: '20px',
 
         '@media (max-width: 768px)': {
             maxWidth: '200px',
         },
 
-        '@media (max-width: 500px)': {
-            maxWidth: '50%',
-            marginTop: '0px',
+        '@media (max-width: 375px)': {
+            maxWidth: '60%',
         },
-
-        
     },
 
     title: {
@@ -30,7 +28,7 @@ const useStyles = createStyles((theme) => ({
         fontWeight: 800,
         marginBottom: theme.spacing.sm,
         paddingTop: theme.spacing.xl * 2,
-
+        fontFamily: `Greycliff CF`,
         [theme.fn.smallerThan('sm')]: {
             paddingTop: theme.spacing.xl * 1,
         },
@@ -69,14 +67,15 @@ const useStyles = createStyles((theme) => ({
     },
 
     p: {
+        fontFamily: `Greycliff CF`,
         color: theme.colorScheme === 'dark' ? theme.colors.gray[0] : theme.colors.gray[9],
-        fontSize: 16,
+        fontSize: 17,
         lineHeight: 1.2,
         letterSpacing: 0.9,
         fontWeight: 500,
         // Media query with value from theme
         [`@media (max-width: ${theme.breakpoints.sm}px)`]: {
-            fontSize: 18,
+            fontSize: 16,
         },
 
         // Static media query
@@ -90,19 +89,11 @@ const useStyles = createStyles((theme) => ({
         fontSize: 16,
         lineHeight: 1.4,
         fontWeight: 400,
-        // Media query with value from theme
-        [`@media (max-width: ${theme.breakpoints.sm}px)`]: {
-            fontSize: 18,
-        },
-
-        // Static media query
-        '@media (max-width: 425px)': {
-            fontSize: 16,
-        },
     },
 
     //show only on mobile
     mobile: {
+        marginTop: 60,
         display: 'none',
         '@media (max-width: 768px)': {
             display: 'block',
@@ -137,7 +128,7 @@ export function Home() {
                             Founder of Starfun Games || Youngest Google Verified Student in LK
                         </Text>
                         <Text className={classes.p2}>
-                        trying to expand the gaming industry in sri lanka
+                            trying to expand the gaming industry in sri lanka
                         </Text>
 
 
@@ -159,28 +150,32 @@ export function Home() {
                     </Grid.Col>
 
                     <Grid.Col sm={5} lg={3}>
-                        <Image src="https://res.cloudinary.com/harindu-dev/image/upload/v1664971567/harindu_fonseka.jpg"
-                            alt="harindu fonseka"
-                            radius={350}
-                            width="250"
-                            height="250"
-                            className={classes.image}
-                        />
+                        <div className={classes.image}>
+                            <Image src="https://res.cloudinary.com/harindu-dev/image/upload/v1664971567/harindu_fonseka.jpg"
+                                alt="harindu fonseka"
+                                width="250"
+                                height="250"
+                                priority={true}
+                                style={{ borderRadius: '50%' }}
+                            />
+                        </div>
                     </Grid.Col>
                 </Grid>
             </div>
 
             <div className={classes.mobile} >
 
-                <Grid justify="space-between">
+                <Grid>
                     <Grid.Col md={5} lg={3}>
-                        <Image src="https://res.cloudinary.com/harindu-dev/image/upload/v1664971567/harindu_fonseka.jpg"
-                            alt="harindu fonseka"
-                            radius={350}
-                            width="250"
-                            height="250"
-                            className={classes.image}
-                        />
+                        <div className={classes.image}>
+                            <Image src="https://res.cloudinary.com/harindu-dev/image/upload/v1664971567/harindu_fonseka.jpg"
+                                alt="harindu fonseka"
+                                width="250"
+                                height="250"
+                                priority={true}
+                                style={{ borderRadius: '50%' }}
+                            />
+                        </div>
                     </Grid.Col>
 
                     <Grid.Col sm={7} lg={8}>
@@ -195,7 +190,7 @@ export function Home() {
                             Founder of Starfun Games || Youngest Google Verified Student in LK
                         </Text>
                         <Text className={classes.p2}>
-                        trying to expand the gaming industry in sri lanka
+                            trying to expand the gaming industry in sri lanka
                         </Text>
 
 

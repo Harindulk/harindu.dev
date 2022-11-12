@@ -1,4 +1,4 @@
-import { createStyles, Text, Title, TextInput, Button, Image, Container } from '@mantine/core';
+import { createStyles, Text, TextInput, Button, Image, Container } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
     wrapper: {
@@ -69,7 +69,7 @@ export function Email() {
                 <Image src="https://ui.mantine.dev/_next/static/media/image.969ed1dc.svg" className={classes.image} />
 
                 <div className={classes.body}>
-                    <Title className={classes.title}>Wait a minute...</Title>
+                    <Text className={classes.title}>Wait a minute...</Text>
                     <Text weight={500} size="lg" mb={5}>
                         Subscribe to our newsletter!
                     </Text>

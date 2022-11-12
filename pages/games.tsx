@@ -48,19 +48,22 @@ const useStyles = createStyles((theme) => ({
   },
 
   title: {
+    fontFamily: `Greycliff CF`,
     color: theme.colorScheme === 'dark' ? theme.colors.gray[0] : theme.colors.dark[9],
-    fontSize: 42,
-    fontWeight: 650,
+    fontSize: 46,
+    fontWeight: 800,
     [theme.fn.smallerThan('xs')]: {
-      fontSize: 28,
+      fontSize: 35,
     },
   },
 
   gamestatus: {
-    fontSize: 20,
+    fontFamily: `Greycliff CF`,
+    color: theme.colorScheme === 'dark' ? theme.colors.gray[0] : theme.colors.dark[9],
+    fontSize: 23,
     fontWeight: 700,
     [theme.fn.smallerThan('xs')]: {
-      fontSize: 14,
+      fontSize: 20,
     },
   },
 
@@ -70,6 +73,10 @@ const useStyles = createStyles((theme) => ({
     [theme.fn.smallerThan('xs')]: {
       fontSize: 16,
     },
+  },
+
+  margin: {
+    marginTop: 120,
   },
 
   buttonimage: {
@@ -153,13 +160,13 @@ export function games() {
             />
             <div className={classes.content}>
               <Text className={classes.title}>Micro Rally</Text>
-              <Text className={classes.p} mt="md">
+              <Text className={classes.p} mt="md" >
                 Face the challenges of unique theme maps with many colorful cars. Gain bonuses 🚗.
                 from daring tricks and collect coins to get maps and by leveling up you can reach
                 even 😎. greater distances with a small fuel capacity⛽.
               </Text>
               <Text mt={20} className={classes.gamestatus}>
-                coming soon
+                Coming soon
               </Text>
 
               <Group>
@@ -335,7 +342,7 @@ export function games() {
                 even 😎. greater distances with a small fuel capacity⛽.
               </Text>
               <Text mt={20} className={classes.gamestatus}>
-                coming soon
+                Coming soon
               </Text>
 
               <Group>
@@ -486,6 +493,7 @@ export function games() {
           </div>
         </div>
       </Container>
+      <div className={classes.margin} />
     </div>
   );
 }

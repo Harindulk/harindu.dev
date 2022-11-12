@@ -1,7 +1,6 @@
 import { createStyles, Text, Container } from '@mantine/core';
 import socialstatsdata from '../data/socialstats.json';
 
-
 const useStyles = createStyles((theme) => ({
   root: {
     display: 'flex',
@@ -14,18 +13,21 @@ const useStyles = createStyles((theme) => ({
     [theme.fn.smallerThan('sm')]: {
       flexDirection: 'column',
     },
-  },
+  }, 
 
   title: {
+    fontFamily: `Quicksand Bold, ${theme.fontFamily}`,
+
     color: theme.white,
-    textTransform: 'uppercase',
     fontWeight: 700,
-    fontSize: theme.fontSizes.sm,
+    fontSize: 16,
   },
 
   count: {
+    fontFamily: `Quicksand Bold, ${theme.fontFamily}`,
+
     color: theme.white,
-    fontSize: 32,
+    fontSize: 33,
     lineHeight: 1,
     fontWeight: 700,
     marginBottom: theme.spacing.md,

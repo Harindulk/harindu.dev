@@ -1,0 +1,106 @@
+{
+    "data": [
+        {
+            "year": "2022",
+            "item": [
+                {
+                    "info": "Won the Young Computer Scientist Competition 2022 organuzed by Ministry of Education Sri Lanka "
+                },
+                {
+                    "info": "Got Selected as the 'Best ICT Student in Sri Lanka' ( National Award )"
+                },
+                {
+                    "info": "4th Place in Cutting Edge Coding Competition IIT"
+                },
+                {
+                    "info": "made 'Pain and Dice' Game in 48 hours"
+                },
+                {
+                    "info": "got first internship from 99x at the age of 15"
+                },
+                {
+                    "info": "made 'Poly Car' Game in 14 days"
+                },
+                {
+                    "info": "Won the Codeflow Hackathon - organized by the Ananda College Colombo 10"
+                },
+                {
+                    "info": "Bug Star Game Live-Steamed by Mish Manners and It got attension from foreign Gamers."
+                }
+            ]
+        },
+        {
+            "year": "2021",
+            "item": [
+                {
+                    "info": "Released the Bug Star Game"
+                },
+                {
+                    "info": "Released Ghost zone game for Android and PC"
+                },
+                {
+                    "info": "Got 5th Place From Sri Lanka in INSTINCTUS 20 Innovation competition and got media coverage from TV's"
+                },
+                {
+                    "info": "Got 1st Place in Novus Technica 2020 - Nalanda College "
+                }
+            ]
+        },
+        {
+            "year": "2020",
+            "item": [
+                {
+                    "info": "made my first video game on October 21"
+                },
+                {
+                    "info": "Started 'Starfun Games' company in September"
+                },
+                {
+                    "info": "Released harindu.dev website on June 09"
+                },
+                {
+                    "info": "INNOV8 2020 - NSBM 3rd Place"
+                },
+                {
+                    "info": "Got 1st Place in Novus Technica 2019 - Nalanda College "
+                },
+                {
+                    "info": "One of my invention got selected to the top 10 inventions in Aurora 2019 organized by Ananda College"
+                }
+            ]
+        },
+        {
+            "year": "2019",
+            "item": [
+                {
+                    "info": "Participated Sri lanka's Robotic Challenge 2019 and scored 12th place"
+                },
+                {
+                    "info": "Participated my first ever Innovation competition 'INNOVATIVE SAINTS 2019' and got 3rd place"
+                },
+                {
+                    "info": "Participated my first ever robotic competition organized by Gateway College."
+                }
+            ]
+        },
+        {
+            "year": "2018",
+            "item": [
+                {
+                    "info": "Started learning Arduino and Robotics."
+                },
+                {
+                    "info": "First Invention got selected as the Most Innovative Idea - Novus Technica 2018 Nalanda College"
+                }
+            ]
+        },
+        {
+            "year": "2017",
+            "item": [
+                {
+                    "info": "Started learning MicroBit using the online playground"
+                }
+            ]
+        }
+    ]
+}

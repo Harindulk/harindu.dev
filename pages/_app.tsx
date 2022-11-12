@@ -5,10 +5,10 @@ import { getCookie, setCookie } from 'cookies-next';
 import Head from 'next/head';
 import { MantineProvider, ColorScheme, ColorSchemeProvider } from '@mantine/core';
 import { NotificationsProvider } from '@mantine/notifications';
-import '../src/Fonts/styles.css';
+import '../public/Fonts/styles.css';
 import { HeaderResponsive } from '../components/Header';
-import { FooterLinks } from '../components/FooterLinks';
-import { RouterTransition } from '../components/RouterTransition';
+import { FooterLinks } from '../components/footer';
+import { RouterTransition } from '../components/loader';
 import favicon from '../public/favicon.png';
 
 export default function App(props: AppProps & { colorScheme: ColorScheme }) {
@@ -28,9 +28,7 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
         <title>Harindu Fonseka</title>
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
         <meta name="title" content="Harindu Fonseka ( Harindulk )" />
-
-        <meta name="referrer" content="origin" />
-
+        
         <meta
           name="description"
           content="Hi! I make games, I'm 15 years old programmer & Game Dev with over 4 years of experience. Harindu Fonseka, Student, GameDev, Web Designer, Visit harindu.dev"
@@ -45,7 +43,7 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
 
       <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
         <MantineProvider
-          theme={{ colorScheme, fontFamily: 'Inter' }}
+          theme={{ colorScheme, fontFamily: 'Quicksand' }}
           withGlobalStyles
           withNormalizeCSS
         >
