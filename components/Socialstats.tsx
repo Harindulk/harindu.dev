@@ -63,7 +63,7 @@ interface SocialMedia {
   data: { title: string; stats: string }[];
 }
 
-export function SocialStats({ data }: SocialMedia) {
+export function SocialMedia({ data }: SocialMedia) {
   data= socialstatsdata.data;
 
   const { classes } = useStyles();

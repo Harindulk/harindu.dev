@@ -5,7 +5,7 @@ import {
   Text,
   Highlight,
 } from '@mantine/core';
-import { SocialStats } from '../components/socialstats';
+import { SocialMedia } from '../components/Socialstats';
 import Progress from '../components/timeline';
 import Head from 'next/head';
 
@@ -132,7 +132,7 @@ export function about() {
         </div>
 
         <Progress data={[]} />
-        <SocialStats data={[]} />
+        <SocialMedia data={[]} />
         <Container>
                 <img src="https://res.cloudinary.com/harindu-dev/image/upload/v1668250240/enfj_ohg3xm.svg" className={classes.cover} />
             </Container>
