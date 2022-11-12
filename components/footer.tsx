@@ -165,7 +165,7 @@ export function FooterLinks({ data }: FooterLinksProps) {
 
         <Group className={classes.social} position="right" noWrap>
         <Text size="xs" color="dimmed" className={classes.description2}>
-              imges: © 16personalities.com
+              images: © 16personalities.com
             </Text>
         </Group>
       </Container>
