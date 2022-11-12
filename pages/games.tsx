@@ -342,7 +342,7 @@ export function games() {
                 even 😎. greater distances with a small fuel capacity⛽.
               </Text>
               <Text mt={20} className={classes.gamestatus}>
-                coming soon
+                Coming soon
               </Text>
 
               <Group>
