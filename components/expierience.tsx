@@ -98,7 +98,7 @@ export function Expierience() {
               }}
             >
 
-              <Carousel.Slide><Image loading='lazy' src="https://res.cloudinary.com/harindu-dev/image/upload/v1668620410/FB_IMG_1668602353474_m5jiuv.jpg" layout='fill' /></Carousel.Slide>
+              <Carousel.Slide><Image loading='lazy' src="https://res.cloudinary.com/harindu-dev/image/upload/v1668621092/harindu_award_aqyfpl.jpg" layout='fill' /></Carousel.Slide>
 
             </Carousel>
 
