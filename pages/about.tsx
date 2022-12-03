@@ -123,7 +123,7 @@ export function about() {
               game "Ghost Zone" was released in 2021 march for Android and PC and he got some
               downloads for that game. his second game "Bug Star" was released in 2021 December.
               it got the attention of a live-streamer from Australia and she live-streamed it on
-              Twitch. also, Harindu got his first Quicksandnship for 2 weeks at the age of 15. before
+              Twitch. also, Harindu got his first internship for 2 weeks at the age of 15. before
               Harindu turned age 16 he participated in over 28 Hackathons and got places in 22.
             </Text>
           </div>
