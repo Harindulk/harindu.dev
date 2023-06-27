@@ -1,5 +1,5 @@
-
 # harindu.dev
+
 Welcome to my personal website, [harindu.dev](https://harindu.dev)! This repository contains the source code and configuration for my website built using various technologies and frameworks. 
 
 ## Technologies Used
@@ -25,19 +25,19 @@ Welcome to my personal website, [harindu.dev](https://harindu.dev)! This reposit
 
 Here are the additional dependencies used in this project:
 
-- **@emotion/react** and **@emotion/server**: Libraries for styling and managing CSS-in-JS in React applications.
-- **@mantine/carousel**, **@mantine/core**, **@mantine/dates**, **@mantine/form**, **@mantine/hooks**, **@mantine/notifications**, **@mantine/nprogress**, **@mantine/prism**: Mantine components and utility libraries.
-- **@next/bundle-analyzer**: Analyzes the bundle size and composition of the Next.js application.
-- **@next/font**: Simplifies adding custom fonts to the Next.js application.
-- **@tabler/icons**: Provides a collection of icons from the Tabler Icons project.
-- **cookies-next**: Handles cookies in Next.js applications.
-- **dayjs**: Manipulates, parses, and formats dates and times.
-- **embla-carousel-react**: React wrapper for the Embla Carousel library for interactive carousels.
-- **gray-matter**: Parses front matter in Markdown files to extract metadata.
-- **next-mdx-remote**: Renders MDX content (Markdown with JSX) on the server in Next.js.
-- **next-seo**: Manages SEO metadata, such as title, description, and Open Graph tags, in Next.js applications.
-- **next-sitemap**: Generates a sitemap for the website to aid search engine crawling and indexing.
-- **reading-time**: Calculates the estimated reading time of a text based on average reading speed.
+- **[@emotion/react](https://www.npmjs.com/package/@emotion/react)** and **[@emotion/server](https://www.npmjs.com/package/@emotion/server)**: Libraries for styling and managing CSS-in-JS in React applications.
+- **[@mantine/carousel](https://www.npmjs.com/package/@mantine/carousel)**, **[@mantine/core](https://www.npmjs.com/package/@mantine/core)**, **[@mantine/dates](https://www.npmjs.com/package/@mantine/dates)**, **[@mantine/form](https://www.npmjs.com/package/@mantine/form)**, **[@mantine/hooks](https://www.npmjs.com/package/@mantine/hooks)**, **[@mantine/notifications](https://www.npmjs.com/package/@mantine/notifications)**, **[@mantine/nprogress](https://www.npmjs.com/package/@mantine/nprogress)**, **[@mantine/prism](https://www.npmjs.com/package/@mantine/prism)**: Mantine components and utility libraries.
+- **[@next/bundle-analyzer](https://www.npmjs.com/package/@next/bundle-analyzer)**: Analyzes the bundle size and composition of the Next.js application.
+- **[@next/font](https://www.npmjs.com/package/@next/font)**: Simplifies adding custom fonts to the Next.js application.
+- **[@tabler/icons](https://www.npmjs.com/package/@tabler/icons)**: Provides a collection of icons from the Tabler Icons project.
+- **[cookies-next](https://www.npmjs.com/package/cookies-next)**: Handles cookies in Next.js applications.
+- **[dayjs](https://www.npmjs.com/package/dayjs)**: Manipulates, parses, and formats dates and times.
+- **[embla-carousel-react](https://www.npmjs.com/package/embla-carousel-react)**: React wrapper for the Embla Carousel library for interactive carousels.
+- **[gray-matter](https://www.npmjs.com/package/gray-matter)**: Parses front matter in Markdown files to extract metadata.
+- **[next-mdx-remote](https://www.npmjs.com/package/next-mdx-remote)**: Renders MDX content (Markdown with JSX) on the server in Next.js.
+- **[next-seo](https://www.npmjs.com/package/next-seo)**: Manages SEO metadata, such as title, description, and Open Graph tags, in Next.js applications.
+- **[next-sitemap](https://www.npmjs.com/package/next-sitemap)**: Generates a sitemap for the website to aid search engine crawling and indexing.
+- **[reading-time](https://www.npmjs.com/package/reading-time)**: Calculates the estimated reading time of a text based on average reading speed.
 
 
 ## Getting Started
@@ -67,4 +67,5 @@ If you find any issues or have suggestions for improvement, please feel free to 
 
 ### Known Issue
 There is currently a bug causing the website to load very fast but with delayed CSS rendering. This issue is impacting the initial visual display of the website. The bug needs to be fixed to ensure proper loading and rendering of CSS files.
+
 
