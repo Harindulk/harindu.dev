@@ -1,6 +1,7 @@
 # harindu.dev
 
 Welcome to my personal website, [harindu.dev](https://harindu.dev)! This repository contains the source code and configuration for my website built using various technologies and frameworks. 
+![image](https://github.com/Harindulk/harindu.dev/assets/61319844/754ba720-3876-479d-aba0-b8f79a327d62)
 
 ## Technologies Used
 
