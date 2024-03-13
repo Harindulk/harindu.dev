@@ -79,6 +79,78 @@ export function Expierience() {
 
         <Group spacing="xl">
 
+        <div className={classes.leftwrapper}>
+            <Carousel
+              mx="auto"
+              withIndicators
+              height={285}
+              className={classes.Carousel}
+              styles={{
+                indicator: {
+                  width: 12,
+                  height: 4,
+                  transition: 'width 250ms ease',
+
+                  '&[data-active]': {
+                    width: 40,
+                  },
+                },
+              }}
+            >
+              <Carousel.Slide><Image loading='lazy' src="https://res.cloudinary.com/harindu-dev/image/upload/v1699951345/3f0484f126018fe74eead7649f516cb9.jpg" layout='fill' /></Carousel.Slide>
+
+            </Carousel>
+
+            <div className={classes.body}>
+
+              <Text className={classes.title} mt="xs" mb="md">
+                Asia Pacific ICT Alliance Awards Nominee
+              </Text>
+
+              <Text className={classes.description}>
+                I got selected to Represent Sri Lanka at the Asia Pacific ICT Alliance Awards at Pakistan after becoming the Young Computer Scientist of Sri Lanka 2022/
+              </Text>
+
+            </div>
+          </div>
+
+        <div className={classes.rightwrapper}>
+
+            <div className={classes.body}>
+              <Text className={classes.title} mt="xs" mb="md">
+                Young Computer Scientist in Sri Lanka
+              </Text>
+              <Group noWrap spacing="xs">
+
+                <Text className={classes.description}>
+                  I'm proud to have done an internship at 99x (one of the best software company in Sri Lanka) when I was 15 years old. I got it after winning an all-island coding competition called 'Codeflow' by Ananda College Colombo 10.
+                </Text>
+              </Group>
+            </div>
+
+            <Carousel
+              mx="auto"
+              withIndicators
+              height={285}
+              className={classes.Carousel}
+              styles={{
+                indicator: {
+                  width: 12,
+                  height: 4,
+                  transition: 'width 250ms ease',
+
+                  '&[data-active]': {
+                    width: 40,
+                  },
+                },
+              }}
+            >
+              <Carousel.Slide><Image loading='lazy' src="" layout="fill" /></Carousel.Slide>
+              {/* ...other slides */}
+            </Carousel>
+          </div>
+
+
           <div className={classes.leftwrapper}>
             <Carousel
               mx="auto"
@@ -231,3 +303,5 @@ export function Expierience() {
 }
 
 export default Expierience;
+
+
