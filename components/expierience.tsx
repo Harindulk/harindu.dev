@@ -108,8 +108,9 @@ export function Expierience() {
               </Text>
 
               <Text className={classes.description}>
-                I got selected to Represent Sri Lanka at the Asia Pacific ICT Alliance Awards at Pakistan after becoming the Young Computer Scientist of Sri Lanka 2022/
-              </Text>
+              Represented Sri Lanka at APICTA 2022 (Pakistan) as Young Computer Scientist (SL) 2022. APICTA honors ICT excellence across 16 Asia-Pacific Countries.
+
+</Text>
 
             </div>
           </div>
@@ -123,8 +124,7 @@ export function Expierience() {
               <Group noWrap spacing="xs">
 
                 <Text className={classes.description}>
-                  I'm proud to have done an internship at 99x (one of the best software company in Sri Lanka) when I was 15 years old. I got it after winning an all-island coding competition called 'Codeflow' by Ananda College Colombo 10.
-                </Text>
+                Awarded Sri Lanka's Young Computer Scientist 2022 by Ministry of Education Sri Lanka, FITIS & University of Colombo </Text>
               </Group>
             </div>
 
@@ -146,8 +146,8 @@ export function Expierience() {
               }}
             >
               <Carousel.Slide><Image loading='lazy' src="" layout="fill" /></Carousel.Slide>
-              {/* ...other slides */}
-            </Carousel>
+              <Image loading='lazy' src="https://res.cloudinary.com/harindu-dev/image/upload/v1710351496/harindu_with_chanux_xjqinj.jpg" layout='fill' />          
+              <Image loading='lazy' src="https://res.cloudinary.com/harindu-dev/image/upload/v1710351496/harindu_stage_nzihlt.webp" layout='fill' />   </Carousel>
           </div>
 
 
@@ -181,7 +181,7 @@ export function Expierience() {
               </Text>
 
               <Text className={classes.description}>
-                I won the 2021 best ICT student in Sri Lanka national award at the national ICT conference organized by the computer society of Sri Lanka. I got this award when I was 16 and I'm the youngest person from among other students who got this award in other years.
+               Won the 2021 Best ICT Student in Sri Lanka National Award at the National ICT Conference organized by the Computer Society of Sri Lanka. At the time, I was only 16 years old, making me the youngest recipient in the award's history.
               </Text>
 
             </div>
@@ -197,8 +197,7 @@ export function Expierience() {
               <Group noWrap spacing="xs">
 
                 <Text className={classes.description}>
-                  I'm proud to have done an internship at 99x (one of the best software company in Sri Lanka) when I was 15 years old. I got it after winning an all-island coding competition called 'Codeflow' by Ananda College Colombo 10.
-                </Text>
+                Secured an internship at <b>99x</b>(a top Sri Lankan software company) at the age of 15. This opportunity came after winning the all-island coding competition 'Codeflow,'                </Text>
               </Group>
             </div>
 
@@ -269,8 +268,7 @@ export function Expierience() {
               <Group noWrap spacing="xs">
 
                 <Text className={classes.description}>
-                  'Starfun Games' was started in September 2020 by me at the age of 14 as a hobby when I learn game development. when it was started its first name was Harindulk Games and I changed its name to Starfun Games in August 2022.
-                </Text>
+                Founded Starfun Games (originally Harindulk Games) in September 2020 (age 14) as a game development hobby.</Text>
               </Group>
             </div>
 

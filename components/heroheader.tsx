@@ -151,7 +151,7 @@ export function Home() {
 
                     <Grid.Col sm={5} lg={3}>
                         <div className={classes.image}>
-                            <Image src="https://res.cloudinary.com/harindu-dev/image/upload/v1664971567/harindu_fonseka.jpg"
+                            <Image src="https://res.cloudinary.com/harindu-dev/image/upload/v1710351535/IMG_20230918_153812_969_krpgyx.jpg"
                                 alt="harindu fonseka"
                                 width="250"
                                 height="250"
@@ -168,7 +168,7 @@ export function Home() {
                 <Grid>
                     <Grid.Col md={5} lg={3}>
                         <div className={classes.image}>
-                            <Image src="https://res.cloudinary.com/harindu-dev/image/upload/v1664971567/harindu_fonseka.jpg"
+                            <Image src="https://res.cloudinary.com/harindu-dev/image/upload/v1710351535/IMG_20230918_153812_969_krpgyx.jpg"
                                 alt="harindu fonseka"
                                 width="250"
                                 height="250"
