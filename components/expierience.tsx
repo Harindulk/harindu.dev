@@ -108,7 +108,7 @@ export function Expierience() {
               </Text>
 
               <Text className={classes.description}>
-              Represented Sri Lanka at APICTA 2022 (Pakistan) as Young Computer Scientist (SL) 2022. APICTA honors ICT excellence across 16 Asia-Pacific Countries.
+              Represented Sri Lanka at <b>APICTA 2022 (Pakistan)</b> as Young Computer Scientist (SL) 2022. APICTA honors ICT excellence <b>across 16 Asia-Pacific Countries.</b> 
 
 </Text>
 
@@ -145,9 +145,11 @@ export function Expierience() {
                 },
               }}
             >
-              <Carousel.Slide><Image loading='lazy' src="" layout="fill" /></Carousel.Slide>
-              <Image loading='lazy' src="https://res.cloudinary.com/harindu-dev/image/upload/v1710351496/harindu_with_chanux_xjqinj.jpg" layout='fill' />          
-              <Image loading='lazy' src="https://res.cloudinary.com/harindu-dev/image/upload/v1710351496/harindu_stage_nzihlt.webp" layout='fill' />   </Carousel>
+              <Carousel.Slide><Image loading='lazy' src="https://res.cloudinary.com/harindu-dev/image/upload/v1710352415/harindu_chanux_ckrawn.jpg" layout='fill' /></Carousel.Slide>
+              <Carousel.Slide><Image loading='lazy' src="https://res.cloudinary.com/harindu-dev/image/upload/v1710352412/harindu-stage_yax6kq.jpg" layout='fill' /></Carousel.Slide>
+
+            </Carousel>
+
           </div>
 
 
@@ -197,7 +199,7 @@ export function Expierience() {
               <Group noWrap spacing="xs">
 
                 <Text className={classes.description}>
-                Secured an internship at <b>99x</b>(a top Sri Lankan software company) at the age of 15. This opportunity came after winning the all-island coding competition 'Codeflow,'                </Text>
+                Secured an internship at <b>99x</b> (a top Sri Lankan software company) at the age of 15. This opportunity came after winning the all-island coding competition 'Codeflow,'                </Text>
               </Group>
             </div>
 
