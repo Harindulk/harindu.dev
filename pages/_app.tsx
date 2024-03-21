@@ -39,7 +39,6 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
         <meta name="language" content="English" />
         <link rel="shortcut icon" href={favicon.src} type="image/x-icon" />
 
-        <!-- Google tag (gtag.js) -->
           <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z6V0MNDZ4N"></script>
           <script>
             window.dataLayer = window.dataLayer || [];
