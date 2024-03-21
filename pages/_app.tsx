@@ -9,8 +9,8 @@ import { getCookie, setCookie } from 'cookies-next';
 
 // Import your custom components and styles
 import { HeaderResponsive } from '../components/Header';
-import { FooterLinks } from '../components/Footer'; // Make sure this path matches your actual file structure
-import { RouterTransition } from '../components/Loader'; // Adjust this import if necessary
+import { FooterLinks } from '../components/footer'; // Adjusted to lowercase 'f', assuming the file is named 'footer.tsx'
+import { RouterTransition } from '../components/loader'; // Ensuring lowercase 'l' if that's the actual file naming
 import favicon from '../public/favicon.png';
 import '../public/Fonts/styles.css'; // Verify this path is correct for your styles
 
