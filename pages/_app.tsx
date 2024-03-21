@@ -10,6 +10,8 @@ import { HeaderResponsive } from '../components/Header';
 import { FooterLinks } from '../components/footer';
 import { RouterTransition } from '../components/loader';
 import favicon from '../public/favicon.png';
+import Script from 'next/script'; // Import Script component from next/script
+
 
 export default function App(props: AppProps & { colorScheme: ColorScheme }) {
   const { Component, pageProps } = props;
