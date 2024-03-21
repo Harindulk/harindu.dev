@@ -39,13 +39,21 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
         <meta name="language" content="English" />
         <link rel="shortcut icon" href={favicon.src} type="image/x-icon" />
 
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z6V0MNDZ4N"></script>
-          <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-Z6V0MNDZ4N');
-          </script>
+       {/* Google Analytics Scripts using next/script */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-Z6V0MNDZ4N"
+        strategy="afterInteractive"
+        async
+      />
+      <Script id="google-analytics-script" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-Z6V0MNDZ4N');
+        `}
+      </Script>
+        
       </Head>
       
 
